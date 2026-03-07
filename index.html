@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heofon - Global Superintelligence</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { height: 100vh; width: 100vw; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
@@ -31,6 +32,8 @@
         .top-nav { position: fixed; top: 20px; right: 40px; z-index: 1000; display: flex; gap: 15px; }
         .nav-link { padding: 10px 20px; border-radius: 30px; border: 1px solid #00d4ff; color: #00d4ff; cursor: pointer; font-weight: 900; background: rgba(0,0,0,0.6); backdrop-filter: blur(5px); transition: 0.3s; }
         .nav-link:hover { background: #00d4ff; color: #000; }
+        .nav-upgrade { border: 1px solid #ff00ff; color: #ff00ff; }
+        .nav-upgrade:hover { background: #ff00ff; color: #fff; }
 
         /* PAGES */
         .page { display: none; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 10; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; }
@@ -53,16 +56,25 @@
 
         /* TRENDING UI */
         .trend-item { 
-            padding: 10px 20px; 
-            border: 1px solid #00d4ff; 
-            border-radius: 25px; 
-            color: #00d4ff; 
-            cursor: pointer; 
-            font-weight: 900; 
-            background: rgba(0, 212, 255, 0.05);
-            transition: 0.3s;
+            padding: 10px 20px; border: 1px solid #00d4ff; border-radius: 25px; 
+            color: #00d4ff; cursor: pointer; font-weight: 900; 
+            background: rgba(0, 212, 255, 0.05); transition: 0.3s;
         }
         .trend-item:hover { background: #00d4ff; color: #000; transform: scale(1.05); }
+
+        /* UPGRADE CARD */
+        .upgrade-card {
+            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(20px);
+            border: 2px solid #ff00ff; padding: 50px; border-radius: 40px;
+            max-width: 500px; box-shadow: 0 0 40px rgba(255, 0, 255, 0.2);
+        }
+        .price-tag { font-size: 4rem; font-weight: 900; color: #ff00ff; margin: 20px 0; }
+        .buy-btn { 
+            display: inline-block; text-decoration: none; background: #ff00ff; color: white; 
+            border: none; padding: 15px 40px; border-radius: 30px; font-size: 1.2rem; 
+            font-weight: 900; cursor: pointer; transition: 0.3s; width: 100%; margin-top: 20px;
+        }
+        .buy-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px #ff00ff; }
 
         /* RESULTS PAGE */
         #results-page { align-items: flex-start; justify-content: flex-start; padding: 30px 10% 40px; overflow-y: auto; text-align: left; }
@@ -96,6 +108,7 @@
         <div class="nav-link" onclick="showPage('home-page')">Home</div>
         <div class="nav-link" onclick="showPage('ai-page')">Heofonix AI</div>
         <div class="nav-link" onclick="showPage('about-page')">About Us</div>
+        <div class="nav-link nav-upgrade" onclick="showPage('upgrade-page')">Upgrade</div>
     </div>
 
     <div id="home-page" class="page active-page">
@@ -109,6 +122,22 @@
             <div class="trend-item" onclick="triggerQuickSearch('nascar')">NASCAR</div>
             <div class="trend-item" onclick="triggerQuickSearch('bing')">Microsoft Bing</div>
             <div class="trend-item" onclick="triggerQuickSearch('roblox')">Roblox</div>
+        </div>
+    </div>
+
+    <div id="upgrade-page" class="page">
+        <div class="upgrade-card">
+            <h2 style="font-size: 2rem;">Heofon <span style="color: #ff00ff;">PRO</span></h2>
+            <p style="margin-top: 10px; opacity: 0.8;">Unlock Unlimited Logic & Superintelligence</p>
+            <div class="price-tag">$5</div>
+            <p style="font-weight: 900;">PER MONTH</p>
+            <ul style="text-align: left; margin: 25px 0; list-style: none; line-height: 2;">
+                <li>✅ 10x Faster Processing</li>
+                <li>✅ Advanced Logic Nodes</li>
+                <li>✅ Early Access Features</li>
+                <li>✅ Exclusive Pro UI Skin</li>
+            </ul>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScWZETQHILkt_OroigHCvgRjmZBlt2NkvGaummpctf1no6GYw/viewform?usp=dialog" target="_blank" class="buy-btn">Subscribe Now</a>
         </div>
     </div>
 
@@ -147,6 +176,7 @@
             "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Enjoy the videos and music you love, upload original content, and share it all.", favicon: "https://www.youtube.com/favicon.ico" }],
             "playhop": [{ name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" }],
             "happy wheels": [{ name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" }],
+            /* UPDATED HEOFON SEARCH RESULT IMAGE */
             "heofon": [{ name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/Heofon-/", desc: "Official hub for Heofon Global Search.", favicon: "favicon.png" }],
             "noredink": [{ name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" }],
             "mobymax": [{ name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" }],
