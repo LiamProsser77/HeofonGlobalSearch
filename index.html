@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heofon - Global Superintelligence</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body { height: 100vh; width: 100vw; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
@@ -51,34 +51,23 @@
             font-weight: 800; text-align: center; box-shadow: 0 0 20px rgba(0,212,212,0.2);
         }
 
-        /* TRENDING SEARCHES UI */
-        .trending-container {
-            margin-top: 25px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 800px;
-        }
-        .trend-item {
-            padding: 10px 18px;
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.5);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: #00d4ff;
-            cursor: pointer;
+        /* TRENDING UI */
+        .trend-item { 
+            padding: 10px 20px; 
+            border: 1px solid #00d4ff; 
+            border-radius: 25px; 
+            color: #00d4ff; 
+            cursor: pointer; 
+            font-weight: 900; 
+            background: rgba(0, 212, 255, 0.05);
             transition: 0.3s;
         }
-        .trend-item:hover {
-            background: #00d4ff;
-            color: #000;
-            transform: translateY(-3px);
-        }
+        .trend-item:hover { background: #00d4ff; color: #000; transform: scale(1.05); }
 
         /* RESULTS PAGE */
-        #results-page { align-items: flex-start; justify-content: flex-start; padding: 100px 10% 40px; overflow-y: auto; text-align: left; }
+        #results-page { align-items: flex-start; justify-content: flex-start; padding: 30px 10% 40px; overflow-y: auto; text-align: left; }
+        .results-nav { width: 100%; display: flex; gap: 20px; align-items: center; margin-bottom: 40px; padding-top: 20px; flex-shrink: 0; }
+        .mini-logo { font-size: 2.2rem; font-weight: 900; background: linear-gradient(45deg, #00d4ff, #ff00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; }
         .result-item { margin-bottom: 35px; width: 100%; max-width: 800px; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .result-header { display: flex; align-items: center; gap: 12px; margin-bottom: 5px; color: #bdc1c6; font-size: 0.9rem; }
@@ -86,28 +75,17 @@
         .result-title { color: #8ab4f8; font-size: 1.5rem; text-decoration: none; font-weight: 500; display: block; margin-bottom: 4px; }
         .result-snippet { color: #bdc1c6; font-size: 1rem; line-height: 1.5; }
 
-        /* ABOUT PAGE */
-        .about-card { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 2px solid #00d4ff; padding: 40px; border-radius: 30px; max-width: 800px; line-height: 1.6; }
-        .about-card h2 { color: #00d4ff; font-size: 2.5rem; margin-bottom: 20px; }
-
-        /* CHAT BUBBLES */
+        /* CHAT UI */
         .chat-container { display: none; background: transparent; }
-        .chat-container.active-page { display: flex; justify-content: flex-end; }
-        .chat-messages { flex: 1; width: 100%; overflow-y: auto; padding: 100px 20px 20px; }
-        .message { 
-            margin-bottom: 25px; padding: 22px; border-radius: 25px; max-width: 80%; 
-            color: #ffffff; font-weight: 800; font-size: 1.15rem; text-align: left;
-            backdrop-filter: blur(12px); border: 2px solid rgba(0,212,255,0.3);
-        }
+        .chat-container.active-page { display: flex; }
+        .chat-messages { flex: 1; width: 100%; overflow-y: auto; padding: 110px 25px 25px; }
+        .message { margin-bottom: 25px; padding: 22px; border-radius: 25px; max-width: 75%; color: #ffffff; font-weight: 800; font-size: 1.15rem; text-align: left; backdrop-filter: blur(12px); border: 2px solid rgba(0,212,255,0.3); }
         .user-message { background: rgba(0, 212, 255, 0.7); margin-left: auto; border-color: white; }
         .ai-message { background: rgba(255, 255, 255, 0.15); margin-right: auto; border: 2px solid #00d4ff; }
 
-        /* FOOTER */
-        .footer { position: fixed; bottom: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.5); font-weight: bold; z-index: 100; text-align: center; width: 100%; letter-spacing: 1px; pointer-events: none;}
-
-        /* INPUT AREA */
         .input-area { width: 100%; padding: 25px; background: rgba(0,0,0,0.8); border-top: 2px solid #00d4ff; z-index: 1001;}
         .upload-btn { color: #00d4ff; cursor: pointer; text-align: center; border: 2px dashed #00d4ff; margin-bottom: 12px; border-radius: 15px; padding: 12px; font-weight: 900; }
+        .footer { position: fixed; bottom: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.5); font-weight: bold; z-index: 100; text-align: center; width: 100%; letter-spacing: 1px; pointer-events: none;}
     </style>
 </head>
 <body>
@@ -123,34 +101,36 @@
     <div id="home-page" class="page active-page">
         <h1 class="logo">Heofon</h1>
         <input type="text" class="search-box" id="homeSearch" placeholder="Search Global Hub..." onkeypress="handleHomeSearch(event)">
-        <p style="margin-top:15px; font-weight:600;">Trending Searches:</p>
-        <div class="trending-container">
-            <div class="trend-item" onclick="triggerQuickSearch('anthropic ai')">Anthropic AI Jobs</div>
-            <div class="trend-item" onclick="triggerQuickSearch('michigan tornado')">Michigan Tornado Warnings</div>
-            <div class="trend-item" onclick="triggerQuickSearch('nascar')">NASCAR Race Weekend</div>
+        <p style="margin-top:20px; font-weight:900; color: #00d4ff;">TRENDING SEARCHES</p>
+        <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 800px;">
+            <div class="trend-item" onclick="triggerQuickSearch('anthropic ai')">Anthropic AI</div>
+            <div class="trend-item" onclick="triggerQuickSearch('youtube')">YouTube</div>
+            <div class="trend-item" onclick="triggerQuickSearch('michigan tornado')">Michigan Tornado</div>
+            <div class="trend-item" onclick="triggerQuickSearch('nascar')">NASCAR</div>
             <div class="trend-item" onclick="triggerQuickSearch('bing')">Microsoft Bing</div>
             <div class="trend-item" onclick="triggerQuickSearch('roblox')">Roblox</div>
         </div>
     </div>
 
     <div id="results-page" class="page">
+        <div class="results-nav">
+            <div class="mini-logo" onclick="showPage('home-page')">Heofon</div>
+            <input type="text" class="search-box" id="resultsSearch" style="max-width: 500px; padding: 15px 25px; font-size: 1.1rem; text-align: left;" placeholder="Search again..." onkeypress="handleResultsSearch(event)">
+        </div>
         <div id="results-list" style="width: 100%; max-width: 850px;"></div>
     </div>
 
     <div id="about-page" class="page">
-        <div class="about-card">
-            <h2>About Heofon</h2>
+        <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 2px solid #00d4ff; padding: 40px; border-radius: 30px; max-width: 800px; line-height: 1.6;">
+            <h2 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 20px;">About Heofon</h2>
             <p>Welcome to <strong>Heofon</strong>, the world's most advanced Global Search Engine and AI Superintelligence hub.</p>
-            <p>Founded in 2026, Heofon provides lightning-fast web navigation and deep logical processing through the Heofonix AI network.</p>
+            <p>Founded in 2026, Heofon provides lightning-fast web navigation and deep logical processing.</p>
         </div>
     </div>
 
     <div id="ai-page" class="page chat-container">
         <div class="chat-messages" id="chatBox">
-            <div class="message ai-message">
-                Hey, Welcome to Heofonix AI<br>
-                Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁
-            </div>
+            <div class="message ai-message">Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁</div>
         </div>
         <div class="input-area">
             <div class="upload-btn" onclick="document.getElementById('fIn').click()">📎 Upload Logic / Image</div>
@@ -163,32 +143,23 @@
 
     <script>
         const searchDB = {
-            "wikipedia": { name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" },
-            "playhop": { name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" },
-            "happy wheels": { name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" },
-            "heofon": { name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/Heofon-/", desc: "Official hub for Heofon Global Search.", favicon: "Screenshot 2026-03-06 8.27.50 PM.png" },
-            "noredink": { name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" },
-            "mobymax": { name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" },
-            "khan": { name: "Khan Academy", url: "https://www.khanacademy.org/profile/me/classroom/b8942f70-39d2-462b-a506-e94c876f9063", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" },
-            "google": { name: "Google", url: "https://www.google.com/?safe=active&ssui=on", desc: "The world's most popular search engine.", favicon: "https://www.google.com/favicon.ico" },
-            "bing": { name: "Search - Microsoft Bing", url: "https://www.bing.com/", desc: "Search with Microsoft Bing and use the power of AI to find information.", favicon: "https://www.bing.com/favicon.ico" },
-            "bing apps": { name: "Microsoft Bing Search - Apps on Google Play", url: "https://play.google.com/store/apps/details?id=com.microsoft.bing", desc: "Microsoft Bing delivers fast, intelligently curated answers.", favicon: "https://www.google.com/favicon.ico" },
-            "bing x": { name: "Bing (@bing) / Posts / X", url: "https://x.com/bing", desc: "Bing - Your AI-powered search and answer engine on X.", favicon: "https://abs.twimg.com/favicons/twitter.2.ico" },
-            "youtube": { name: "YouTube", url: "https://www.youtube.com", desc: "Enjoy the videos and music you love.", favicon: "https://www.youtube.com/favicon.ico" },
-            "liam prosser games": { name: "Liam Prosser Gamez", url: "https://sites.google.com/kimberly.k12.wi.us/liamprossergamez-com/home", desc: "The official game hub by Liam Prosser. High-speed logic and entertainment.", favicon: "https://www.google.com/s2/favicons?domain=sites.google.com" },
-            "github": { name: "GitHub", url: "https://github.com/", desc: "Where the world builds software. Millions of developers and projects.", favicon: "https://github.githubassets.com/favicons/favicon.svg" },
-            "chatgpt": { name: "ChatGPT", url: "https://chatgpt.com/", desc: "Interact with an AI that can help with writing, coding, and more.", favicon: "https://chatgpt.com/favicon.ico" },
-            "twitch": { name: "Twitch", url: "https://www.twitch.tv/", desc: "The world's leading video platform and community for gamers.", favicon: "https://static.twitchcdn.net/assets/favicon-32-d6025c14e900565d6177.png" },
-            "discord": { name: "Discord", url: "https://discord.com/", desc: "Talk, chat, hang out, and stay close with your friends and communities.", favicon: "https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico" },
-            "roblox": { name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions of people gather together to imagine and create.", favicon: "https://www.roblox.com/favicon.ico" },
-            "spotify": { name: "Spotify", url: "https://open.spotify.com", desc: "Digital music, podcast, and video service with millions of songs.", favicon: "https://www.scdn.co/nx/ad-experience/favicon.ico" },
-            "reddit": { name: "Reddit", url: "https://www.reddit.com/", desc: "The front page of the internet. Dive into anything.", favicon: "https://www.redditstatic.com/desktop2x/img/favicon/favicon-32x32.png" },
-            "twitter": { name: "X / Twitter", url: "https://x.com", desc: "Breaking News, entertainment, sports and politics from X.", favicon: "https://abs.twimg.com/favicons/twitter.2.ico" },
-            "microsoft": { name: "Microsoft - Cloud, Computers, Apps & Gaming", url: "https://www.microsoft.com", desc: "Explore Microsoft products and services for your home or business.", favicon: "https://www.microsoft.com/favicon.ico" },
-            "instagram": { name: "Instagram", url: "https://www.instagram.com", desc: "A simple, fun & creative way to capture, edit & share photos.", favicon: "https://www.instagram.com/static/images/ico/favicon.ico/36b30482280d.ico" },
-            "pinterest": { name: "Pinterest", url: "https://www.pinterest.com", desc: "Discover recipes, home ideas, style inspiration and other ideas.", favicon: "https://s.pinimg.com/webapp/favicon-54a5b2af.png" },
-            "apple": { name: "Apple", url: "https://www.apple.com", desc: "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, and Mac.", favicon: "https://www.apple.com/favicon.ico" },
-            "anthropic ai": { name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company that builds reliable, interpretable, and steerable AI systems.", favicon: "https://www.anthropic.com/favicon.ico" }
+            "wikipedia": [{ name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" }],
+            "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Enjoy the videos and music you love, upload original content, and share it all.", favicon: "https://www.youtube.com/favicon.ico" }],
+            "playhop": [{ name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" }],
+            "happy wheels": [{ name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" }],
+            "heofon": [{ name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/Heofon-/", desc: "Official hub for Heofon Global Search.", favicon: "favicon.png" }],
+            "noredink": [{ name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" }],
+            "mobymax": [{ name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" }],
+            "khan": [{ name: "Khan Academy", url: "https://www.khanacademy.org/profile/me/classroom/b8942f70-39d2-462b-a506-e94c876f9063", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" }],
+            "bing": [
+                { name: "Search - Microsoft Bing", url: "https://www.bing.com/", desc: "Search with Microsoft Bing and use the power of AI.", favicon: "https://www.bing.com/favicon.ico" },
+                { name: "Bing Search App", url: "https://play.google.com/store/apps/details?id=com.microsoft.bing", desc: "Microsoft Bing delivers fast, curated answers.", favicon: "https://www.google.com/favicon.ico" }
+            ],
+            "liam prosser games": [{ name: "Liam Prosser Gamez", url: "https://sites.google.com/kimberly.k12.wi.us/liamprossergamez-com/home", desc: "The official game hub by Liam Prosser.", favicon: "https://www.google.com/s2/favicons?domain=sites.google.com" }],
+            "roblox": [{ name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions gather to create.", favicon: "https://www.roblox.com/favicon.ico" }],
+            "anthropic ai": [{ name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company building reliable AI.", favicon: "https://www.anthropic.com/favicon.ico" }],
+            "nascar": [{ name: "NASCAR Official Site", url: "https://www.nascar.com/", desc: "Stock car racing news, schedules, and results.", favicon: "https://www.nascar.com/favicon.ico" }],
+            "michigan tornado": [{ name: "National Weather Service", url: "https://www.weather.gov/", desc: "Live tornado warnings and weather alerts for Michigan.", favicon: "https://www.weather.gov/favicon.ico" }]
         };
 
         function showPage(id) {
@@ -197,28 +168,23 @@
         }
 
         function handleHomeSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
-        function triggerQuickSearch(val) { document.getElementById('homeSearch').value = val; performSearch(val); }
+        function handleResultsSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
+        function triggerQuickSearch(val) { performSearch(val); }
 
         function performSearch(queryRaw) {
             const query = queryRaw.toLowerCase().trim();
             if (!query) return;
-
+            document.getElementById('resultsSearch').value = queryRaw;
             const list = document.getElementById('results-list');
-            list.innerHTML = `<h2 style="color:#00d4ff; margin-bottom:30px; font-size: 2rem;">Search Results: ${query}</h2>`;
-
+            list.innerHTML = `<h2 style="color:#00d4ff; margin-bottom:30px; font-size: 1.5rem;">Results for: ${query}</h2>`;
             let found = false;
-            // Loop through DB to find ANY matches (allows multiple results)
             for (let key in searchDB) {
                 if (query.includes(key) || key.includes(query)) {
-                    const item = searchDB[key];
-                    renderResult(item.name, item.url, item.desc, item.favicon);
+                    searchDB[key].forEach(item => renderResult(item.name, item.url, item.desc, item.favicon));
                     found = true;
                 }
             }
-
-            if (!found) {
-                renderResult(`Search Google for "${query}"`, `https://google.com/search?q=${query}`, `View global web results for "${query}" on Google Search.`, "https://www.google.com/favicon.ico");
-            }
+            if (!found) renderResult(`Search Google for "${query}"`, `https://google.com/search?q=${query}`, `Global results for "${query}"`, "https://www.google.com/favicon.ico");
             showPage('results-page');
         }
 
@@ -226,7 +192,7 @@
             document.getElementById('results-list').innerHTML += `
                 <div class="result-item">
                     <div class="result-header">
-                        <img src="${favicon}" class="result-favicon" onerror="this.src='Screenshot 2026-03-06 8.27.50 PM.png'">
+                        <img src="${favicon}" class="result-favicon" onerror="this.src='favicon.png'">
                         <span>${url}</span>
                     </div>
                     <a href="${url}" target="_blank" class="result-title">${title}</a>
@@ -236,9 +202,11 @@
 
         async function getAiResponse(val) {
             const m = val.toLowerCase().trim();
-            if (["hola", "como", "esta"].some(k => m.includes(k))) return "🇪🇸 **Heofonix:** ¡Hola! Detecto idioma español. ¿En qué puedo ayudarte?";
+            if (["hola", "como", "esta"].some(k => m.includes(k))) return "🇪🇸 **Heofonix:** ¡Hola! ¿En qué puedo ayudarte hoy?";
             const mathMatch = m.match(/(\d+)\s*([-+*/])\s*(\d+)/);
-            if(mathMatch) return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`;
+            if(mathMatch) {
+                try { return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`; } catch(e) {}
+            }
             if(m.includes("define")) {
                 const word = m.split(" ").pop().replace(/[?!.]/g, "");
                 try {
@@ -247,7 +215,7 @@
                     if(data[0]) return `📘 **Dictionary:** ${data[0].meanings[0].definitions[0].definition}`;
                 } catch(e) { return "📘 Word not found."; }
             }
-            return "🌌 **Heofonix:** Request received. Processing via the global superintelligence network...";
+            return "🌌 **Heofonix:** Request received. Processing via the network...";
         }
 
         function handleChatPress(e) { if(e.key === 'Enter') { run(e.target.value); e.target.value = ''; } }
