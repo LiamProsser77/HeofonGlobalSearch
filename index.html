@@ -173,7 +173,7 @@
             const query = queryRaw.toLowerCase().trim();
             if (!query) return;
 
-            // Update URL so Chrome can use it
+            // Updates URL address bar
             const newURL = window.location.pathname + "?q=" + encodeURIComponent(queryRaw);
             window.history.pushState({ path: newURL }, '', newURL);
 
@@ -191,13 +191,11 @@
             showPage('results-page');
         }
 
-        // AUTO-SEARCH ON LOAD
+        // Check for URL search query on start
         window.onload = function() {
             const urlParams = new URLSearchParams(window.location.search);
             const query = urlParams.get('q');
-            if (query) {
-                performSearch(query);
-            }
+            if (query) { performSearch(query); }
         };
 
         function renderResult(title, url, desc, favicon) {
@@ -216,9 +214,7 @@
             const m = val.toLowerCase().trim();
             if (["hola", "como", "esta"].some(k => m.includes(k))) return "🇪🇸 **Heofonix:** ¡Hola! ¿En qué puedo ayudarte hoy?";
             const mathMatch = m.match(/(\d+)\s*([-+*/])\s*(\d+)/);
-            if(mathMatch) {
-                try { return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`; } catch(e) {}
-            }
+            if(mathMatch) { try { return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`; } catch(e) {} }
             if(m.includes("define")) {
                 const word = m.split(" ").pop().replace(/[?!.]/g, "");
                 try {
