@@ -135,7 +135,7 @@
         <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 800px;">
             <div class="trend-item" onclick="triggerQuickSearch('anthropic ai')">Anthropic AI</div>
             <div class="trend-item" onclick="triggerQuickSearch('youtube')">YouTube</div>
-            <div class="trend-item" onclick="triggerQuickSearch('michigan tornado')">Michigan Tornado</div>
+            <div class="trend-item" onclick="triggerQuickSearch('amazon')">Amazon</div>
             <div class="trend-item" onclick="triggerQuickSearch('nascar')">NASCAR</div>
             <div class="trend-item" onclick="triggerQuickSearch('bing')">Microsoft Bing</div>
             <div class="trend-item" onclick="triggerQuickSearch('roblox')">Roblox</div>
@@ -201,7 +201,32 @@
             "roblox": [{ name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions gather to create.", favicon: "https://www.roblox.com/favicon.ico" }],
             "anthropic ai": [{ name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company building reliable AI.", favicon: "https://www.anthropic.com/favicon.ico" }],
             "nascar": [{ name: "NASCAR Official Site", url: "https://www.nascar.com/", desc: "Stock car racing news, schedules, and results.", favicon: "https://www.nascar.com/favicon.ico" }],
-            "michigan tornado": [{ name: "National Weather Service", url: "https://www.weather.gov/", desc: "Live tornado warnings and weather alerts for Michigan.", favicon: "https://www.weather.gov/favicon.ico" }]
+            "michigan tornado": [{ name: "National Weather Service", url: "https://www.weather.gov/", desc: "Live tornado warnings and weather alerts for Michigan.", favicon: "https://www.weather.gov/favicon.ico" }],
+            "amazon": [{ name: "Amazon", url: "https://www.amazon.com", desc: "Global leader in e-commerce, cloud computing, and digital streaming.", favicon: "https://www.amazon.com/favicon.ico" }],
+            "microsoft": [{ name: "Microsoft", url: "https://www.microsoft.com", desc: "Software, electronics, and cloud services including Windows and Office.", favicon: "https://www.microsoft.com/favicon.ico" }],
+            "tesla": [{ name: "Tesla", url: "https://www.tesla.com", desc: "Electric vehicles, solar energy, and clean energy solutions.", favicon: "https://www.tesla.com/favicon.ico" }],
+            "disney": [{ name: "Disney", url: "https://www.disney.com", desc: "The world's leading entertainment and media company.", favicon: "https://www.disney.com/favicon.ico" }],
+            "spacex": [{ name: "SpaceX", url: "https://www.spacex.com", desc: "Revolutionizing space technology and interplanetary travel.", favicon: "https://www.spacex.com/favicon.ico" }],
+            "google": [{ name: "Google", url: "https://www.google.com", desc: "The world's most popular search engine.", favicon: "https://www.google.com/favicon.ico" }],
+            "netflix": [{ name: "Netflix", url: "https://www.netflix.com", desc: "Stream your favorite movies and TV shows.", favicon: "https://www.netflix.com/favicon.ico" }],
+            "apple": [{ name: "Apple", url: "https://www.apple.com", desc: "Innovative technology and consumer electronics.", favicon: "https://www.apple.com/favicon.ico" }],
+            "spotify": [{ name: "Spotify", url: "https://www.spotify.com", desc: "Digital music, podcast, and video service.", favicon: "https://www.spotify.com/favicon.ico" }],
+            "reddit": [{ name: "Reddit", url: "https://www.reddit.com", desc: "Dive into anything on the front page of the internet.", favicon: "https://www.reddit.com/favicon.ico" }],
+            "twitch": [{ name: "Twitch", url: "https://www.twitch.tv", desc: "Leading live streaming platform for gamers.", favicon: "https://www.twitch.tv/favicon.ico" }],
+            "steam": [{ name: "Steam", url: "https://store.steampowered.com", desc: "The ultimate destination for playing and discussing games.", favicon: "https://store.steampowered.com/favicon.ico" }],
+            "github": [{ name: "GitHub", url: "https://www.github.com", desc: "The world's leading AI-powered developer platform.", favicon: "https://github.com/favicon.ico" }],
+            "discord": [{ name: "Discord", url: "https://www.discord.com", desc: "The easiest way to talk over voice, video, and text.", favicon: "https://www.discord.com/favicon.ico" }],
+            "nvidia": [{ name: "NVIDIA", url: "https://www.nvidia.com", desc: "Global leader in AI computing and high-end graphics cards.", favicon: "https://www.nvidia.com/favicon.ico" }],
+            "fortnite": [{ name: "Fortnite", url: "https://www.epicgames.com/fortnite", desc: "Battle Royale and creative gameplay from Epic Games.", favicon: "https://www.epicgames.com/favicon.ico" }],
+            "minecraft": [{ name: "Minecraft Official", url: "https://www.minecraft.net", desc: "Build, explore, and survive in a blocky world.", favicon: "https://www.minecraft.net/favicon.ico" }],
+            "coolmath": [{ name: "Coolmath Games", url: "https://www.coolmathgames.com", desc: "Fun logic and strategy games that are educational.", favicon: "https://www.coolmathgames.com/favicon.ico" }],
+            "chess": [{ name: "Chess.com", url: "https://www.chess.com", desc: "Play chess online against friends or the computer.", favicon: "https://www.chess.com/favicon.ico" }],
+            "duolingo": [{ name: "Duolingo", url: "https://www.duolingo.com", desc: "The world's most popular way to learn a language.", favicon: "https://www.duolingo.com/favicon.ico" }],
+            "weather": [{ name: "AccuWeather", url: "https://www.accuweather.com", desc: "Accurate local and international weather forecasts.", favicon: "https://www.accuweather.com/favicon.ico" }],
+            "cnn": [{ name: "CNN", url: "https://www.cnn.com", desc: "Breaking news and top stories from around the globe.", favicon: "https://www.cnn.com/favicon.ico" }],
+            "espn": [{ name: "ESPN", url: "https://www.espn.com", desc: "Comprehensive sports news, scores, and live coverage.", favicon: "https://www.espn.com/favicon.ico" }],
+            "adobe": [{ name: "Adobe", url: "https://www.adobe.com", desc: "Creative cloud software for design, video, and photography.", favicon: "https://www.adobe.com/favicon.ico" }],
+            "unblocked games": [{ name: "Unblocked Games 66", url: "https://sites.google.com/site/unblockedgames66ez/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }]
         };
 
         const heopadArea = document.getElementById('heopadArea');
@@ -243,6 +268,7 @@
 
         // CUSTOM DESCRIPTIONS FOR AI INSIGHT
         const insightDB = {
+            "heofon": "Heofon is an advanced Search Engine, find all your wants and needs.",
             "appleton": "Appleton Packing & Gasket is an industrial leader specializing in high-performance sealing solutions and custom gasket fabrication for global infrastructure.",
             "wwe": "WWE is the global leader in sports entertainment, featuring high-octane professional wrestling, world-class athletes, and massive live broadcast events.",
             "youtube": "YouTube is the premier global video sharing platform, hosting billions of hours of educational, entertainment, and creative content for all users.",
@@ -250,7 +276,32 @@
             "roblox": "Roblox is a massive multiplayer online platform that allows users to design their own games and play millions of experiences created by other developers.",
             "anthropic ai": "Anthropic is a safety-focused AI research company, known for developing Claude and pushing the boundaries of reliable, helpful artificial intelligence.",
             "nascar": "NASCAR is the ultimate stock car racing organization, hosting iconic high-speed events and competitive championships across North America.",
-            "michigan tornado": "Current weather tracking for Michigan focuses on severe storm alerts and tornado warning systems to ensure public safety during extreme events."
+            "michigan tornado": "Current weather tracking for Michigan focuses on severe storm alerts and tornado warning systems to ensure public safety during extreme events.",
+            "amazon": "Amazon has revolutionized global commerce and logistics, providing an massive infrastructure for delivery, AWS cloud intelligence, and digital media.",
+            "microsoft": "Microsoft is a foundation of modern computing, leading in enterprise software, artificial intelligence integration via Copilot, and gaming via Xbox.",
+            "tesla": "Tesla leads the transition to sustainable energy through high-performance electric vehicles and large-scale battery storage solutions.",
+            "disney": "Disney represents the pinnacle of storytelling and brand management, encompassing theme parks, movie studios, and a vast streaming ecosystem.",
+            "spacex": "SpaceX is pushing the boundaries of human exploration with reusable rocket technology and the Starlink satellite network for global connectivity.",
+            "google": "Google is the dominant global search provider and innovator in cloud technology and mobile software.",
+            "netflix": "Netflix transformed media consumption by pioneering subscription-based streaming and original cinematic content.",
+            "apple": "Apple is a global leader in high-end consumer hardware, known for the iPhone, Mac, and its integrated software ecosystem.",
+            "spotify": "Spotify changed the music industry by providing instant legal access to millions of tracks through data-driven streaming.",
+            "reddit": "Reddit is a massive network of communities where users share news, engage in discussions, and upvote quality content.",
+            "twitch": "Twitch is the primary destination for live streaming culture, ranging from professional gaming to creative 'Just Chatting' streams.",
+            "steam": "Steam is the leading digital distribution platform for PC gaming, managed by Valve Corporation.",
+            "github": "GitHub is the essential repository platform for global software development and open-source collaboration.",
+            "discord": "Discord is a versatile communication hub that supports high-quality voice and text channels for communities and friends.",
+            "nvidia": "NVIDIA is the hardware backbone of the AI revolution, providing the GPU power necessary for modern computing.",
+            "fortnite": "Fortnite is a cultural phenomenon in gaming, blending survival mechanics with creative building and major pop-culture crossovers.",
+            "minecraft": "Minecraft is one of the best-selling games of all time, fostering creativity and logic through its open-world sandbox design.",
+            "coolmath": "Coolmath Games is a staple for educational entertainment, providing logic-based puzzles that are widely accessible.",
+            "chess": "Chess.com is the world's largest online chess club, helping modernize the ancient game for a digital audience.",
+            "duolingo": "Duolingo uses gamification to make language learning accessible and engaging for over 500 million users worldwide.",
+            "weather": "Modern weather tracking uses satellite data and superintelligence to provide localized forecasts and emergency alerts.",
+            "cnn": "CNN is a major global news network providing 24-hour coverage of international events and politics.",
+            "espn": "ESPN is the worldwide leader in sports broadcasting and digital sports media.",
+            "adobe": "Adobe sets the industry standard for creative software with its powerful suite of design and document tools.",
+            "unblocked games": "Unblocked game portals are designed to bypass network restrictions to provide access to browser-based entertainment."
         };
 
         async function performSearch(queryRaw) {
@@ -300,7 +351,7 @@
         };
 
         function renderResult(title, url, desc, favicon) {
-            document.getElementById('results-list').innerHTML += `<br>
+            document.getElementById('results-list').innerHTML += `
                 <div class="result-item">
                     <div class="result-header">
                         <img src="${favicon}" class="result-favicon" onerror="this.src='favicon.png'">
