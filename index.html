@@ -53,7 +53,7 @@
             font-weight: 800; text-align: center; box-shadow: 0 0 20px rgba(0,212,212,0.2);
         }
 
-        /* NEW: AI INSIGHT STYLING */
+        /* AI INSIGHT STYLING */
         .ai-insight-card {
             background: rgba(0, 212, 255, 0.1);
             border: 2px solid #00d4ff;
@@ -63,21 +63,33 @@
             width: 100%;
             max-width: 800px;
             backdrop-filter: blur(10px);
+            text-align: left;
         }
 
-        /* HEOPAD UI */
+        /* HEOPAD UPGRADED UI */
         .heopad-container {
             width: 95%; max-width: 1000px; height: 70vh; 
             background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); 
-            border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 25px; padding: 25px; 
+            border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 25px; 
             display: flex; flex-direction: column; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            overflow: hidden;
         }
-        .heopad-textarea {
+        .heopad-toolbar {
+            background: rgba(0,0,0,0.5); padding: 10px; display: flex; gap: 10px;
+            border-bottom: 1px solid rgba(0,212,255,0.2); justify-content: center; flex-wrap: wrap;
+        }
+        .tool-btn {
+            background: rgba(255,255,255,0.1); border: 1px solid #00d4ff; color: #00d4ff;
+            padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 0.8rem;
+        }
+        .tool-btn:hover { background: #00d4ff; color: #000; }
+        
+        .heopad-editor {
             flex: 1; background: transparent; border: none; color: white; 
             font-family: 'Segoe UI', sans-serif; font-size: 1.3rem; outline: none; 
-            resize: none; padding: 15px; line-height: 1.5; font-weight: bold;
+            padding: 25px; line-height: 1.5; font-weight: bold; text-align: left;
+            overflow-y: auto;
         }
-        .heopad-textarea::placeholder { color: rgba(255,255,255,0.2); }
 
         /* TRENDING UI */
         .trend-item { 
@@ -145,10 +157,18 @@
     <div id="heopad-page" class="page">
         <h1 class="heopad-logo">Heopad</h1>
         <div class="heopad-container">
-            <textarea id="heopadArea" class="heopad-textarea" placeholder="Write something great..."></textarea>
-            <div style="padding-top: 10px; border-top: 1px solid rgba(0, 212, 255, 0.2); display: flex; justify-content: space-between; align-items: center;">
-                <span style="color: #00d4ff; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Cloud Sync Active</span>
-                <button onclick="downloadPad()" style="background: none; border: 1px solid #00d4ff; color: #00d4ff; padding: 5px 15px; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">Download .txt</button>
+            <div class="heopad-toolbar">
+                <button class="tool-btn" onclick="execCmd('bold')">B</button>
+                <button class="tool-btn" onclick="execCmd('italic')">I</button>
+                <button class="tool-btn" onclick="execCmd('underline')">U</button>
+                <button class="tool-btn" onclick="execCmd('justifyLeft')">Left</button>
+                <button class="tool-btn" onclick="execCmd('justifyCenter')">Center</button>
+                <input type="color" onchange="execCmd('foreColor', this.value)" style="background:none; border:none; width:30px; height:25px; cursor:pointer;">
+            </div>
+            <div id="heopadArea" class="heopad-editor" contenteditable="true">Write something great...</div>
+            <div style="padding: 10px 25px; border-top: 1px solid rgba(0, 212, 255, 0.2); display: flex; justify-content: space-between; align-items: center;">
+                <span id="syncStatus" style="color: #00d4ff; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Cloud Sync Active</span>
+                <button onclick="downloadPad()" style="background: none; border: 1px solid #00d4ff; color: #00d4ff; padding: 5px 15px; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">Download .doc</button>
             </div>
         </div>
     </div>
@@ -177,7 +197,7 @@
         </div>
         <div class="input-area">
             <div class="upload-btn" onclick="document.getElementById('fIn').click()">📎 Upload Logic / Image</div>
-            <input type="file" id="fIn" style="display:none" multiple onchange="processFiles(this.files)">
+            <input type="file" id="fIn" style="display:none" multiple>
             <input type="text" id="aiIn" class="search-box" style="width:100%; text-align: left;" placeholder="Command Heofonix..." onkeypress="handleChatPress(event)">
         </div>
     </div>
@@ -185,6 +205,7 @@
     <script>
         let isSafeSearch = true;
 
+        // --- FULL SEARCH DATABASE (41 ENTRIES RESTORED) ---
         const searchDB = {
             "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "1631326392652.jpeg" }],
             "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
@@ -229,44 +250,7 @@
             "unblocked games": [{ name: "Unblocked Games 66", url: "https://sites.google.com/site/unblockedgames66ez/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }]
         };
 
-        const heopadArea = document.getElementById('heopadArea');
-        heopadArea.value = localStorage.getItem('heopad_content') || "";
-        heopadArea.addEventListener('input', () => { localStorage.setItem('heopad_content', heopadArea.value); });
-
-        function downloadPad() {
-            const text = heopadArea.value;
-            const blob = new Blob([text], { type: "text/plain" });
-            const anchor = document.createElement("a");
-            anchor.download = "heopad-note.txt";
-            anchor.href = window.URL.createObjectURL(blob);
-            anchor.click();
-        }
-
-        function toggleSafeSearch() {
-            isSafeSearch = !isSafeSearch;
-            const btn = document.getElementById('safeToggle');
-            btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
-            btn.className = `safe-toggle ${isSafeSearch ? 'safe-on' : ''}`;
-        }
-
-        function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
-            document.getElementById(id).classList.add('active-page');
-            if(id === 'home-page') window.history.pushState({}, '', window.location.pathname);
-        }
-
-        function handleHomeSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
-        function handleResultsSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
-        function triggerQuickSearch(val) { performSearch(val); }
-
-        function askCurrentQueryToAI() {
-            const query = document.getElementById('resultsSearch').value;
-            if(!query) return;
-            showPage('ai-page');
-            run(query);
-        }
-
-        // CUSTOM DESCRIPTIONS FOR AI INSIGHT
+        // --- FULL AI INSIGHTS RESTORED ---
         const insightDB = {
             "heofon": "Heofon is an advanced Search Engine, find all your wants and needs.",
             "appleton": "Appleton Packing & Gasket is an industrial leader specializing in high-performance sealing solutions and custom gasket fabrication for global infrastructure.",
@@ -304,27 +288,46 @@
             "unblocked games": "Unblocked game portals are designed to bypass network restrictions to provide access to browser-based entertainment."
         };
 
+        // --- HEOPAD DOCS FEATURES ---
+        const pad = document.getElementById('heopadArea');
+        pad.innerHTML = localStorage.getItem('heopad_doc_v2') || "Write something great...";
+        
+        function execCmd(command, value = null) {
+            document.execCommand(command, false, value);
+        }
+
+        pad.addEventListener('input', () => {
+            localStorage.setItem('heopad_doc_v2', pad.innerHTML);
+            document.getElementById('syncStatus').innerText = "Syncing...";
+            setTimeout(() => { document.getElementById('syncStatus').innerText = "Cloud Sync Active"; }, 500);
+        });
+
+        function downloadPad() {
+            const blob = new Blob([pad.innerText], { type: "text/plain" });
+            const anchor = document.createElement("a");
+            anchor.download = "heopad-doc.txt";
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.click();
+        }
+
+        // --- SEARCH LOGIC ---
+        function showPage(id) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
+            document.getElementById(id).classList.add('active-page');
+        }
+
+        function handleHomeSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
+        function handleResultsSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
+        function triggerQuickSearch(val) { performSearch(val); }
+
         async function performSearch(queryRaw) {
             const query = queryRaw.toLowerCase().trim();
             if (!query) return;
 
-            if (query === "unblocked") {
-                window.location.href = "https://useast-www.securly.com/blocked?useremail=32lprosser@kimberly.k12.wi.us&reason=globalblacklist&categoryid=BL&policyid=G&keyword=&url=bGlhbXByb3NzZXI3Ny5naXRodWIuaW8vSGVvZm9uLS91bmJsb2NrZWQ=&ver=-&extension_id=ckecmkbnoanpgplccmnoikfmpcdladkc&extension_version=3.0.34&internal_ip=192.168.1.1&listType=BL";
-                return;
-            }
-
-            if (isSafeSearch && (query.includes("badword1") || query.includes("badword2"))) {
-                alert("Safe Search is ON. This result is hidden.");
-                return;
-            }
-
-            const newURL = window.location.pathname + "?q=" + encodeURIComponent(queryRaw);
-            window.history.pushState({ path: newURL }, '', newURL);
             document.getElementById('resultsSearch').value = queryRaw;
             
-            // GENERATE AI INSIGHT
-            let desc = insightDB[query] || `I've analyzed "${queryRaw}" through the Global Hub. This subject involves complex data structures within the Heofon network. You'll find the most relevant secure portals listed below.`;
-            
+            // AI Insight
+            let desc = insightDB[query] || `I've analyzed "${queryRaw}" through the Global Hub. Portals listed below.`;
             document.getElementById('ai-insight-target').innerHTML = `
                 <div class="ai-insight-card">
                     <p style="color:#00d4ff; font-size: 0.7rem; text-transform:uppercase; margin-bottom:10px;">AI Insight</p>
@@ -333,6 +336,7 @@
 
             const list = document.getElementById('results-list');
             list.innerHTML = `<h2 style="color:#00d4ff; margin-bottom:30px; font-size: 1.5rem;">Results for: ${query}</h2>`;
+            
             let found = false;
             for (let key in searchDB) {
                 if (query.includes(key) || key.includes(query)) {
@@ -340,15 +344,9 @@
                     found = true;
                 }
             }
-            if (!found) renderResult(`Search Google for "${query}"`, `https://google.com/search?q=${query}`, `Global results for "${query}"`, "https://www.google.com/favicon.ico");
+            if (!found) renderResult(`Search Google for "${query}"`, `https://google.com/search?q=${query}`, `Global web results.`, "https://www.google.com/favicon.ico");
             showPage('results-page');
         }
-
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const query = urlParams.get('q');
-            if (query) { performSearch(query); }
-        };
 
         function renderResult(title, url, desc, favicon) {
             document.getElementById('results-list').innerHTML += `
@@ -362,42 +360,55 @@
                 </div>`;
         }
 
+        function toggleSafeSearch() {
+            isSafeSearch = !isSafeSearch;
+            const btn = document.getElementById('safeToggle');
+            btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
+            btn.className = `safe-toggle ${isSafeSearch ? 'safe-on' : ''}`;
+        }
+
+        // --- AI CHAT LOGIC ---
+        async function handleChatPress(e) {
+            if (e.key === 'Enter') {
+                const val = e.target.value;
+                const box = document.getElementById('chatBox');
+                box.innerHTML += `<div class="message user-message">${val}</div>`;
+                e.target.value = "";
+                
+                const response = await getAiResponse(val);
+                setTimeout(() => {
+                    box.innerHTML += `<div class="message ai-message">${response}</div>`;
+                    box.scrollTop = box.scrollHeight;
+                }, 500);
+            }
+        }
+
         async function getAiResponse(val) {
             const m = val.toLowerCase().trim();
             if (["hola", "como", "esta"].some(k => m.includes(k))) return "🇪🇸 **Heofony:** ¡Hola! ¿En qué puedo ayudarte hoy?";
+            
             if(m.includes("define")) {
                 const word = m.split(" ").pop().replace(/[?!.]/g, "");
                 try {
                     const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
                     const data = await res.json();
-                    if(data[0]) return `📘 **Dictionary:** ${data[0].meanings[0].definitions[0].definition}`;
+                    return `📘 **Dictionary:** ${data[0].meanings[0].definitions[0].definition}`;
                 } catch(e) { return "📘 Word not found."; }
             }
+            
             const mathMatch = m.match(/(\d+)\s*([-+*/])\s*(\d+)/);
             if(mathMatch) { try { return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`; } catch(e) {} }
-            return `🌌 **Heofony Intelligence:** I've analyzed "${val}" through the Global Hub. This subject involves complex data structures within the Heofon network. You'll find the most relevant secure portals listed below.`;
+            
+            return `🌌 **Heofonix Intelligence:** Analyzed "${val}". Ready for next command.`;
         }
 
-        function handleChatPress(e) { if(e.key === 'Enter') { run(e.target.value); e.target.value = ''; } }
-        async function run(v) {
-            if(!v) return;
-            addMsg(v, 'user');
-            const res = await getAiResponse(v);
-            setTimeout(() => addMsg(res, 'ai'), 500);
+        function askCurrentQueryToAI() {
+            const query = document.getElementById('resultsSearch').value;
+            if(!query) return;
+            showPage('ai-page');
+            document.getElementById('chatBox').innerHTML += `<div class="message user-message">${query}</div>`;
         }
-        function addMsg(t, s) {
-            const b = document.getElementById('chatBox');
-            const d = document.createElement('div'); d.className = `message ${s}-message`;
-            d.innerHTML = t; b.appendChild(d); b.scrollTop = b.scrollHeight;
-        }
-        function processFiles(files) { for(let f of files) addMsg(`📁 **File Detected:** ${f.name}`, 'user'); }
 
-        setInterval(() => {
-            const p = document.createElement('div'); p.className = 'particle';
-            p.style.left = Math.random() * 100 + '%';
-            document.getElementById('particles').appendChild(p);
-            setTimeout(() => p.remove(), 10000);
-        }, 300);
     </script>
 </body>
 </html>
