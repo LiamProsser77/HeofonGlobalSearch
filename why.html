@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Use Heofon? | Decentralized Intelligence</title>
+    
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <style>
-        /* GLOBAL FONT AND RESET (from Heofon HTML) */
+        /* GLOBAL FONT AND RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-weight: bold; /* Global bold from Heofon */
+            font-weight: bold;
         }
 
         html, body {
-            height: 100%; /* Changed from 100vh to fit content better */
-            width: 100%; /* Changed from 100vw */
-            overflow-x: hidden; /* Prevent horizontal scroll from stars */
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; /* From Heofon */
-            background: #050505; /* From Heofon */
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            background: #050505;
             color: #ffffff;
         }
 
-        /* --- MOVING STARS BACKGROUND (from Heofon HTML) --- */
+        /* --- MOVING STARS BACKGROUND --- */
         .stars-container {
-            position: fixed; top: 0; left: 0; width: 200%; height: 200%; z-index: -2; /* Placed behind content */
+            position: fixed; top: 0; left: 0; width: 200%; height: 200%; z-index: -2;
             background:
                 radial-gradient(1px 1px at 25px 35px, #fff, transparent),
                 radial-gradient(2px 2px at 50px 100px, #eee, transparent),
@@ -35,20 +38,20 @@
         }
         @keyframes spaceScroll { from { transform: translate(0, 0); } to { transform: translate(-50%, -50%); } }
 
-        /* --- PARTICLES (from Heofon HTML) --- */
-        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; } /* Placed behind content */
+        /* --- PARTICLES --- */
+        .particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
         .particle { position: absolute; width: 3px; height: 3px; background: #00d4ff; border-radius: 50%; box-shadow: 0 0 10px #00d4ff; animation: floatUp 10s infinite linear; }
         @keyframes floatUp { 0% { transform: translateY(110vh); opacity: 0; } 100% { transform: translateY(-10vh); opacity: 0; } }
 
         /* --- MAIN CONTENT CONTAINER --- */
         .container {
-            position: relative; /* To be above stars/particles */
+            position: relative;
             z-index: 10;
             max-width: 800px;
             padding: 40px 20px;
-            margin: 0 auto; /* Center the container */
-            backdrop-filter: blur(10px); /* Subtle blur for main content area */
-            background: rgba(0,0,0,0.4); /* Slightly darker background */
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.4);
             border-radius: 20px;
             margin-top: 40px;
             margin-bottom: 40px;
@@ -61,22 +64,21 @@
             margin-bottom: 60px;
         }
 
-        /* --- GRADIENT HEADING (adapted from Heofon logo style) --- */
         h1 {
-            font-size: 3.5rem; /* Slightly larger */
-            font-weight: 900; /* From Heofon */
+            font-size: 3.5rem;
+            font-weight: 900;
             margin-bottom: 10px;
-            letter-spacing: -2px; /* From Heofon */
+            letter-spacing: -2px;
             background: linear-gradient(to right, #2ab9ff 0%, #4f86ff 40%, #a158ff 70%, #d449ff 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            display: inline-block; /* Essential for background-clip to work */
+            display: inline-block;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #00d4ff; /* Heofon blue */
-            font-weight: bold; /* Global setting */
+            color: #00d4ff;
+            font-weight: bold;
         }
 
         .hero-text {
@@ -85,7 +87,7 @@
             margin-bottom: 50px;
             color: #b0b0b0;
             line-height: 1.8;
-            padding: 0 15px; /* Add some padding for better readability */
+            padding: 0 15px;
         }
 
         .grid {
@@ -95,57 +97,58 @@
             margin-bottom: 20px;
         }
 
-        /* --- CARD STYLING (adapted from Heofon's AI insight card) --- */
         .card {
-            background: rgba(0, 212, 255, 0.1); /* Heofon AI Insight card background */
-            border: 2px solid #00d4ff; /* Heofon border */
-            border-radius: 20px; /* From Heofon */
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid #00d4ff;
+            border-radius: 20px;
             padding: 30px;
             transition: transform 0.2s ease, border-color 0.2s ease;
-            backdrop-filter: blur(8px); /* Glassmorphism */
+            backdrop-filter: blur(8px);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            border-color: #ff00ff; /* A purple accent on hover */
+            border-color: #ff00ff;
         }
 
         h2 {
             color: #ffffff;
-            font-size: 1.6rem; /* Slightly larger */
+            font-size: 1.6rem;
             margin-top: 0;
             margin-bottom: 15px;
-            background: linear-gradient(45deg, #00d4ff, #ff00ff); /* Heofon mini-logo gradient */
+            background: linear-gradient(45deg, #00d4ff, #ff00ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             display: inline-block;
         }
 
         h3 {
-            color: #00d4ff; /* Heofon blue */
+            color: #00d4ff;
             margin-top: 40px;
             margin-bottom: 20px;
             font-size: 1.8rem;
             text-align: center;
         }
 
-        /* --- STATS LIST (adapted with Heofon's clean, bordered style) --- */
+        /* --- CENTERED STATS LIST --- */
         .stats-list {
             list-style: none;
             padding: 0;
-            background: rgba(0,0,0,0.5); /* Darker background from Heopad toolbar */
-            border-radius: 15px; /* Slightly more rounded */
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
             padding: 25px;
             margin-bottom: 40px;
             border: 1px solid rgba(0, 212, 255, 0.2);
             backdrop-filter: blur(8px);
+            text-align: center; /* Centers the content */
         }
 
         .stats-list li {
             padding: 12px 0;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.15); /* Softer border */
+            border-bottom: 1px solid rgba(0, 212, 255, 0.15);
             display: flex;
-            justify-content: space-between;
+            justify-content: center; /* Changed from space-between to center */
+            gap: 15px; /* Adds space between the label and the value */
             align-items: center;
             font-size: 1.1rem;
         }
@@ -155,16 +158,15 @@
         }
 
         .highlight {
-            color: #00ff88; /* A vibrant green for highlights, from Heofon's safe search */
-            font-weight: 900; /* Extra bold */
+            color: #00ff88;
+            font-weight: 900;
             letter-spacing: 0.5px;
         }
 
-        /* --- Your Custom Button Styles --- */
-        .cta-button-wrapper { /* New wrapper for button specific styles */
+        .cta-button-wrapper {
             text-align: center;
             padding: 20px;
-            margin-top: 30px; /* Added some space */
+            margin-top: 30px;
         }
 
         .cta-button {
@@ -180,7 +182,7 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* Explicitly set for button */
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         .cta-button:hover {
@@ -189,15 +191,11 @@
             filter: brightness(1.1);
         }
 
-        .cta-button:active {
-            transform: translateY(1px);
-        }
-
         footer {
             text-align: center;
             margin-top: 60px;
             padding-top: 20px;
-            border-top: 1px solid rgba(0, 212, 255, 0.15); /* Softer border */
+            border-top: 1px solid rgba(0, 212, 255, 0.15);
             font-style: italic;
             color: #888;
             font-size: 0.95rem;
@@ -263,25 +261,22 @@
 </div>
 
 <script>
-    // Particle generation script (from Heofon HTML)
     const particlesContainer = document.getElementById('particles');
     function createParticle() {
         const particle = document.createElement('div');
         particle.className = 'particle';
         particle.style.left = `${Math.random() * 100}vw`;
-        particle.style.animationDuration = `${Math.random() * 8 + 5}s`; // 5 to 13 seconds
-        particle.style.animationDelay = `${Math.random() * 10}s`; // Stagger start
+        particle.style.animationDuration = `${Math.random() * 8 + 5}s`;
+        particle.style.animationDelay = `${Math.random() * 10}s`;
         particlesContainer.appendChild(particle);
 
-        // Remove particle after animation to prevent DOM bloat
         particle.addEventListener('animationend', () => {
             particle.remove();
-            createParticle(); // Recreate new particle
+            createParticle();
         });
     }
 
-    // Generate initial particles
-    for (let i = 0; i < 50; i++) { // Adjusted number for this page
+    for (let i = 0; i < 50; i++) {
         createParticle();
     }
 </script>
