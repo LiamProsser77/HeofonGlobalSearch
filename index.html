@@ -127,12 +127,13 @@
         .safe-toggle { padding: 10px 15px; border-radius: 20px; border: 1px solid #555; background: rgba(255,255,255,0.1); color: #fff; font-size: 0.8rem; cursor: pointer; font-weight: bold; }
         .safe-on { border-color: #00ff88; color: #00ff88; }
 
-        .result-item { margin-bottom: 35px; width: 100%; animation: fadeIn 0.5s ease; }
+        .result-item { margin-bottom: 35px; width: 100%; animation: fadeIn 0.5s ease; cursor: pointer; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .result-header { display: flex; align-items: center; gap: 12px; margin-bottom: 5px; color: #bdc1c6; font-size: 0.9rem; }
         .result-favicon { width: 24px; height: 24px; border-radius: 4px; object-fit: contain; background: white; padding: 2px; }
-        .result-title { color: #8ab4f8; font-size: 1.5rem; text-decoration: none; font-weight: bold; display: block; margin-bottom: 4px; }
-        .result-snippet { color: #bdc1c6; font-size: 1rem; line-height: 1.5; }
+        .result-title { color: #8ab4f8; font-size: 1.5rem; text-decoration: none; font-weight: bold; display: block; margin-bottom: 4px; cursor: pointer; transition: 0.2s; }
+        .result-title:hover { color: #00d4ff; text-decoration: underline; }
+        .result-snippet { color: #bdc1c6; font-size: 1rem; line-height: 1.5; cursor: pointer; }
 
         /* CHAT UI */
         .chat-container { display: none; background: transparent; }
@@ -389,14 +390,18 @@
 
         function renderResult(title, url, desc, favicon) {
             document.getElementById('results-list').innerHTML += `
-                <div class="result-item">
+                <div class="result-item" onclick="navigateToURL('${url.replace(/'/g, "\\'")}')">
                     <div class="result-header">
                         <img src="${favicon}" class="result-favicon" onerror="this.src='favicon.png'">
                         <span>${url}</span>
                     </div>
-                    <a href="${url}" target="_blank" class="result-title">${title}</a>
+                    <div class="result-title">${title}</div>
                     <div class="result-snippet">${desc}</div>
                 </div>`;
+        }
+
+        function navigateToURL(url) {
+            window.location.href = url;
         }
 
         function toggleSafeSearch() {
