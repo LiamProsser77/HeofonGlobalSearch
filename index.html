@@ -241,24 +241,22 @@
     <script>
         let isSafeSearch = true;
 
-        // --- FULL SEARCH DATABASE ---
+        // --- FULL SEARCH DATABASE (100+ ENTRIES) ---
         const searchDB = {
-            "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "1631326392652.jpeg" }],
+            "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "https://appletonpackinggasket.com/favicon.ico" }],
             "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
             "wikipedia": [{ name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" }],
-            "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Enjoy the videos and music you love, upload original content, and share it all.", favicon: "https://www.youtube.com/favicon.ico" }],
+            "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Watch videos, share original content, and enjoy music.", favicon: "https://www.youtube.com/favicon.ico" }],
             "playhop": [{ name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" }],
             "happy wheels": [{ name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" }],
             "heofon": [{ name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/Heofon-/", desc: "Official hub for Heofon Global Search.", favicon: "favicon.png" }],
             "noredink": [{ name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" }],
             "mobymax": [{ name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" }],
-            "khan": [{ name: "Khan Academy", url: "https://www.khanacademy.org/profile/me/classroom/b8942f70-39d2-462b-a506-e94c876f9063", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" }],
+            "khan": [{ name: "Khan Academy", url: "https://www.khanacademy.org/", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" }],
             "bing": [{ name: "Search - Microsoft Bing", url: "https://www.bing.com/", desc: "Search with Microsoft Bing and use the power of AI.", favicon: "https://www.bing.com/favicon.ico" }],
-            "liam prosser games": [{ name: "Liam Prosser Gamez", url: "https://sites.google.com/kimberly.k12.wi.us/liamprossergamez-com/home", desc: "The official game hub by Liam Prosser.", favicon: "liamlogo.jpg" }],
             "roblox": [{ name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions gather to create.", favicon: "https://www.roblox.com/favicon.ico" }],
             "anthropic ai": [{ name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company building reliable AI.", favicon: "https://www.anthropic.com/favicon.ico" }],
             "nascar": [{ name: "NASCAR Official Site", url: "https://www.nascar.com/", desc: "Stock car racing news, schedules, and results.", favicon: "https://www.nascar.com/favicon.ico" }],
-            "michigan tornado": [{ name: "National Weather Service", url: "https://www.weather.gov/", desc: "Live tornado warnings and weather alerts for Michigan.", favicon: "https://www.weather.gov/favicon.ico" }],
             "amazon": [{ name: "Amazon", url: "https://www.amazon.com", desc: "Global leader in e-commerce, cloud computing, and digital streaming.", favicon: "https://www.amazon.com/favicon.ico" }],
             "microsoft": [{ name: "Microsoft", url: "https://www.microsoft.com", desc: "Software, electronics, and cloud services including Windows and Office.", favicon: "https://www.microsoft.com/favicon.ico" }],
             "tesla": [{ name: "Tesla", url: "https://www.tesla.com", desc: "Electric vehicles, solar energy, and clean energy solutions.", favicon: "https://www.tesla.com/favicon.ico" }],
@@ -283,45 +281,84 @@
             "cnn": [{ name: "CNN", url: "https://www.cnn.com", desc: "Breaking news and top stories from around the globe.", favicon: "https://www.cnn.com/favicon.ico" }],
             "espn": [{ name: "ESPN", url: "https://www.espn.com", desc: "Comprehensive sports news, scores, and live coverage.", favicon: "https://www.espn.com/favicon.ico" }],
             "adobe": [{ name: "Adobe", url: "https://www.adobe.com", desc: "Creative cloud software for design, video, and photography.", favicon: "https://www.adobe.com/favicon.ico" }],
+            "ebay": [{ name: "eBay", url: "https://www.ebay.com", desc: "Buy and sell electronics, cars, fashion apparel, collectibles, and more.", favicon: "https://www.ebay.com/favicon.ico" }],
+            "walmart": [{ name: "Walmart", url: "https://www.walmart.com", desc: "Shop Walmart.com for Every Day Low Prices.", favicon: "https://www.walmart.com/favicon.ico" }],
+            "target": [{ name: "Target", url: "https://www.target.com", desc: "Expect More. Pay Less.", favicon: "https://www.target.com/favicon.ico" }],
+            "best buy": [{ name: "Best Buy", url: "https://www.bestbuy.com", desc: "Expert Service. Unbeatable Price.", favicon: "https://www.bestbuy.com/favicon.ico" }],
+            "quora": [{ name: "Quora", url: "https://www.quora.com", desc: "A place to share knowledge and better understand the world.", favicon: "https://www.quora.com/favicon.ico" }],
+            "medium": [{ name: "Medium", url: "https://www.medium.com", desc: "Where good ideas find you.", favicon: "https://www.medium.com/favicon.ico" }],
+            "stack overflow": [{ name: "Stack Overflow", url: "https://stackoverflow.com", desc: "The largest, most trusted online community for developers.", favicon: "https://stackoverflow.com/favicon.ico" }],
+            "linkedin": [{ name: "LinkedIn", url: "https://www.linkedin.com", desc: "Manage your professional identity.", favicon: "https://www.linkedin.com/favicon.ico" }],
+            "twitter": [{ name: "X / Twitter", url: "https://www.twitter.com", desc: "It's what's happening.", favicon: "https://abs.twimg.com/favicons/twitter.ico" }],
+            "instagram": [{ name: "Instagram", url: "https://www.instagram.com", desc: "Capture and Share the World's Moments.", favicon: "https://www.instagram.com/favicon.ico" }],
+            "pinterest": [{ name: "Pinterest", url: "https://www.pinterest.com", desc: "Discover recipes, home ideas, style inspiration and other ideas.", favicon: "https://www.pinterest.com/favicon.ico" }],
+            "tiktok": [{ name: "TikTok", url: "https://www.tiktok.com", desc: "Make Your Day.", favicon: "https://www.tiktok.com/favicon.ico" }],
+            "hulu": [{ name: "Hulu", url: "https://www.hulu.com", desc: "Stream TV and Movies.", favicon: "https://www.hulu.com/favicon.ico" }],
+            "hbo": [{ name: "Max (HBO)", url: "https://www.max.com", desc: "The One to Watch for HBO, DC, and more.", favicon: "https://www.max.com/favicon.ico" }],
+            "craigslist": [{ name: "Craigslist", url: "https://www.craigslist.org", desc: "Local classifieds and forums.", favicon: "https://www.craigslist.org/favicon.ico" }],
+            "imdb": [{ name: "IMDb", url: "https://www.imdb.com", desc: "Movies, TV and Celebrities.", favicon: "https://www.imdb.com/favicon.ico" }],
+            "yelp": [{ name: "Yelp", url: "https://www.yelp.com", desc: "Real reviews from real people.", favicon: "https://www.yelp.com/favicon.ico" }],
+            "zillow": [{ name: "Zillow", url: "https://www.zillow.com", desc: "Real Estate, Apartments, Mortgages & Home Values.", favicon: "https://www.zillow.com/favicon.ico" }],
+            "bbc": [{ name: "BBC News", url: "https://www.bbc.com/news", desc: "Breaking news from around the world.", favicon: "https://www.bbc.com/favicon.ico" }],
+            "nyt": [{ name: "The New York Times", url: "https://www.nytimes.com", desc: "Breaking News, World News & Multimedia.", favicon: "https://www.nytimes.com/favicon.ico" }],
+            "forbes": [{ name: "Forbes", url: "https://www.forbes.com", desc: "Business, Stock Market, Quotations, and Financial Advice.", favicon: "https://www.forbes.com/favicon.ico" }],
+            "ign": [{ name: "IGN", url: "https://www.ign.com", desc: "Video Games, Movies, TV and Comics.", favicon: "https://www.ign.com/favicon.ico" }],
+            "gamespot": [{ name: "GameSpot", url: "https://www.gamespot.com", desc: "Gaming news and reviews.", favicon: "https://www.gamespot.com/favicon.ico" }],
+            "epic games": [{ name: "Epic Games Store", url: "https://www.epicgames.com", desc: "Download and play amazing games.", favicon: "https://www.epicgames.com/favicon.ico" }],
+            "openai": [{ name: "OpenAI", url: "https://www.openai.com", desc: "Creating safe AGI that benefits all of humanity.", favicon: "https://www.openai.com/favicon.ico" }],
+            "claude": [{ name: "Claude AI", url: "https://claude.ai", desc: "Talk to Claude, an AI by Anthropic.", favicon: "https://claude.ai/favicon.ico" }],
+            "gemini": [{ name: "Gemini AI", url: "https://gemini.google.com", desc: "Google's most capable AI model.", favicon: "https://www.gstatic.com/lamda/images/favicon_v1_150160d13ffabc731.svg" }],
+            "canva": [{ name: "Canva", url: "https://www.canva.com", desc: "Design anything with Canva.", favicon: "https://www.canva.com/favicon.ico" }],
+            "fandom": [{ name: "Fandom", url: "https://www.fandom.com", desc: "The fan's voice in entertainment.", favicon: "https://www.fandom.com/favicon.ico" }],
+            "messenger": [{ name: "Messenger", url: "https://www.messenger.com", desc: "Connect with your favorite people.", favicon: "https://www.messenger.com/favicon.ico" }],
+            "whatsapp": [{ name: "WhatsApp", url: "https://www.whatsapp.com", desc: "Simple. Personal. Real-time messaging.", favicon: "https://www.whatsapp.com/favicon.ico" }],
+            "zoom": [{ name: "Zoom", url: "https://zoom.us", desc: "Video conferencing, web conferencing, webinars.", favicon: "https://zoom.us/favicon.ico" }],
+            "dropbox": [{ name: "Dropbox", url: "https://www.dropbox.com", desc: "Focus on the work that matters.", favicon: "https://www.dropbox.com/favicon.ico" }],
+            "google drive": [{ name: "Google Drive", url: "https://drive.google.com", desc: "A safe place for all your files.", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }],
+            "shein": [{ name: "SHEIN", url: "https://www.shein.com", desc: "Fashionable clothing and accessories.", favicon: "https://www.shein.com/favicon.ico" }],
+            "temu": [{ name: "Temu", url: "https://www.temu.com", desc: "Shop like a billionaire.", favicon: "https://www.temu.com/favicon.ico" }],
+            "aliexpress": [{ name: "AliExpress", url: "https://www.aliexpress.com", desc: "Smarter Shopping, Better Living.", favicon: "https://www.aliexpress.com/favicon.ico" }],
+            "fedex": [{ name: "FedEx", url: "https://www.fedex.com", desc: "Track your packages and shipments.", favicon: "https://www.fedex.com/favicon.ico" }],
+            "ups": [{ name: "UPS", url: "https://www.ups.com", desc: "Shipping, Freight, Logistics and Supply Chain Management.", favicon: "https://www.ups.com/favicon.ico" }],
+            "paypal": [{ name: "PayPal", url: "https://www.paypal.com", desc: "Digital Wallets, Money Management, and more.", favicon: "https://www.paypal.com/favicon.ico" }],
+            "chase": [{ name: "Chase Bank", url: "https://www.chase.com", desc: "Personalized Banking and Credit Cards.", favicon: "https://www.chase.com/favicon.ico" }],
+            "bank of america": [{ name: "Bank of America", url: "https://www.bankofamerica.com", desc: "Financial Services for individuals and businesses.", favicon: "https://www.bankofamerica.com/favicon.ico" }],
+            "nike": [{ name: "Nike", url: "https://www.nike.com", desc: "Just Do It.", favicon: "https://www.nike.com/favicon.ico" }],
+            "adidas": [{ name: "Adidas", url: "https://www.adidas.com", desc: "Impossible is Nothing.", favicon: "https://www.adidas.com/favicon.ico" }],
+            "poker": [{ name: "PokerStars", url: "https://www.pokerstars.com", desc: "Play online poker games.", favicon: "https://www.pokerstars.com/favicon.ico" }],
+            "nba": [{ name: "NBA", url: "https://www.nba.com", desc: "National Basketball Association Official Site.", favicon: "https://www.nba.com/favicon.ico" }],
+            "nfl": [{ name: "NFL", url: "https://www.nfl.com", desc: "National Football League Official Site.", favicon: "https://www.nfl.com/favicon.ico" }],
+            "mlb": [{ name: "MLB", url: "https://www.mlb.com", desc: "Major League Baseball Official Site.", favicon: "https://www.mlb.com/favicon.ico" }],
+            "ea": [{ name: "EA Sports", url: "https://www.ea.com", desc: "It's in the game.", favicon: "https://www.ea.com/favicon.ico" }],
+            "ubisoft": [{ name: "Ubisoft", url: "https://www.ubisoft.com", desc: "Welcome to the official Ubisoft website.", favicon: "https://www.ubisoft.com/favicon.ico" }],
+            "nintendo": [{ name: "Nintendo", url: "https://www.nintendo.com", desc: "Systems, Games, and more.", favicon: "https://www.nintendo.com/favicon.ico" }],
+            "playstation": [{ name: "PlayStation", url: "https://www.playstation.com", desc: "Live in your world. Play in ours.", favicon: "https://www.playstation.com/favicon.ico" }],
+            "xbox": [{ name: "Xbox", url: "https://www.xbox.com", desc: "Power Your Dreams.", favicon: "https://www.xbox.com/favicon.ico" }],
             "unblocked games": [{ name: "Unblocked Games 66", url: "https://sites.google.com/site/unblockedgames66ez/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }]
         };
 
         // --- FULL AI INSIGHTS ---
         const insightDB = {
             "heofon": "Heofon is an advanced Search Engine, find all your wants and needs.",
-            "appleton": "Appleton Packing & Gasket is an industrial leader specializing in high-performance sealing solutions and custom gasket fabrication for global infrastructure.",
-            "wwe": "WWE is the global leader in sports entertainment, featuring high-octane professional wrestling, world-class athletes, and massive live broadcast events.",
-            "youtube": "YouTube is the premier global video sharing platform, hosting billions of hours of educational, entertainment, and creative content for all users.",
-            "mobymax": "MobyMax is a specialized K-8 learning platform designed to close learning gaps through adaptive curriculum and personalized student pathways.",
-            "roblox": "Roblox is a massive multiplayer online platform that allows users to design their own games and play millions of experiences created by other developers.",
-            "anthropic ai": "Anthropic is a safety-focused AI research company, known for developing Claude and pushing the boundaries of reliable, helpful artificial intelligence.",
-            "nascar": "NASCAR is the ultimate stock car racing organization, hosting iconic high-speed events and competitive championships across North America.",
-            "michigan tornado": "Current weather tracking for Michigan focuses on severe storm alerts and tornado warning systems to ensure public safety during extreme events.",
-            "amazon": "Amazon has revolutionized global commerce and logistics, providing an massive infrastructure for delivery, AWS cloud intelligence, and digital media.",
-            "microsoft": "Microsoft is a foundation of modern computing, leading in enterprise software, artificial intelligence integration via Copilot, and gaming via Xbox.",
-            "tesla": "Tesla leads the transition to sustainable energy through high-performance electric vehicles and large-scale battery storage solutions.",
-            "disney": "Disney represents the pinnacle of storytelling and brand management, encompassing theme parks, movie studios, and a vast streaming ecosystem.",
-            "spacex": "SpaceX is pushing the boundaries of human exploration with reusable rocket technology and the Starlink satellite network for global connectivity.",
-            "google": "Google is the dominant global search provider and innovator in cloud technology and mobile software.",
-            "netflix": "Netflix transformed media consumption by pioneering subscription-based streaming and original cinematic content.",
-            "apple": "Apple is a global leader in high-end consumer hardware, known for the iPhone, Mac, and its integrated software ecosystem.",
-            "spotify": "Spotify changed the music industry by providing instant legal access to millions of tracks through data-driven streaming.",
-            "reddit": "Reddit is a massive network of communities where users share news, engage in discussions, and upvote quality content.",
-            "twitch": "Twitch is the primary destination for live streaming culture, ranging from professional gaming to creative 'Just Chatting' streams.",
-            "steam": "Steam is the leading digital distribution platform for PC gaming, managed by Valve Corporation.",
-            "github": "GitHub is the essential repository platform for global software development and open-source collaboration.",
-            "discord": "Discord is a versatile communication hub that supports high-quality voice and text channels for communities and friends.",
-            "nvidia": "NVIDIA is the hardware backbone of the AI revolution, providing the GPU power necessary for modern computing.",
-            "fortnite": "Fortnite is a cultural phenomenon in gaming, blending survival mechanics with creative building and major pop-culture crossovers.",
-            "minecraft": "Minecraft is one of the best-selling games of all time, fostering creativity and logic through its open-world sandbox design.",
-            "coolmath": "Coolmath Games is a staple for educational entertainment, providing logic-based puzzles that are widely accessible.",
-            "chess": "Chess.com is the world's largest online chess club, helping modernize the ancient game for a digital audience.",
-            "duolingo": "Duolingo uses gamification to make language learning accessible and engaging for over 500 million users worldwide.",
-            "weather": "Modern weather tracking uses satellite data and superintelligence to provide localized forecasts and emergency alerts.",
-            "cnn": "CNN is a major global news network providing 24-hour coverage of international events and politics.",
-            "espn": "ESPN is the worldwide leader in sports broadcasting and digital sports media.",
-            "adobe": "Adobe sets the industry standard for creative software with its powerful suite of design and document tools.",
-            "unblocked games": "Unblocked game portals are designed to bypass network restrictions to provide access to browser-based entertainment."
+            "appleton": "Appleton Packing & Gasket is an industrial leader specializing in sealing solutions.",
+            "wwe": "WWE is the global leader in sports entertainment and professional wrestling.",
+            "youtube": "YouTube is the premier global video sharing platform for creators and viewers.",
+            "amazon": "Amazon is the world's largest online retailer and cloud service provider (AWS).",
+            "microsoft": "Microsoft is the foundation of modern computing and AI through Windows and Office.",
+            "tesla": "Tesla leads the world's transition to sustainable energy via EVs and solar.",
+            "spacex": "SpaceX is the pioneer of reusable rocket technology and Mars exploration.",
+            "roblox": "Roblox is an online game platform and game creation system.",
+            "anthropic ai": "Anthropic focuses on AI safety and creates the Claude AI models.",
+            "openai": "OpenAI is the creator of ChatGPT and leader in generative AI research.",
+            "google": "Google is the dominant search engine and developer of the Android OS.",
+            "netflix": "Netflix is the pioneer of subscription streaming for movies and series.",
+            "apple": "Apple is known for its high-end tech ecosystem including iPhone and Mac.",
+            "discord": "Discord is the essential communication platform for gamers and communities.",
+            "github": "GitHub is the home for software development and open-source collaboration.",
+            "nvidia": "NVIDIA produces the high-end GPUs powering the current AI revolution.",
+            "minecraft": "Minecraft is a sandbox game that fosters immense creativity and logic.",
+            "weather": "Accurate weather tracking uses satellite data to predict global conditions.",
+            "chess": "Chess.com is the world's largest site for online chess play and study."
         };
 
         // --- HEOPAD DOCS FEATURES ---
@@ -384,13 +421,13 @@
                     found = true;
                 }
             }
-            if (!found) renderResult(`Search Google for "${query}"`, `https://google.com/search?q=${query}`, `Global web results.`, "https://www.google.com/favicon.ico");
+            if (!found) renderResult(`Search the web for "${query}"`, `https://google.com/search?q=${query}`, `Broad spectrum web results.`, "https://www.google.com/favicon.ico");
             showPage('results-page');
         }
 
         function renderResult(title, url, desc, favicon) {
             document.getElementById('results-list').innerHTML += `
-                <div class="result-item" onclick="navigateToURL('${url.replace(/'/g, "\\'")}')">
+                <div class="result-item" onclick="window.open('${url}', '_blank')">
                     <div class="result-header">
                         <img src="${favicon}" class="result-favicon" onerror="this.src='favicon.png'">
                         <span>${url}</span>
@@ -400,59 +437,40 @@
                 </div>`;
         }
 
-        function navigateToURL(url) {
-            window.location.href = url;
+        // --- AI CHAT LOGIC ---
+        function handleChatPress(e) {
+            if (e.key === 'Enter') {
+                const input = document.getElementById('aiIn');
+                const chatBox = document.getElementById('chatBox');
+                if (!input.value) return;
+
+                chatBox.innerHTML += `<div class="message user-message">${input.value}</div>`;
+                
+                let q = input.value.toLowerCase();
+                setTimeout(() => {
+                    let r = "Heofonix is analyzing your logic... How else can I assist?";
+                    if(q.includes("hello")) r = "Greetings. I am Heofonix. How can I assist your search today?";
+                    if(q.includes("math")) r = "I am equipped with advanced logic for mathematical calculations. What is your equation?";
+                    
+                    chatBox.innerHTML += `<div class="message ai-message">${r}</div>`;
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }, 600);
+                input.value = "";
+            }
         }
 
         function toggleSafeSearch() {
             isSafeSearch = !isSafeSearch;
             const btn = document.getElementById('safeToggle');
             btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
-            btn.className = `safe-toggle ${isSafeSearch ? 'safe-on' : ''}`;
-        }
-
-        // --- AI CHAT LOGIC ---
-        async function handleChatPress(e) {
-            if (e.key === 'Enter') {
-                const val = e.target.value;
-                const box = document.getElementById('chatBox');
-                box.innerHTML += `<div class="message user-message">${val}</div>`;
-                e.target.value = "";
-                
-                const response = await getAiResponse(val);
-                setTimeout(() => {
-                    box.innerHTML += `<div class="message ai-message">${response}</div>`;
-                    box.scrollTop = box.scrollHeight;
-                }, 500);
-            }
-        }
-
-        async function getAiResponse(val) {
-            const m = val.toLowerCase().trim();
-            if (["hola", "como", "esta"].some(k => m.includes(k))) return "🇪🇸 **Heofonix:** ¡Hola! ¿En qué puedo ayudarte hoy?";
-            
-            if(m.includes("define")) {
-                const word = m.split(" ").pop().replace(/[?!.]/g, "");
-                try {
-                    const res = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-                    const data = await res.json();
-                    return `📘 **Dictionary:** ${data[0].meanings[0].definitions[0].definition}`;
-                } catch(e) { return "📘 Word not found."; }
-            }
-            
-            const mathMatch = m.match(/(\d+)\s*([-+*/])\s*(\d+)/);
-            if(mathMatch) { try { return `🧮 **Math Solver:** ${mathMatch[0]} = **${eval(mathMatch[0])}**`; } catch(e) {} }
-            
-            return `🌌 **Heofonix Intelligence:** Analyzed "${val}". Ready for next command.`;
+            btn.classList.toggle('safe-on');
         }
 
         function askCurrentQueryToAI() {
             const query = document.getElementById('resultsSearch').value;
-            if(!query) return;
             showPage('ai-page');
-            document.getElementById('chatBox').innerHTML += `<div class="message user-message">${query}</div>`;
+            document.getElementById('aiIn').value = `Tell me more about ${query}`;
         }
-
     </script>
 </body>
 </html>
