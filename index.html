@@ -145,6 +145,79 @@
 
         .input-area { width: 100%; padding: 25px; background: rgba(0,0,0,0.8); border-top: 2px solid #00d4ff; z-index: 1001;}
         .upload-btn { color: #00d4ff; cursor: pointer; text-align: center; border: 2px dashed #00d4ff; margin-bottom: 12px; border-radius: 15px; padding: 12px; font-weight: 900; }
+
+        /* SETTINGS PAGE UI (NEW) */
+        #settings-page {
+            align-items: flex-start;
+            justify-content: center;
+        }
+        .settings-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 25px;
+            border: 1px solid rgba(0, 212, 255, 0.4);
+            padding: 30px;
+            max-width: 600px;
+            width: 90%;
+            backdrop-filter: blur(12px);
+            text-align: left;
+        }
+        .settings-card h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .setting-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            gap: 15px;
+        }
+        .setting-label {
+            font-size: 0.95rem;
+            color: #bdc1c6;
+        }
+        .settings-select, .settings-toggle {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            border-radius: 20px;
+            padding: 6px 14px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        body.light-mode {
+            background: #f5f5f5;
+            color: #000;
+        }
+        body.light-mode .nav-link,
+        body.light-mode .trend-item,
+        body.light-mode .heopad-container,
+        body.light-mode .results-side-panel,
+        body.light-mode .message,
+        body.light-mode .ai-insight-card,
+        body.light-mode .settings-card {
+            border-color: #0066aa;
+        }
+        body.light-mode .nav-link,
+        body.light-mode .trend-item,
+        body.light-mode .ai-ask-btn,
+        body.light-mode .input-area {
+            background: rgba(255,255,255,0.9);
+            color: #000;
+        }
+        body.light-mode .search-box {
+            background: rgba(0,0,0,0.05);
+            color: #000;
+            border-color: #0066aa;
+        }
+        body.light-mode .safe-toggle.safe-on {
+            color: #008844;
+            border-color: #008844;
+        }
     </style>
 </head>
 <body>
@@ -152,16 +225,17 @@
     <div class="particles" id="particles"></div>
 
     <div class="top-nav">
-        <div class="nav-link" onclick="showPage('home-page')">Home</div>
-        <div class="nav-link" onclick="showPage('heopad-page')">Heopad</div>
-        <div class="nav-link" onclick="showPage('ai-page')">Heofonix AI</div>
-        <div class="nav-link" onclick="showPage('about-page')">About Us</div>
+        <div class="nav-link" onclick="showPage('home-page')" data-i18n-key="navHome">Home</div>
+        <div class="nav-link" onclick="showPage('heopad-page')" data-i18n-key="navHeopad">Heopad</div>
+        <div class="nav-link" onclick="showPage('about-page')" data-i18n-key="navAbout">About Us</div>
+        <div class="nav-link" onclick="showPage('settings-page')" data-i18n-key="navSettings">Settings</div>
+        <div class="nav-link" onclick="showPage('ai-page')" data-i18n-key="navAI">Heofonix AI</div>
     </div>
 
     <div id="home-page" class="page active-page">
         <h1 class="logo">Heofon</h1>
-        <input type="text" class="search-box" id="homeSearch" placeholder="Search Global Hub..." onkeypress="handleHomeSearch(event)">
-        <p style="margin-top:20px; font-weight:900; color: #00d4ff;">TRENDING SEARCHES</p>
+        <input type="text" class="search-box" id="homeSearch" placeholder="Search Global Hub..." onkeypress="handleHomeSearch(event)" data-i18n-placeholder="homeSearchPlaceholder">
+        <p style="margin-top:20px; font-weight:900; color: #00d4ff;" data-i18n-key="trendingTitle">TRENDING SEARCHES</p>
         <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 800px;">
             <div class="trend-item" onclick="triggerQuickSearch('anthropic ai')">Anthropic AI</div>
             <div class="trend-item" onclick="triggerQuickSearch('youtube')">YouTube</div>
@@ -179,14 +253,14 @@
                 <button class="tool-btn" onclick="execCmd('bold')">B</button>
                 <button class="tool-btn" onclick="execCmd('italic')">I</button>
                 <button class="tool-btn" onclick="execCmd('underline')">U</button>
-                <button class="tool-btn" onclick="execCmd('justifyLeft')">Left</button>
-                <button class="tool-btn" onclick="execCmd('justifyCenter')">Center</button>
+                <button class="tool-btn" onclick="execCmd('justifyLeft')" data-i18n-key="btnLeft">Left</button>
+                <button class="tool-btn" onclick="execCmd('justifyCenter')" data-i18n-key="btnCenter">Center</button>
                 <input type="color" onchange="execCmd('foreColor', this.value)" style="background:none; border:none; width:30px; height:25px; cursor:pointer;">
             </div>
             <div id="heopadArea" class="heopad-editor" contenteditable="true">Write something great...</div>
             <div style="padding: 10px 25px; border-top: 1px solid rgba(0, 212, 255, 0.2); display: flex; justify-content: space-between; align-items: center;">
                 <span id="syncStatus" style="color: #00d4ff; font-weight: 900; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Cloud Sync Active</span>
-                <button onclick="downloadPad()" style="background: none; border: 1px solid #00d4ff; color: #00d4ff; padding: 5px 15px; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 0.7rem;">Download .doc</button>
+                <button onclick="downloadPad()" style="background: none; border: 1px solid #00d4ff; color: #00d4ff; padding: 5px 15px; border-radius: 15px; cursor: pointer; font-weight: bold; font-size: 0.7rem;" data-i18n-key="downloadBtn">Download .doc</button>
             </div>
         </div>
     </div>
@@ -194,8 +268,8 @@
     <div id="results-page" class="page">
         <div class="results-nav">
             <div class="mini-logo" onclick="showPage('home-page')">Heofon</div>
-            <input type="text" class="search-box" id="resultsSearch" style="max-width: 400px; padding: 12px 25px; font-size: 1.1rem; text-align: left;" onkeypress="handleResultsSearch(event)">
-            <button class="ai-ask-btn" onclick="askCurrentQueryToAI()">Ask Heofonix</button>
+            <input type="text" class="search-box" id="resultsSearch" style="max-width: 400px; padding: 12px 25px; font-size: 1.1rem; text-align: left;" onkeypress="handleResultsSearch(event)" data-i18n-placeholder="resultsSearchPlaceholder">
+            <button class="ai-ask-btn" onclick="askCurrentQueryToAI()" data-i18n-key="askAI">Ask Heofonix</button>
             <div id="safeToggle" class="safe-toggle safe-on" onclick="toggleSafeSearch()">Safe Search: ON</div>
         </div>
 
@@ -211,10 +285,10 @@
                     Search Heofon to unlock deep intelligence insights here.
                 </div>
                 <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(0,212,255,0.2);">
-                <p style="color:#00d4ff; font-size: 0.8rem; text-transform:uppercase;">Quick Actions</p>
+                <p style="color:#00d4ff; font-size: 0.8rem; text-transform:uppercase;" data-i18n-key="quickActions">Quick Actions</p>
                 <ul style="list-style: none; margin-top: 10px;">
-                    <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="showPage('heopad-page')">➜ Open in Heopad</li>
-                    <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="askCurrentQueryToAI()">➜ Chat with Heofonix</li>
+                    <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="showPage('heopad-page')" data-i18n-key="quickOpenHeopad">➜ Open in Heopad</li>
+                    <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="askCurrentQueryToAI()" data-i18n-key="quickChatAI">➜ Chat with Heofonix</li>
                 </ul>
             </div>
         </div>
@@ -222,19 +296,44 @@
 
     <div id="about-page" class="page">
         <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 2px solid #00d4ff; padding: 40px; border-radius: 30px; max-width: 800px; line-height: 1.6;">
-            <h2 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 20px;">About Heofon</h2>
-            <p>Welcome to Heofon. Heofon is an advanced Search Engine. We deliver vast searches for all your wants and needs without stealing your info. Heofon gives you searches that you need and not random searches you find off other search engines, we give you the most advanced and vast we can give you.</p>
+            <h2 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 20px;" data-i18n-key="aboutTitle">About Heofon</h2>
+            <p data-i18n-key="aboutText">Welcome to Heofon. Heofon is an advanced Search Engine. We deliver vast searches for all your wants and needs without stealing your info. Heofon gives you searches that you need and not random searches you find off other search engines, we give you the most advanced and vast we can give you.</p>
+        </div>
+    </div>
+
+    <!-- SETTINGS PAGE (NEW) -->
+    <div id="settings-page" class="page">
+        <div class="settings-card">
+            <h2 data-i18n-key="settingsTitle">Settings</h2>
+
+            <div class="setting-row">
+                <span class="setting-label" data-i18n-key="settingsLanguage">Language / Språk</span>
+                <select class="settings-select" id="langSelect" onchange="setLanguage(this.value)">
+                    <option value="en">English</option>
+                    <option value="no">Norsk</option>
+                </select>
+            </div>
+
+            <div class="setting-row">
+                <span class="setting-label" data-i18n-key="settingsTheme">Theme / Tema</span>
+                <button class="settings-toggle" id="themeToggle" onclick="toggleTheme()">Dark</button>
+            </div>
+
+            <div class="setting-row">
+                <span class="setting-label" data-i18n-key="settingsSafe">Safe Search</span>
+                <button class="settings-toggle" id="safeToggleSettings" onclick="toggleSafeSearchFromSettings()">ON</button>
+            </div>
         </div>
     </div>
 
     <div id="ai-page" class="page chat-container">
         <div class="chat-messages" id="chatBox">
-            <div class="message ai-message">Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁</div>
+            <div class="message ai-message" data-i18n-key="aiWelcome">Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁</div>
         </div>
         <div class="input-area">
-            <div class="upload-btn" onclick="document.getElementById('fIn').click()">📎 Upload Logic / Image</div>
+            <div class="upload-btn" onclick="document.getElementById('fIn').click()" data-i18n-key="uploadBtn">📎 Upload Logic / Image</div>
             <input type="file" id="fIn" style="display:none" multiple>
-            <input type="text" id="aiIn" class="search-box" style="width:100%; text-align: left;" placeholder="Command Heofonix..." onkeypress="handleChatPress(event)">
+            <input type="text" id="aiIn" class="search-box" style="width:100%; text-align: left;" placeholder="Command Heofonix..." onkeypress="handleChatPress(event)" data-i18n-placeholder="aiInputPlaceholder">
         </div>
     </div>
 
@@ -462,8 +561,18 @@
         function toggleSafeSearch() {
             isSafeSearch = !isSafeSearch;
             const btn = document.getElementById('safeToggle');
-            btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
-            btn.classList.toggle('safe-on');
+            if (btn) {
+                btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
+                btn.classList.toggle('safe-on', isSafeSearch);
+            }
+            const btn2 = document.getElementById('safeToggleSettings');
+            if (btn2) {
+                btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
+            }
+        }
+
+        function toggleSafeSearchFromSettings() {
+            toggleSafeSearch();
         }
 
         function askCurrentQueryToAI() {
@@ -471,6 +580,113 @@
             showPage('ai-page');
             document.getElementById('aiIn').value = `Tell me more about ${query}`;
         }
+
+        // --- SETTINGS LOGIC (LANG + THEME + TEXTS) ---
+        const translations = {
+            en: {
+                navHome: "Home",
+                navHeopad: "Heopad",
+                navAI: "Heofonix AI",
+                navAbout: "About Us",
+                navSettings: "Settings",
+                trendingTitle: "TRENDING SEARCHES",
+                btnLeft: "Left",
+                btnCenter: "Center",
+                downloadBtn: "Download .doc",
+                aboutTitle: "About Heofon",
+                aboutText: "Welcome to Heofon. Heofon is an advanced Search Engine. We deliver vast searches for all your wants and needs without stealing your info. Heofon gives you searches that you need and not random searches you find off other search engines, we give you the most advanced and vast we can give you.",
+                quickActions: "Quick Actions",
+                quickOpenHeopad: "➜ Open in Heopad",
+                quickChatAI: "➜ Chat with Heofonix",
+                aiWelcome: "Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁",
+                uploadBtn: "📎 Upload Logic / Image",
+                homeSearchPlaceholder: "Search Global Hub...",
+                resultsSearchPlaceholder: "Search Heofon...",
+                aiInputPlaceholder: "Command Heofonix...",
+                askAI: "Ask Heofonix",
+                settingsTitle: "Settings",
+                settingsLanguage: "Language / Språk",
+                settingsTheme: "Theme / Tema",
+                settingsSafe: "Safe Search"
+            },
+            no: {
+                navHome: "Hjem",
+                navHeopad: "Heopad",
+                navAI: "Heofonix KI",
+                navAbout: "Om oss",
+                navSettings: "Innstillinger",
+                trendingTitle: "POPULÆRE SØK",
+                btnLeft: "Venstre",
+                btnCenter: "Senter",
+                downloadBtn: "Last ned .doc",
+                aboutTitle: "Om Heofon",
+                aboutText: "Velkommen til Heofon. Heofon er en avansert søkemotor. Vi leverer store og presise søk for alle dine behov uten å stjele informasjonen din. Heofon gir deg søkene du trenger og ikke tilfeldige treff fra andre søkemotorer, vi gir deg det mest avanserte og omfattende vi kan.",
+                quickActions: "Hurtigvalg",
+                quickOpenHeopad: "➜ Åpne i Heopad",
+                quickChatAI: "➜ Chat med Heofonix",
+                aiWelcome: "Hei, velkommen til Heofonix KI<br><br>Spør om hva som helst — Flytende spansk 🇪🇸, ordbok 📘, matte ➕, logikk 📁",
+                uploadBtn: "📎 Last opp logikk / bilde",
+                homeSearchPlaceholder: "Søk i Global Hub...",
+                resultsSearchPlaceholder: "Søk i Heofon...",
+                aiInputPlaceholder: "Gi kommando til Heofonix...",
+                askAI: "Spør Heofonix",
+                settingsTitle: "Innstillinger",
+                settingsLanguage: "Språk",
+                settingsTheme: "Tema",
+                settingsSafe: "Trygt søk"
+            }
+        };
+
+        function applyTranslations(lang) {
+            const dict = translations[lang] || translations.en;
+
+            document.querySelectorAll("[data-i18n-key]").forEach(el => {
+                const key = el.getAttribute("data-i18n-key");
+                if (dict[key]) el.innerHTML = dict[key];
+            });
+
+            document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+                const key = el.getAttribute("data-i18n-placeholder");
+                if (dict[key]) el.placeholder = dict[key];
+            });
+        }
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang === "no" ? "no" : "en";
+            localStorage.setItem("heofon_lang", lang);
+            applyTranslations(lang);
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const btn = document.getElementById("themeToggle");
+            const isLight = body.classList.toggle("light-mode");
+            btn.innerText = isLight ? "Light" : "Dark";
+            localStorage.setItem("heofon_theme", isLight ? "light" : "dark");
+        }
+
+        // INIT SETTINGS ON LOAD
+        (function initSettings() {
+            const savedLang = localStorage.getItem("heofon_lang") || "en";
+            const savedTheme = localStorage.getItem("heofon_theme") || "dark";
+
+            const langSelect = document.getElementById("langSelect");
+            if (langSelect) langSelect.value = savedLang;
+            setLanguage(savedLang);
+
+            if (savedTheme === "light") {
+                document.body.classList.add("light-mode");
+                const btn = document.getElementById("themeToggle");
+                if (btn) btn.innerText = "Light";
+            } else {
+                const btn = document.getElementById("themeToggle");
+                if (btn) btn.innerText = "Dark";
+            }
+
+            // sync safe search button on settings page
+            const btn2 = document.getElementById('safeToggleSettings');
+            if (btn2) btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
+        })();
     </script>
 </body>
 </html>
