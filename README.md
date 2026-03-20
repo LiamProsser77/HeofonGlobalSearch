@@ -6,4 +6,5 @@ Right now out AI is down thank you for the wait.
 
 <img width="356" height="159" alt="Screenshot 2026-03-20 4 47 16 PM" src="https://github.com/user-attachments/assets/11ef4cf0-7a34-49fa-97b0-67e17fdaa647" />
 
+<img width="266" height="275" alt="favicon png" src="https://github.com/user-attachments/assets/ef68c494-9d0a-436a-820c-1c4019ae8ab8" />
 
