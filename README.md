@@ -28,13 +28,5 @@ Right now out AI is down thank you for the wait.
     </a>
 </div>
 
-<style>
-    a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 223, 216, 0.6);
-        filter: brightness(1.1);
-    }
-    a:active {
-        transform: translateY(1px);
-    }
+
 </style>
