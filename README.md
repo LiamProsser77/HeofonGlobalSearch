@@ -3,6 +3,7 @@ Heofon is a powerful search engine and global hub built to give you the exact re
 The site also features the Heopad, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. Yeah, it's the ultimate all-in-one search engine and AI experience.
 Go to https://liamprosser77.github.io/HeofonGlobalSearch/ to see more and test out Heofon.
 Right now out AI is down thank you for the wait.
-<img width="356" height="173" alt="Screenshot 2026-03-20 4 45 16 PM" src="https://github.com/user-attachments/assets/9363ccf9-73b7-44e7-ab7e-df6f08997b27" />
+
+<img width="356" height="173" alt="Screenshot 2026-03-20 4 45 16 PM" src="https://liamprosser77.github.io/HeofonGlobalSearch/" />
 
 
