@@ -9,7 +9,7 @@ Right now out AI is down thank you for the wait.
 <img width="266" height="275" alt="favicon png" src="https://github.com/user-attachments/assets/ef68c494-9d0a-436a-820c-1c4019ae8ab8" />
 
 
-<div style="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
+<div ="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
     <a href="https://liamprosser77.github.io/HeofonGlobalSearch/" target="_blank" style="
         display: inline-block;
         padding: 15px 40px;
