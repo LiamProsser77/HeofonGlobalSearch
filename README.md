@@ -29,4 +29,4 @@ Right now out AI is down thank you for the wait.
 </div>
 
 
-</style>
+
