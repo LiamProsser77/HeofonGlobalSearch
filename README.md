@@ -10,7 +10,7 @@ Right now out AI is down thank you for the wait.
 
 
 <div style="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
-    <a href="https://liamprosser77.github.io/Heofon-/" target="_blank" style="
+    <a href="https://liamprosser77.github.io/HeofonGlobalSearch/" target="_blank" style="
         display: inline-block;
         padding: 15px 40px;
         font-size: 18px;
