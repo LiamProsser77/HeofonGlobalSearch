@@ -4,6 +4,5 @@ The site also features the Heopad, a dedicated space where you can write down no
 Go to https://liamprosser77.github.io/HeofonGlobalSearch/ to see more and test out Heofon.
 Right now out AI is down thank you for the wait.
 
-<img width="356" height="173" alt="Screenshot 2026-03-20 4 45 16 PM" src="https://liamprosser77.github.io/HeofonGlobalSearch/" />
 
-
+<img width="356" height="173" alt="Screenshot 2026-03-20 4 45 16 PM" src="https://github.com/user-attachments/assets/03437c36-0657-4b3a-8876-568c37dd8182" />
