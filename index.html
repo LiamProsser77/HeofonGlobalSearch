@@ -369,8 +369,15 @@
     <script>
         let isSafeSearch = true;
 
-        /* SEARCH DATABASE (with SearXNG added) */
+    /* SEARCH DATABASE */
         const searchDB = {
+            // New Additions
+            "yahoo": [{ name: "Yahoo", url: "https://www.yahoo.com", desc: "News, email and search results.", favicon: "https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage_2x.png" }],
+            "ecosia": [{ name: "Ecosia", url: "https://www.ecosia.org", desc: "The search engine that plants trees.", favicon: "https://cdn-static.ecosia.org/assets/images/ico/favicon.ico" }],
+            "duckduckgo": [{ name: "DuckDuckGo", url: "https://duckduckgo.com", desc: "The search engine that doesn't track you.", favicon: "https://duckduckgo.com/favicon.ico" }],
+            "yandex": [{ name: "Yandex", url: "https://yandex.com", desc: "A Russian multinational technology company providing Internet-related services.", favicon: "https://yastatic.net/s3/home-static/_/ed/ed773ef1352e7424036e522b9c7b275f.png" }],
+            
+            // Original Database
             "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "https://appletonpackinggasket.com/favicon.ico" }],
             "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
             "wikipedia": [{ name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" }],
@@ -472,7 +479,6 @@
                 favicon: "https://search.rhscz.eu/favicon.ico"
             }]
         };
-
         /* INSIGHT TEXTS (SearXNG added) */
         const insightDB = {
             "heofon": "Heofon is a advanced, Norwegian, American search engine that is safe and does not take your info and has vast searches.",
