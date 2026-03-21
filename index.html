@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heofon - Global Superintelligence</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    
+   
     <style>
-        /* ADDED GLOBAL BOLD */
+        /* GLOBAL */
         * { margin: 0; padding: 0; box-sizing: border-box; font-weight: bold; }
         html, body { height: 100vh; width: 100vw; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
         body { background: #050505; color: #ffffff; }
 
-        /* --- MOVING STARS BACKGROUND --- */
+        /* BACKGROUND */
         .stars-container {
             position: fixed; top: 0; left: 0; width: 200%; height: 200%; z-index: 1;
-            background: 
+            background:
                 radial-gradient(1px 1px at 25px 35px, #fff, transparent),
                 radial-gradient(2px 2px at 50px 100px, #eee, transparent),
                 radial-gradient(1px 1px at 90px 40px, #fff, transparent),
@@ -38,7 +38,7 @@
         .page { display: none; width: 100vw; height: 100vh; position: absolute; top: 0; left: 0; z-index: 10; flex-direction: column; align-items: center; justify-content: center; padding: 20px; text-align: center; }
         .active-page { display: flex; }
 
-        /* LOGO & HEOPAD TEXT STYLE */
+        /* LOGO + SEARCH BOX */
         .logo, .heopad-logo {
             font-size: 6rem; font-weight: 900; margin-bottom: 20px;
             background: linear-gradient(to right, #2ab9ff 0%, #4f86ff 40%, #a158ff 70%, #d449ff 100%);
@@ -46,14 +46,14 @@
             letter-spacing: -2px;
         }
 
-        .search-box { 
-            width: 90%; max-width: 750px; padding: 25px; border-radius: 50px; 
-            border: 2px solid #00d4ff; background: rgba(255,255,255,0.1); 
+        .search-box {
+            width: 90%; max-width: 750px; padding: 25px; border-radius: 50px;
+            border: 2px solid #00d4ff; background: rgba(255,255,255,0.1);
             color: white; font-size: 1.4rem; outline: none; backdrop-filter: blur(15px);
             font-weight: 800; text-align: center; box-shadow: 0 0 20px rgba(0,212,212,0.2);
         }
 
-        /* AI INSIGHT STYLING */
+        /* AI INSIGHT CARD (FOR RESULTS) */
         .ai-insight-card {
             background: rgba(0, 212, 255, 0.1);
             border: 2px solid #00d4ff;
@@ -66,11 +66,11 @@
             text-align: left;
         }
 
-        /* HEOPAD UPGRADED UI */
+        /* HEOPAD UI */
         .heopad-container {
-            width: 95%; max-width: 1000px; height: 70vh; 
-            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px); 
-            border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 25px; 
+            width: 95%; max-width: 1000px; height: 70vh;
+            background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 25px;
             display: flex; flex-direction: column; box-shadow: 0 10px 40px rgba(0,0,0,0.5);
             overflow: hidden;
         }
@@ -83,32 +83,30 @@
             padding: 5px 12px; border-radius: 8px; cursor: pointer; font-size: 0.8rem;
         }
         .tool-btn:hover { background: #00d4ff; color: #000; }
-        
+       
         .heopad-editor {
-            flex: 1; background: transparent; border: none; color: white; 
-            font-family: 'Segoe UI', sans-serif; font-size: 1.3rem; outline: none; 
+            flex: 1; background: transparent; border: none; color: white;
+            font-family: 'Segoe UI', sans-serif; font-size: 1.3rem; outline: none;
             padding: 25px; line-height: 1.5; font-weight: bold; text-align: left;
             overflow-y: auto;
         }
 
-        /* TRENDING UI */
-        .trend-item { 
-            padding: 10px 20px; border: 1px solid #00d4ff; border-radius: 25px; 
-            color: #00d4ff; cursor: pointer; font-weight: 900; 
+        /* TRENDING */
+        .trend-item {
+            padding: 10px 20px; border: 1px solid #00d4ff; border-radius: 25px;
+            color: #00d4ff; cursor: pointer; font-weight: 900;
             background: rgba(0, 212, 255, 0.05); transition: 0.3s;
         }
         .trend-item:hover { background: #00d4ff; color: #000; transform: scale(1.05); }
 
-        /* RESULTS PAGE UI */
+        /* RESULTS PAGE */
         #results-page { align-items: flex-start; justify-content: flex-start; padding: 30px 10% 40px; overflow-y: auto; text-align: left; }
         .results-nav { width: 100%; display: flex; gap: 15px; align-items: center; margin-bottom: 40px; padding-top: 20px; flex-shrink: 0; flex-wrap: wrap; }
         .mini-logo { font-size: 2.2rem; font-weight: 900; background: linear-gradient(45deg, #00d4ff, #ff00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; cursor: pointer; }
-        
-        /* RESULTS LAYOUT */
+       
         .results-main-container { display: flex; width: 100%; gap: 40px; align-items: flex-start; }
         .results-left-column { flex: 1; max-width: 800px; }
-        
-        /* THE SIDE THING */
+       
         .results-side-panel {
             width: 350px;
             background: rgba(255, 255, 255, 0.05);
@@ -121,9 +119,6 @@
             animation: fadeIn 0.8s ease;
         }
 
-        .ai-ask-btn { padding: 12px 20px; border-radius: 30px; border: none; background: #00d4ff; color: #000; font-weight: 900; cursor: pointer; transition: 0.3s; }
-        .ai-ask-btn:hover { background: #ff00ff; color: #fff; transform: translateY(-2px); }
-
         .safe-toggle { padding: 10px 15px; border-radius: 20px; border: 1px solid #555; background: rgba(255,255,255,0.1); color: #fff; font-size: 0.8rem; cursor: pointer; font-weight: bold; }
         .safe-on { border-color: #00ff88; color: #00ff88; }
 
@@ -135,18 +130,7 @@
         .result-title:hover { color: #00d4ff; text-decoration: underline; }
         .result-snippet { color: #bdc1c6; font-size: 1rem; line-height: 1.5; cursor: pointer; }
 
-        /* CHAT UI */
-        .chat-container { display: none; background: transparent; }
-        .chat-container.active-page { display: flex; }
-        .chat-messages { flex: 1; width: 100%; overflow-y: auto; padding: 110px 25px 25px; }
-        .message { margin-bottom: 25px; padding: 22px; border-radius: 25px; max-width: 75%; color: #ffffff; font-weight: bold; font-size: 1.15rem; text-align: left; backdrop-filter: blur(12px); border: 2px solid rgba(0,212,255,0.3); }
-        .user-message { background: rgba(0, 212, 255, 0.7); margin-left: auto; border-color: white; }
-        .ai-message { background: rgba(255, 255, 255, 0.15); margin-right: auto; border: 2px solid #00d4ff; }
-
-        .input-area { width: 100%; padding: 25px; background: rgba(0,0,0,0.8); border-top: 2px solid #00d4ff; z-index: 1001;}
-        .upload-btn { color: #00d4ff; cursor: pointer; text-align: center; border: 2px dashed #00d4ff; margin-bottom: 12px; border-radius: 15px; padding: 12px; font-weight: 900; }
-
-        /* SETTINGS PAGE UI (NEW) */
+        /* SETTINGS */
         #settings-page {
             align-items: flex-start;
             justify-content: center;
@@ -197,14 +181,12 @@
         body.light-mode .trend-item,
         body.light-mode .heopad-container,
         body.light-mode .results-side-panel,
-        body.light-mode .message,
         body.light-mode .ai-insight-card,
         body.light-mode .settings-card {
             border-color: #0066aa;
         }
         body.light-mode .nav-link,
         body.light-mode .trend-item,
-        body.light-mode .ai-ask-btn,
         body.light-mode .input-area {
             background: rgba(255,255,255,0.9);
             color: #000;
@@ -218,6 +200,57 @@
             color: #008844;
             border-color: #008844;
         }
+
+        /* HOME SEARCH SUGGESTIONS */
+        .suggestions-box {
+            width: 90%;
+            max-width: 750px;
+            margin: 8px auto 0;
+            text-align: left;
+            color: #e8eaed;
+            font-size: 0.95rem;
+        }
+        .suggestion-item {
+            padding: 6px 18px;
+            cursor: pointer;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .suggestion-item:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* magnifying-glass icon */
+        .suggestion-icon {
+            position: relative;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid #8ab4f8;
+            box-sizing: border-box;
+        }
+        .suggestion-icon::after {
+            content: "";
+            position: absolute;
+            width: 7px;
+            height: 2px;
+            background: #8ab4f8;
+            border-radius: 2px;
+            right: -3px;
+            bottom: -1px;
+            transform: rotate(40deg);
+        }
+
+        .suggestion-text-main {
+            font-weight: 900;
+        }
+        .suggestion-text-sub {
+            font-weight: 400;
+            opacity: 0.7;
+            margin-left: 4px;
+        }
     </style>
 </head>
 <body>
@@ -229,12 +262,18 @@
         <div class="nav-link" onclick="showPage('heopad-page')" data-i18n-key="navHeopad">Heopad</div>
         <div class="nav-link" onclick="showPage('about-page')" data-i18n-key="navAbout">About Us</div>
         <div class="nav-link" onclick="showPage('settings-page')" data-i18n-key="navSettings">Settings</div>
-        <div class="nav-link" onclick="showPage('ai-page')" data-i18n-key="navAI">Heofonix AI</div>
     </div>
 
+    <!-- HOME PAGE -->
     <div id="home-page" class="page active-page">
         <h1 class="logo">Heofon</h1>
-        <input type="text" class="search-box" id="homeSearch" placeholder="Search Global Hub..." onkeypress="handleHomeSearch(event)" data-i18n-placeholder="homeSearchPlaceholder">
+        <input type="text" class="search-box" id="homeSearch"
+               placeholder="Search Global Hub..."
+               oninput="updateSuggestions(this.value)"
+               onkeypress="handleHomeSearch(event)"
+               data-i18n-placeholder="homeSearchPlaceholder">
+        <div id="suggestions" class="suggestions-box"></div>
+
         <p style="margin-top:20px; font-weight:900; color: #00d4ff;" data-i18n-key="trendingTitle">TRENDING SEARCHES</p>
         <div style="margin-top: 15px; display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; max-width: 800px;">
             <div class="trend-item" onclick="triggerQuickSearch('anthropic ai')">Anthropic AI</div>
@@ -246,11 +285,12 @@
         </div>
     </div>
 
+    <!-- HEOPAD PAGE -->
     <div id="heopad-page" class="page">
         <h1 class="heopad-logo">Heopad</h1>
         <div class="heopad-container">
             <div class="heopad-toolbar">
-                <button class="tool-btn" onclick="execCmd('bold')">B</button>
+                <button class="tool-btn" onclick="execCmd('bold')" data-i18n-key="btnLeft">B</button>
                 <button class="tool-btn" onclick="execCmd('italic')">I</button>
                 <button class="tool-btn" onclick="execCmd('underline')">U</button>
                 <button class="tool-btn" onclick="execCmd('justifyLeft')" data-i18n-key="btnLeft">Left</button>
@@ -265,11 +305,11 @@
         </div>
     </div>
 
+    <!-- RESULTS PAGE -->
     <div id="results-page" class="page">
         <div class="results-nav">
             <div class="mini-logo" onclick="showPage('home-page')">Heofon</div>
             <input type="text" class="search-box" id="resultsSearch" style="max-width: 400px; padding: 12px 25px; font-size: 1.1rem; text-align: left;" onkeypress="handleResultsSearch(event)" data-i18n-placeholder="resultsSearchPlaceholder">
-            <button class="ai-ask-btn" onclick="askCurrentQueryToAI()" data-i18n-key="askAI">Ask Heofonix</button>
             <div id="safeToggle" class="safe-toggle safe-on" onclick="toggleSafeSearch()">Safe Search: ON</div>
         </div>
 
@@ -278,7 +318,7 @@
                 <div id="ai-insight-target"></div>
                 <div id="results-list"></div>
             </div>
-            
+           
             <div class="results-side-panel" id="results-side-panel">
                 <h3 id="side-title" style="color:#00d4ff; margin-bottom:15px; font-size: 1.4rem;">Knowledge Hub</h3>
                 <div id="side-content" style="color:#bdc1c6; font-size: 0.95rem; line-height: 1.6;">
@@ -288,12 +328,12 @@
                 <p style="color:#00d4ff; font-size: 0.8rem; text-transform:uppercase;" data-i18n-key="quickActions">Quick Actions</p>
                 <ul style="list-style: none; margin-top: 10px;">
                     <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="showPage('heopad-page')" data-i18n-key="quickOpenHeopad">➜ Open in Heopad</li>
-                    <li style="margin-bottom: 8px; cursor:pointer; color:#8ab4f8;" onclick="askCurrentQueryToAI()" data-i18n-key="quickChatAI">➜ Chat with Heofonix</li>
                 </ul>
             </div>
         </div>
     </div>
 
+    <!-- ABOUT PAGE -->
     <div id="about-page" class="page">
         <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px); border: 2px solid #00d4ff; padding: 40px; border-radius: 30px; max-width: 800px; line-height: 1.6;">
             <h2 style="color: #00d4ff; font-size: 2.5rem; margin-bottom: 20px;" data-i18n-key="aboutTitle">About Heofon</h2>
@@ -301,7 +341,7 @@
         </div>
     </div>
 
-    <!-- SETTINGS PAGE (NEW) -->
+    <!-- SETTINGS PAGE -->
     <div id="settings-page" class="page">
         <div class="settings-card">
             <h2 data-i18n-key="settingsTitle">Settings</h2>
@@ -326,21 +366,10 @@
         </div>
     </div>
 
-    <div id="ai-page" class="page chat-container">
-        <div class="chat-messages" id="chatBox">
-            <div class="message ai-message" data-i18n-key="aiWelcome">Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁</div>
-        </div>
-        <div class="input-area">
-            <div class="upload-btn" onclick="document.getElementById('fIn').click()" data-i18n-key="uploadBtn">📎 Upload Logic / Image</div>
-            <input type="file" id="fIn" style="display:none" multiple>
-            <input type="text" id="aiIn" class="search-box" style="width:100%; text-align: left;" placeholder="Command Heofonix..." onkeypress="handleChatPress(event)" data-i18n-placeholder="aiInputPlaceholder">
-        </div>
-    </div>
-
     <script>
         let isSafeSearch = true;
 
-        // --- FULL SEARCH DATABASE (100+ ENTRIES) ---
+        /* SEARCH DATABASE (with SearXNG added) */
         const searchDB = {
             "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "https://appletonpackinggasket.com/favicon.ico" }],
             "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
@@ -433,10 +462,18 @@
             "nintendo": [{ name: "Nintendo", url: "https://www.nintendo.com", desc: "Systems, Games, and more.", favicon: "https://www.nintendo.com/favicon.ico" }],
             "playstation": [{ name: "PlayStation", url: "https://www.playstation.com", desc: "Live in your world. Play in ours.", favicon: "https://www.playstation.com/favicon.ico" }],
             "xbox": [{ name: "Xbox", url: "https://www.xbox.com", desc: "Power Your Dreams.", favicon: "https://www.xbox.com/favicon.ico" }],
-            "unblocked games": [{ name: "Classroom Center", url: "https://sites.google.com/classroom.center/view-1/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }]
+            "unblocked games": [{ name: "Classroom Center", url: "https://sites.google.com/classroom.center/view-1/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }],
+
+            /* NEW: SearXNG (rhsCZ) */
+            "searxng": [{
+                name: "SearXNG (rhsCZ)",
+                url: "https://search.rhscz.eu/",
+                desc: "Privacy‑respecting metasearch engine powered by SearXNG.",
+                favicon: "https://search.rhscz.eu/favicon.ico"
+            }]
         };
 
-        // --- FULL AI INSIGHTS ---
+        /* INSIGHT TEXTS (SearXNG added) */
         const insightDB = {
             "heofon": "Heofon is a advanced, Norwegian, American search engine that is safe and does not take your info and has vast searches.",
             "appleton": "Appleton Packing & Gasket is an industrial leader specializing in sealing solutions.",
@@ -457,13 +494,14 @@
             "nvidia": "NVIDIA produces the high-end GPUs powering the current AI revolution.",
             "minecraft": "Minecraft is a sandbox game that fosters immense creativity and logic.",
             "weather": "Accurate weather tracking uses satellite data to predict global conditions.",
-            "chess": "Chess.com is the world's largest site for online chess play and study."
+            "chess": "Chess.com is the world's largest site for online chess play and study.",
+            "searxng": "SearXNG is a privacy‑focused metasearch engine that aggregates results from many other search providers."
         };
 
-        // --- HEOPAD DOCS FEATURES ---
+        /* HEOPAD */
         const pad = document.getElementById('heopadArea');
         pad.innerHTML = localStorage.getItem('heopad_doc_v2') || "Write something great...";
-        
+       
         function execCmd(command, value = null) {
             document.execCommand(command, false, value);
         }
@@ -482,23 +520,71 @@
             anchor.click();
         }
 
-        // --- SEARCH LOGIC ---
+        /* PAGE SWITCHING */
         function showPage(id) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active-page'));
             document.getElementById(id).classList.add('active-page');
         }
 
-        function handleHomeSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
+        /* SEARCH HANDLERS */
+        function handleHomeSearch(e) {
+            if (e.key === 'Enter') {
+                performSearch(e.target.value);
+                document.getElementById('suggestions').innerHTML = '';
+            }
+        }
         function handleResultsSearch(e) { if (e.key === 'Enter') performSearch(e.target.value); }
         function triggerQuickSearch(val) { performSearch(val); }
 
+        /* LIVE SUGGESTIONS UNDER HOME BOX */
+        function updateSuggestions(inputVal) {
+            const box = document.getElementById('suggestions');
+            const q = inputVal.toLowerCase().trim();
+
+            if (!q) {
+                box.innerHTML = '';
+                return;
+            }
+
+            const matches = [];
+            for (let key in searchDB) {
+                if (key.startsWith(q)) matches.push(key);
+                if (matches.length >= 6) break;
+            }
+
+            if (matches.length === 0) {
+                box.innerHTML = '';
+                return;
+            }
+
+            box.innerHTML = matches.map(k => {
+                const boldPart = k.slice(0, q.length);
+                const restPart = k.slice(q.length);
+                return `
+                    <div class="suggestion-item" onclick="selectSuggestion('${k.replace(/'/g, "\\'")}')">
+                        <div class="suggestion-icon"></div>
+                        <div>
+                            <span class="suggestion-text-main">${boldPart}</span><span class="suggestion-text-sub">${restPart}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function selectSuggestion(text) {
+            const input = document.getElementById('homeSearch');
+            input.value = text;
+            document.getElementById('suggestions').innerHTML = '';
+            performSearch(text);
+        }
+
+        /* PERFORM SEARCH */
         async function performSearch(queryRaw) {
             const query = queryRaw.toLowerCase().trim();
             if (!query) return;
 
             document.getElementById('resultsSearch').value = queryRaw;
-            
-            // AI Insight
+           
             let desc = insightDB[query] || `I've analyzed "${queryRaw}" through the Global Hub. Portals listed below.`;
             document.getElementById('ai-insight-target').innerHTML = `
                 <div class="ai-insight-card">
@@ -506,13 +592,12 @@
                     <p style="font-size:1.1rem; line-height:1.4;">${desc}</p>
                 </div>`;
 
-            // UPDATE SIDE THING
             document.getElementById('side-title').innerText = queryRaw.toUpperCase();
             document.getElementById('side-content').innerText = desc;
 
             const list = document.getElementById('results-list');
             list.innerHTML = `<h2 style="color:#00d4ff; margin-bottom:30px; font-size: 1.5rem;">Results for: ${query}</h2>`;
-            
+           
             let found = false;
             for (let key in searchDB) {
                 if (query.includes(key) || key.includes(query)) {
@@ -536,28 +621,7 @@
                 </div>`;
         }
 
-        // --- AI CHAT LOGIC ---
-        function handleChatPress(e) {
-            if (e.key === 'Enter') {
-                const input = document.getElementById('aiIn');
-                const chatBox = document.getElementById('chatBox');
-                if (!input.value) return;
-
-                chatBox.innerHTML += `<div class="message user-message">${input.value}</div>`;
-                
-                let q = input.value.toLowerCase();
-                setTimeout(() => {
-                    let r = "Heofonix is analyzing your logic... How else can I assist?";
-                    if(q.includes("hello")) r = "Greetings. I am Heofonix. How can I assist your search today?";
-                    if(q.includes("math")) r = "I am equipped with advanced logic for mathematical calculations. What is your equation?";
-                    
-                    chatBox.innerHTML += `<div class="message ai-message">${r}</div>`;
-                    chatBox.scrollTop = chatBox.scrollHeight;
-                }, 600);
-                input.value = "";
-            }
-        }
-
+        /* SAFE SEARCH TOGGLE */
         function toggleSafeSearch() {
             isSafeSearch = !isSafeSearch;
             const btn = document.getElementById('safeToggle');
@@ -570,23 +634,15 @@
                 btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
             }
         }
-
         function toggleSafeSearchFromSettings() {
             toggleSafeSearch();
         }
 
-        function askCurrentQueryToAI() {
-            const query = document.getElementById('resultsSearch').value;
-            showPage('ai-page');
-            document.getElementById('aiIn').value = `Tell me more about ${query}`;
-        }
-
-        // --- SETTINGS LOGIC (LANG + THEME + TEXTS) ---
+        /* TRANSLATIONS */
         const translations = {
             en: {
                 navHome: "Home",
                 navHeopad: "Heopad",
-                navAI: "Heofonix AI",
                 navAbout: "About Us",
                 navSettings: "Settings",
                 trendingTitle: "TRENDING SEARCHES",
@@ -597,13 +653,8 @@
                 aboutText: "Welcome to Heofon. Heofon is an advanced Search Engine. We deliver vast searches for all your wants and needs without stealing your info. Heofon gives you searches that you need and not random searches you find off other search engines, we give you the most advanced and vast we can give you.",
                 quickActions: "Quick Actions",
                 quickOpenHeopad: "➜ Open in Heopad",
-                quickChatAI: "➜ Chat with Heofonix",
-                aiWelcome: "Hey, Welcome to Heofonix AI<br><br>Ask anything — Fluent Spanish 🇪🇸, Dictionary 📘, Math ➕, Logic 📁",
-                uploadBtn: "📎 Upload Logic / Image",
                 homeSearchPlaceholder: "Search Global Hub...",
                 resultsSearchPlaceholder: "Search Heofon...",
-                aiInputPlaceholder: "Command Heofonix...",
-                askAI: "Ask Heofonix",
                 settingsTitle: "Settings",
                 settingsLanguage: "Language / Språk",
                 settingsTheme: "Theme / Tema",
@@ -612,7 +663,6 @@
             no: {
                 navHome: "Hjem",
                 navHeopad: "Heopad",
-                navAI: "Heofonix KI",
                 navAbout: "Om oss",
                 navSettings: "Innstillinger",
                 trendingTitle: "POPULÆRE SØK",
@@ -623,13 +673,8 @@
                 aboutText: "Velkommen til Heofon. Heofon er en avansert søkemotor. Vi leverer store og presise søk for alle dine behov uten å stjele informasjonen din. Heofon gir deg søkene du trenger og ikke tilfeldige treff fra andre søkemotorer, vi gir deg det mest avanserte og omfattende vi kan.",
                 quickActions: "Hurtigvalg",
                 quickOpenHeopad: "➜ Åpne i Heopad",
-                quickChatAI: "➜ Chat med Heofonix",
-                aiWelcome: "Hei, velkommen til Heofonix KI<br><br>Spør om hva som helst — Flytende spansk 🇪🇸, ordbok 📘, matte ➕, logikk 📁",
-                uploadBtn: "📎 Last opp logikk / bilde",
                 homeSearchPlaceholder: "Søk i Global Hub...",
                 resultsSearchPlaceholder: "Søk i Heofon...",
-                aiInputPlaceholder: "Gi kommando til Heofonix...",
-                askAI: "Spør Heofonix",
                 settingsTitle: "Innstillinger",
                 settingsLanguage: "Språk",
                 settingsTheme: "Tema",
@@ -665,7 +710,6 @@
             localStorage.setItem("heofon_theme", isLight ? "light" : "dark");
         }
 
-        // INIT SETTINGS ON LOAD
         (function initSettings() {
             const savedLang = localStorage.getItem("heofon_lang") || "en";
             const savedTheme = localStorage.getItem("heofon_theme") || "dark";
@@ -683,10 +727,10 @@
                 if (btn) btn.innerText = "Dark";
             }
 
-            // sync safe search button on settings page
             const btn2 = document.getElementById('safeToggleSettings');
             if (btn2) btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
         })();
     </script>
 </body>
 </html>
+
