@@ -3,7 +3,8 @@ Heofon is a powerful search engine and global hub built to give you the exact re
 The site also features the Heopad, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. Yeah, it's the ultimate all-in-one search engine and AI experience.
 Heofon may have not as much searches as the other big guys but all the searches are vast and helpful for what you want.
 
-Right now out AI is down thank you for the wait. 
+Right now out AI is down thank you for the wait. We just have updated Heofon now with billions of pages with web crawlers, see it at: https://heofonglobalsearch-com.base44.app/
+
 
 
 
