@@ -262,6 +262,7 @@
         <div class="nav-link" onclick="showPage('heopad-page')" data-i18n-key="navHeopad">Heopad</div>
         <div class="nav-link" onclick="showPage('about-page')" data-i18n-key="navAbout">About Us</div>
         <div class="nav-link" onclick="showPage('settings-page')" data-i18n-key="navSettings">Settings</div>
+        <div class="nav-link" onclick="showPage('add-heofon-page')" data-i18n-key="navAddHeofon">Add Heofon</div>
     </div>
 
     <!-- HOME PAGE -->
@@ -290,9 +291,9 @@
         <h1 class="heopad-logo">Heopad</h1>
         <div class="heopad-container">
             <div class="heopad-toolbar">
-                <button class="tool-btn" onclick="execCmd('bold')" data-i18n-key="btnLeft">B</button>
-                <button class="tool-btn" onclick="execCmd('italic')">I</button>
-                <button class="tool-btn" onclick="execCmd('underline')">U</button>
+                <button class="tool-btn" onclick="execCmd('bold')" data-i18n-key="btnBold">B</button>
+                <button class="tool-btn" onclick="execCmd('italic')" data-i18n-key="btnItalic">I</button>
+                <button class="tool-btn" onclick="execCmd('underline')" data-i18n-key="btnUnderline">U</button>
                 <button class="tool-btn" onclick="execCmd('justifyLeft')" data-i18n-key="btnLeft">Left</button>
                 <button class="tool-btn" onclick="execCmd('justifyCenter')" data-i18n-key="btnCenter">Center</button>
                 <input type="color" onchange="execCmd('foreColor', this.value)" style="background:none; border:none; width:30px; height:25px; cursor:pointer;">
@@ -366,119 +367,166 @@
         </div>
     </div>
 
+    <!-- ADD HEOFON PAGE -->
+    <div id="add-heofon-page" class="page">
+        <div style="
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 2px solid #00d4ff;
+            padding: 40px;
+            border-radius: 30px;
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+        ">
+            <h2 style="color:#00d4ff; font-size:2.2rem; margin-bottom:20px;" data-i18n-key="addHeofonTitle">
+                Add Heofon to your browser
+            </h2>
+            <p style="margin-bottom:25px; color:#e8eaed;" data-i18n-key="addHeofonText">
+                Choose your browser below to open the instructions page and add Heofon.
+            </p>
+
+            <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+                <button
+                    style="padding:12px 24px; border-radius:25px; border:none; cursor:pointer;
+                           font-size:1rem; font-weight:bold; color:#fff; background:#e66000;"
+                    onclick="window.open('https://sites.google.com/kimberly.k12.wi.us/heofon-how-to-do-blog2/home','_blank')"
+                    data-i18n-key="addHeofonFirefoxBtn">
+                    Add Heofon to Firefox
+                </button>
+
+                <button
+                    style="padding:12px 24px; border-radius:25px; border:none; cursor:pointer;
+                           font-size:1rem; font-weight:bold; color:#fff; background:#4285f4;"
+                    onclick="window.open('https://sites.google.com/kimberly.k12.wi.us/heofon-how-to-do-blog/home','_blank')"
+                    data-i18n-key="addHeofonChromeBtn">
+                    Add Heofon to Chrome
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
         let isSafeSearch = true;
 
- /* SEARCH DATABASE (100 Entries) */
-const searchDB = {
-    // New Search Engine Additions
-    "yahoo": [{ name: "Yahoo", url: "https://www.yahoo.com", desc: "News, email and search results.", favicon: "https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage_2x.png" }],
-    "ecosia": [{ name: "Ecosia", url: "https://www.ecosia.org", desc: "The search engine that plants trees.", favicon: "https://cdn-static.ecosia.org/assets/images/ico/favicon.ico" }],
-    "duckduckgo": [{ name: "DuckDuckGo", url: "https://duckduckgo.com", desc: "The search engine that doesn't track you.", favicon: "https://duckduckgo.com/favicon.ico" }],
-    "yandex": [{ name: "Yandex", url: "https://yandex.com", desc: "A Russian multinational technology company providing Internet-related services.", favicon: "https://yastatic.net/s3/home-static/_/ed/ed773ef1352e7424036e522b9c7b275f.png" }],
-    "baidu": [{ name: "Baidu", url: "https://www.baidu.com", desc: "The leading Chinese language search engine.", favicon: "https://www.baidu.com/favicon.ico" }],
-    "naver": [{ name: "Naver", url: "https://www.naver.com", desc: "South Korea's premier search portal.", favicon: "https://www.naver.com/favicon.ico" }],
-    "qwant": [{ name: "Qwant", url: "https://www.qwant.com", desc: "The search engine that respects your privacy.", favicon: "https://www.qwant.com/favicon.ico" }],
-    "wolframalpha": [{ name: "WolframAlpha", url: "https://www.wolframalpha.com", desc: "Compute expert-level answers using AI technology.", favicon: "https://www.wolframalpha.com/favicon.ico" }],
-    "swisscows": [{ name: "Swisscows", url: "https://swisscows.com", desc: "A family-friendly, privacy-focused search engine.", favicon: "https://swisscows.com/favicon.ico" }],
-    
-    // Original Database
-    "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "https://appletonpackinggasket.com/favicon.ico" }],
-    "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
-    "wikipedia": [{ name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" }],
-    "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Watch videos, share original content, and enjoy music.", favicon: "https://www.youtube.com/favicon.ico" }],
-    "playhop": [{ name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" }],
-    "happy wheels": [{ name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" }],
-    "heofon": [{ name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/HeofonGlobalSearch/", desc: "A Norwegian and American search engine that does not take info from you.", favicon: "favicon.png" }],
-    "noredink": [{ name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" }],
-    "mobymax": [{ name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" }],
-    "khan": [{ name: "Khan Academy", url: "https://www.khanacademy.org/", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" }],
-    "bing": [{ name: "Search - Microsoft Bing", url: "https://www.bing.com/", desc: "Search with Microsoft Bing and use the power of AI.", favicon: "https://www.bing.com/favicon.ico" }],
-    "roblox": [{ name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions gather to create.", favicon: "https://www.roblox.com/favicon.ico" }],
-    "anthropic ai": [{ name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company building reliable AI.", favicon: "https://www.anthropic.com/favicon.ico" }],
-    "nascar": [{ name: "NASCAR Official Site", url: "https://www.nascar.com/", desc: "Stock car racing news, schedules, and results.", favicon: "https://www.nascar.com/favicon.ico" }],
-    "amazon": [{ name: "Amazon", url: "https://www.amazon.com", desc: "Global leader in e-commerce, cloud computing, and digital streaming.", favicon: "https://www.amazon.com/favicon.ico" }],
-    "microsoft": [{ name: "Microsoft", url: "https://www.microsoft.com", desc: "Software, electronics, and cloud services including Windows and Office.", favicon: "https://www.microsoft.com/favicon.ico" }],
-    "tesla": [{ name: "Tesla", url: "https://www.tesla.com", desc: "Electric vehicles, solar energy, and clean energy solutions.", favicon: "https://www.tesla.com/favicon.ico" }],
-    "disney": [{ name: "Disney", url: "https://www.disney.com", desc: "The world's leading entertainment and media company.", favicon: "https://www.disney.com/favicon.ico" }],
-    "spacex": [{ name: "SpaceX", url: "https://www.spacex.com", desc: "Revolutionizing space technology and interplanetary travel.", favicon: "https://www.spacex.com/favicon.ico" }],
-    "google": [{ name: "Google", url: "https://www.google.com", desc: "The world's most popular search engine.", favicon: "https://www.google.com/favicon.ico" }],
-    "netflix": [{ name: "Netflix", url: "https://www.netflix.com", desc: "Stream your favorite movies and TV shows.", favicon: "https://www.netflix.com/favicon.ico" }],
-    "apple": [{ name: "Apple", url: "https://www.apple.com", desc: "Innovative technology and consumer electronics.", favicon: "https://www.apple.com/favicon.ico" }],
-    "spotify": [{ name: "Spotify", url: "https://www.spotify.com", desc: "Digital music, podcast, and video service.", favicon: "https://www.spotify.com/favicon.ico" }],
-    "reddit": [{ name: "Reddit", url: "https://www.reddit.com", desc: "Dive into anything on the front page of the internet.", favicon: "https://www.reddit.com/favicon.ico" }],
-    "twitch": [{ name: "Twitch", url: "https://www.twitch.tv", desc: "Leading live streaming platform for gamers.", favicon: "https://www.twitch.tv/favicon.ico" }],
-    "steam": [{ name: "Steam", url: "https://store.steampowered.com", desc: "The ultimate destination for playing and discussing games.", favicon: "https://store.steampowered.com/favicon.ico" }],
-    "github": [{ name: "GitHub", url: "https://www.github.com", desc: "The world's leading AI-powered developer platform.", favicon: "https://github.com/favicon.ico" }],
-    "discord": [{ name: "Discord", url: "https://www.discord.com", desc: "The easiest way to talk over voice, video, and text.", favicon: "https://www.discord.com/favicon.ico" }],
-    "nvidia": [{ name: "NVIDIA", url: "https://www.nvidia.com", desc: "Global leader in AI computing and high-end graphics cards.", favicon: "https://www.nvidia.com/favicon.ico" }],
-    "fortnite": [{ name: "Fortnite", url: "https://www.epicgames.com/fortnite", desc: "Battle Royale and creative gameplay from Epic Games.", favicon: "https://www.epicgames.com/favicon.ico" }],
-    "minecraft": [{ name: "Minecraft Official", url: "https://www.minecraft.net", desc: "Build, explore, and survive in a blocky world.", favicon: "https://www.minecraft.net/favicon.ico" }],
-    "coolmath": [{ name: "Coolmath Games", url: "https://www.coolmathgames.com", desc: "Fun logic and strategy games that are educational.", favicon: "https://www.coolmathgames.com/favicon.ico" }],
-    "chess": [{ name: "Chess.com", url: "https://www.chess.com", desc: "Play chess online against friends or the computer.", favicon: "https://www.chess.com/favicon.ico" }],
-    "duolingo": [{ name: "Duolingo", url: "https://www.duolingo.com", desc: "The world's most popular way to learn a language.", favicon: "https://www.duolingo.com/favicon.ico" }],
-    "weather": [{ name: "AccuWeather", url: "https://www.accuweather.com", desc: "Accurate local and international weather forecasts.", favicon: "https://www.accuweather.com/favicon.ico" }],
-    "cnn": [{ name: "CNN", url: "https://www.cnn.com", desc: "Breaking news and top stories from around the globe.", favicon: "https://www.cnn.com/favicon.ico" }],
-    "espn": [{ name: "ESPN", url: "https://www.espn.com", desc: "Comprehensive sports news, scores, and live coverage.", favicon: "https://www.espn.com/favicon.ico" }],
-    "adobe": [{ name: "Adobe", url: "https://www.adobe.com", desc: "Creative cloud software for design, video, and photography.", favicon: "https://www.adobe.com/favicon.ico" }],
-    "ebay": [{ name: "eBay", url: "https://www.ebay.com", desc: "Buy and sell electronics, cars, fashion apparel, collectibles, and more.", favicon: "https://www.ebay.com/favicon.ico" }],
-    "walmart": [{ name: "Walmart", url: "https://www.walmart.com", desc: "Shop Walmart.com for Every Day Low Prices.", favicon: "https://www.walmart.com/favicon.ico" }],
-    "target": [{ name: "Target", url: "https://www.target.com", desc: "Expect More. Pay Less.", favicon: "https://www.target.com/favicon.ico" }],
-    "best buy": [{ name: "Best Buy", url: "https://www.bestbuy.com", desc: "Expert Service. Unbeatable Price.", favicon: "https://www.bestbuy.com/favicon.ico" }],
-    "quora": [{ name: "Quora", url: "https://www.quora.com", desc: "A place to share knowledge and better understand the world.", favicon: "https://www.quora.com/favicon.ico" }],
-    "medium": [{ name: "Medium", url: "https://www.medium.com", desc: "Where good ideas find you.", favicon: "https://www.medium.com/favicon.ico" }],
-    "stack overflow": [{ name: "Stack Overflow", url: "https://stackoverflow.com", desc: "The largest, most trusted online community for developers.", favicon: "https://stackoverflow.com/favicon.ico" }],
-    "linkedin": [{ name: "LinkedIn", url: "https://www.linkedin.com", desc: "Manage your professional identity.", favicon: "https://www.linkedin.com/favicon.ico" }],
-    "twitter": [{ name: "X / Twitter", url: "https://www.twitter.com", desc: "It's what's happening.", favicon: "https://abs.twimg.com/favicons/twitter.ico" }],
-    "instagram": [{ name: "Instagram", url: "https://www.instagram.com", desc: "Capture and Share the World's Moments.", favicon: "https://www.instagram.com/favicon.ico" }],
-    "pinterest": [{ name: "Pinterest", url: "https://www.pinterest.com", desc: "Discover recipes, home ideas, style inspiration.", favicon: "https://www.pinterest.com/favicon.ico" }],
-    "tiktok": [{ name: "TikTok", url: "https://www.tiktok.com", desc: "Make Your Day.", favicon: "https://www.tiktok.com/favicon.ico" }],
-    "hulu": [{ name: "Hulu", url: "https://www.hulu.com", desc: "Stream TV and Movies.", favicon: "https://www.hulu.com/favicon.ico" }],
-    "hbo": [{ name: "Max (HBO)", url: "https://www.max.com", desc: "The One to Watch for HBO, DC, and more.", favicon: "https://www.max.com/favicon.ico" }],
-    "craigslist": [{ name: "Craigslist", url: "https://www.craigslist.org", desc: "Local classifieds and forums.", favicon: "https://www.craigslist.org/favicon.ico" }],
-    "imdb": [{ name: "IMDb", url: "https://www.imdb.com", desc: "Movies, TV and Celebrities.", favicon: "https://www.imdb.com/favicon.ico" }],
-    "yelp": [{ name: "Yelp", url: "https://www.yelp.com", desc: "Real reviews from real people.", favicon: "https://www.yelp.com/favicon.ico" }],
-    "zillow": [{ name: "Zillow", url: "https://www.zillow.com", desc: "Real Estate, Apartments, Mortgages & Home Values.", favicon: "https://www.zillow.com/favicon.ico" }],
-    "bbc": [{ name: "BBC News", url: "https://www.bbc.com/news", desc: "Breaking news from around the world.", favicon: "https://www.bbc.com/favicon.ico" }],
-    "nyt": [{ name: "The New York Times", url: "https://www.nytimes.com", desc: "Breaking News, World News & Multimedia.", favicon: "https://www.nytimes.com/favicon.ico" }],
-    "forbes": [{ name: "Forbes", url: "https://www.forbes.com", desc: "Business, Stock Market, and Financial Advice.", favicon: "https://www.forbes.com/favicon.ico" }],
-    "ign": [{ name: "IGN", url: "https://www.ign.com", desc: "Video Games, Movies, TV and Comics.", favicon: "https://www.ign.com/favicon.ico" }],
-    "gamespot": [{ name: "GameSpot", url: "https://www.gamespot.com", desc: "Gaming news and reviews.", favicon: "https://www.gamespot.com/favicon.ico" }],
-    "epic games": [{ name: "Epic Games Store", url: "https://www.epicgames.com", desc: "Download and play amazing games.", favicon: "https://www.epicgames.com/favicon.ico" }],
-    "openai": [{ name: "OpenAI", url: "https://www.openai.com", desc: "Creating safe AGI that benefits all of humanity.", favicon: "https://www.openai.com/favicon.ico" }],
-    "claude": [{ name: "Claude AI", url: "https://claude.ai", desc: "Talk to Claude, an AI by Anthropic.", favicon: "https://claude.ai/favicon.ico" }],
-    "gemini": [{ name: "Gemini AI", url: "https://gemini.google.com", desc: "Google's most capable AI model.", favicon: "https://www.gstatic.com/lamda/images/favicon_v1_150160d13ffabc731.svg" }],
-    "canva": [{ name: "Canva", url: "https://www.canva.com", desc: "Design anything with Canva.", favicon: "https://www.canva.com/favicon.ico" }],
-    "fandom": [{ name: "Fandom", url: "https://www.fandom.com", desc: "The fan's voice in entertainment.", favicon: "https://www.fandom.com/favicon.ico" }],
-    "messenger": [{ name: "Messenger", url: "https://www.messenger.com", desc: "Connect with your favorite people.", favicon: "https://www.messenger.com/favicon.ico" }],
-    "whatsapp": [{ name: "WhatsApp", url: "https://www.whatsapp.com", desc: "Simple. Personal. Real-time messaging.", favicon: "https://www.whatsapp.com/favicon.ico" }],
-    "zoom": [{ name: "Zoom", url: "https://zoom.us", desc: "Video conferencing, webinars, and meetings.", favicon: "https://zoom.us/favicon.ico" }],
-    "dropbox": [{ name: "Dropbox", url: "https://www.dropbox.com", desc: "Focus on the work that matters.", favicon: "https://www.dropbox.com/favicon.ico" }],
-    "google drive": [{ name: "Google Drive", url: "https://drive.google.com", desc: "A safe place for all your files.", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }],
-    "shein": [{ name: "SHEIN", url: "https://www.shein.com", desc: "Fashionable clothing and accessories.", favicon: "https://www.shein.com/favicon.ico" }],
-    "temu": [{ name: "Temu", url: "https://www.temu.com", desc: "Shop like a billionaire.", favicon: "https://www.temu.com/favicon.ico" }],
-    "aliexpress": [{ name: "AliExpress", url: "https://www.aliexpress.com", desc: "Smarter Shopping, Better Living.", favicon: "https://www.aliexpress.com/favicon.ico" }],
-    "fedex": [{ name: "FedEx", url: "https://www.fedex.com", desc: "Track your packages and shipments.", favicon: "https://www.fedex.com/favicon.ico" }],
-    "ups": [{ name: "UPS", url: "https://www.ups.com", desc: "Shipping, Freight, and Logistics.", favicon: "https://www.ups.com/favicon.ico" }],
-    "paypal": [{ name: "PayPal", url: "https://www.paypal.com", desc: "Digital Wallets and Money Management.", favicon: "https://www.paypal.com/favicon.ico" }],
-    "chase": [{ name: "Chase Bank", url: "https://www.chase.com", desc: "Personalized Banking and Credit Cards.", favicon: "https://www.chase.com/favicon.ico" }],
-    "bank of america": [{ name: "Bank of America", url: "https://www.bankofamerica.com", desc: "Financial Services for individuals.", favicon: "https://www.bankofamerica.com/favicon.ico" }],
-    "nike": [{ name: "Nike", url: "https://www.nike.com", desc: "Just Do It.", favicon: "https://www.nike.com/favicon.ico" }],
-    "adidas": [{ name: "Adidas", url: "https://www.adidas.com", desc: "Impossible is Nothing.", favicon: "https://www.adidas.com/favicon.ico" }],
-    "poker": [{ name: "PokerStars", url: "https://www.pokerstars.com", desc: "Play online poker games.", favicon: "https://www.pokerstars.com/favicon.ico" }],
-    "nba": [{ name: "NBA", url: "https://www.nba.com", desc: "National Basketball Association Official Site.", favicon: "https://www.nba.com/favicon.ico" }],
-    "nfl": [{ name: "NFL", url: "https://www.nfl.com", desc: "National Football League Official Site.", favicon: "https://www.nfl.com/favicon.ico" }],
-    "mlb": [{ name: "MLB", url: "https://www.mlb.com", desc: "Major League Baseball Official Site.", favicon: "https://www.mlb.com/favicon.ico" }],
-    "ea": [{ name: "EA Sports", url: "https://www.ea.com", desc: "It's in the game.", favicon: "https://www.ea.com/favicon.ico" }],
-    "ubisoft": [{ name: "Ubisoft", url: "https://www.ubisoft.com", desc: "Official Ubisoft website.", favicon: "https://www.ubisoft.com/favicon.ico" }],
-    "nintendo": [{ name: "Nintendo", url: "https://www.nintendo.com", desc: "Systems, Games, and more.", favicon: "https://www.nintendo.com/favicon.ico" }],
-    "playstation": [{ name: "PlayStation", url: "https://www.playstation.com", desc: "Live in your world. Play in ours.", favicon: "https://www.playstation.com/favicon.ico" }],
-    "xbox": [{ name: "Xbox", url: "https://www.xbox.com", desc: "Power Your Dreams.", favicon: "https://www.xbox.com/favicon.ico" }],
-    "unblocked games": [{ name: "Classroom Center", url: "https://sites.google.com/classroom.center/view-1/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }],
-    "searxng": [{ name: "SearXNG (rhsCZ)", url: "https://search.rhscz.eu/", desc: "Privacy‑respecting metasearch engine powered by SearXNG.", favicon: "https://search.rhscz.eu/favicon.ico" }]
-};
+        /* PARTICLES */
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 60; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.animationDuration = (7 + Math.random() * 6) + 's';
+            p.style.animationDelay = (Math.random() * -10) + 's';
+            particlesContainer.appendChild(p);
+        }
 
-        /* INSIGHT TEXTS (SearXNG added) */
+        /* SEARCH DATABASE (TRUNCATED FOR BREVITY IN EXPLANATION – KEEP YOUR FULL DB HERE) */
+        const searchDB = {
+            "yahoo": [{ name: "Yahoo", url: "https://www.yahoo.com", desc: "News, email and search results.", favicon: "https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage_2x.png" }],
+            "ecosia": [{ name: "Ecosia", url: "https://www.ecosia.org", desc: "The search engine that plants trees.", favicon: "https://cdn-static.ecosia.org/assets/images/ico/favicon.ico" }],
+            "duckduckgo": [{ name: "DuckDuckGo", url: "https://duckduckgo.com", desc: "The search engine that doesn't track you.", favicon: "https://duckduckgo.com/favicon.ico" }],
+            "yandex": [{ name: "Yandex", url: "https://yandex.com", desc: "A Russian multinational technology company providing Internet-related services.", favicon: "https://yastatic.net/s3/home-static/_/ed/ed773ef1352e7424036e522b9c7b275f.png" }],
+            "baidu": [{ name: "Baidu", url: "https://www.baidu.com", desc: "The leading Chinese language search engine.", favicon: "https://www.baidu.com/favicon.ico" }],
+            "naver": [{ name: "Naver", url: "https://www.naver.com", desc: "South Korea's premier search portal.", favicon: "https://www.naver.com/favicon.ico" }],
+            "qwant": [{ name: "Qwant", url: "https://www.qwant.com", desc: "The search engine that respects your privacy.", favicon: "https://www.qwant.com/favicon.ico" }],
+            "wolframalpha": [{ name: "WolframAlpha", url: "https://www.wolframalpha.com", desc: "Compute expert-level answers using AI technology.", favicon: "https://www.wolframalpha.com/favicon.ico" }],
+            "swisscows": [{ name: "Swisscows", url: "https://swisscows.com", desc: "A family-friendly, privacy-focused search engine.", favicon: "https://swisscows.com/favicon.ico" }],
+            "appleton": [{ name: "Appleton Packing & Gasket", url: "https://appletonpackinggasket.com/", desc: "Industrial packing and gasket solutions for all applications.", favicon: "https://appletonpackinggasket.com/favicon.ico" }],
+            "wwe": [{ name: "WWE Official Site", url: "https://www.wwe.com/", desc: "World Wrestling Entertainment - Home of Raw, SmackDown, and NXT.", favicon: "https://www.wwe.com/favicon.ico" }],
+            "wikipedia": [{ name: "Wikipedia", url: "https://www.wikipedia.org/", desc: "The free encyclopedia that anyone can edit.", favicon: "https://www.wikipedia.org/static/favicon/wikipedia.ico" }],
+            "youtube": [{ name: "YouTube", url: "https://www.youtube.com/", desc: "Watch videos, share original content, and enjoy music.", favicon: "https://www.youtube.com/favicon.ico" }],
+            "playhop": [{ name: "Playhop", url: "https://playhop.com/", desc: "Play free online games in your browser.", favicon: "https://playhop.com/favicon.ico" }],
+            "happy wheels": [{ name: "Happy Wheels", url: "https://totaljerkface.com/happy_wheels.tjf", desc: "A physics-based obstacle course game.", favicon: "https://totaljerkface.com/favicon.ico" }],
+            "heofon": [{ name: "Heofon - Global Superintelligence", url: "https://liamprosser77.github.io/HeofonGlobalSearch/", desc: "A Norwegian and American search engine that does not take info from you.", favicon: "favicon.png" }],
+            "noredink": [{ name: "NoRedInk", url: "https://www.noredink.com/learn/home", desc: "Adaptive writing and grammar tools.", favicon: "https://www.noredink.com/favicon.ico" }],
+            "mobymax": [{ name: "MobyMax", url: "https://www.mobymax.com/signin", desc: "Personalized learning for K-8 students.", favicon: "https://www.mobymax.com/favicon.ico" }],
+            "khan": [{ name: "Khan Academy", url: "https://www.khanacademy.org/", desc: "Learn anything for free.", favicon: "https://www.khanacademy.org/favicon.ico" }],
+            "bing": [{ name: "Search - Microsoft Bing", url: "https://www.bing.com/", desc: "Search with Microsoft Bing and use the power of AI.", favicon: "https://www.bing.com/favicon.ico" }],
+            "roblox": [{ name: "Roblox", url: "https://www.roblox.com/", desc: "A global platform where millions gather to create.", favicon: "https://www.roblox.com/favicon.ico" }],
+            "anthropic ai": [{ name: "Anthropic AI", url: "https://www.anthropic.com", desc: "AI safety and research company building reliable AI.", favicon: "https://www.anthropic.com/favicon.ico" }],
+            "nascar": [{ name: "NASCAR Official Site", url: "https://www.nascar.com/", desc: "Stock car racing news, schedules, and results.", favicon: "https://www.nascar.com/favicon.ico" }],
+            "amazon": [{ name: "Amazon", url: "https://www.amazon.com", desc: "Global leader in e-commerce, cloud computing, and digital streaming.", favicon: "https://www.amazon.com/favicon.ico" }],
+            "microsoft": [{ name: "Microsoft", url: "https://www.microsoft.com", desc: "Software, electronics, and cloud services including Windows and Office.", favicon: "https://www.microsoft.com/favicon.ico" }],
+            "tesla": [{ name: "Tesla", url: "https://www.tesla.com", desc: "Electric vehicles, solar energy, and clean energy solutions.", favicon: "https://www.tesla.com/favicon.ico" }],
+            "disney": [{ name: "Disney", url: "https://www.disney.com", desc: "The world's leading entertainment and media company.", favicon: "https://www.disney.com/favicon.ico" }],
+            "spacex": [{ name: "SpaceX", url: "https://www.spacex.com", desc: "Revolutionizing space technology and interplanetary travel.", favicon: "https://www.spacex.com/favicon.ico" }],
+            "google": [{ name: "Google", url: "https://www.google.com", desc: "The world's most popular search engine.", favicon: "https://www.google.com/favicon.ico" }],
+            "netflix": [{ name: "Netflix", url: "https://www.netflix.com", desc: "Stream your favorite movies and TV shows.", favicon: "https://www.netflix.com/favicon.ico" }],
+            "apple": [{ name: "Apple", url: "https://www.apple.com", desc: "Innovative technology and consumer electronics.", favicon: "https://www.apple.com/favicon.ico" }],
+            "spotify": [{ name: "Spotify", url: "https://www.spotify.com", desc: "Digital music, podcast, and video service.", favicon: "https://www.spotify.com/favicon.ico" }],
+            "reddit": [{ name: "Reddit", url: "https://www.reddit.com", desc: "Dive into anything on the front page of the internet.", favicon: "https://www.reddit.com/favicon.ico" }],
+            "twitch": [{ name: "Twitch", url: "https://www.twitch.tv", desc: "Leading live streaming platform for gamers.", favicon: "https://www.twitch.tv/favicon.ico" }],
+            "steam": [{ name: "Steam", url: "https://store.steampowered.com", desc: "The ultimate destination for playing and discussing games.", favicon: "https://store.steampowered.com/favicon.ico" }],
+            "github": [{ name: "GitHub", url: "https://www.github.com", desc: "The world's leading AI-powered developer platform.", favicon: "https://github.com/favicon.ico" }],
+            "discord": [{ name: "Discord", url: "https://www.discord.com", desc: "The easiest way to talk over voice, video, and text.", favicon: "https://www.discord.com/favicon.ico" }],
+            "nvidia": [{ name: "NVIDIA", url: "https://www.nvidia.com", desc: "Global leader in AI computing and high-end graphics cards.", favicon: "https://www.nvidia.com/favicon.ico" }],
+            "fortnite": [{ name: "Fortnite", url: "https://www.epicgames.com/fortnite", desc: "Battle Royale and creative gameplay from Epic Games.", favicon: "https://www.epicgames.com/favicon.ico" }],
+            "minecraft": [{ name: "Minecraft Official", url: "https://www.minecraft.net", desc: "Build, explore, and survive in a blocky world.", favicon: "https://www.minecraft.net/favicon.ico" }],
+            "coolmath": [{ name: "Coolmath Games", url: "https://www.coolmathgames.com", desc: "Fun logic and strategy games that are educational.", favicon: "https://www.coolmathgames.com/favicon.ico" }],
+            "chess": [{ name: "Chess.com", url: "https://www.chess.com", desc: "Play chess online against friends or the computer.", favicon: "https://www.chess.com/favicon.ico" }],
+            "duolingo": [{ name: "Duolingo", url: "https://www.duolingo.com", desc: "The world's most popular way to learn a language.", favicon: "https://www.duolingo.com/favicon.ico" }],
+            "weather": [{ name: "AccuWeather", url: "https://www.accuweather.com", desc: "Accurate local and international weather forecasts.", favicon: "https://www.accuweather.com/favicon.ico" }],
+            "cnn": [{ name: "CNN", url: "https://www.cnn.com", desc: "Breaking news and top stories from around the globe.", favicon: "https://www.cnn.com/favicon.ico" }],
+            "espn": [{ name: "ESPN", url: "https://www.espn.com", desc: "Comprehensive sports news, scores, and live coverage.", favicon: "https://www.espn.com/favicon.ico" }],
+            "adobe": [{ name: "Adobe", url: "https://www.adobe.com", desc: "Creative cloud software for design, video, and photography.", favicon: "https://www.adobe.com/favicon.ico" }],
+            "ebay": [{ name: "eBay", url: "https://www.ebay.com", desc: "Buy and sell electronics, cars, fashion apparel, collectibles, and more.", favicon: "https://www.ebay.com/favicon.ico" }],
+            "walmart": [{ name: "Walmart", url: "https://www.walmart.com", desc: "Shop Walmart.com for Every Day Low Prices.", favicon: "https://www.walmart.com/favicon.ico" }],
+            "target": [{ name: "Target", url: "https://www.target.com", desc: "Expect More. Pay Less.", favicon: "https://www.target.com/favicon.ico" }],
+            "best buy": [{ name: "Best Buy", url: "https://www.bestbuy.com", desc: "Expert Service. Unbeatable Price.", favicon: "https://www.bestbuy.com/favicon.ico" }],
+            "quora": [{ name: "Quora", url: "https://www.quora.com", desc: "A place to share knowledge and better understand the world.", favicon: "https://www.quora.com/favicon.ico" }],
+            "medium": [{ name: "Medium", url: "https://www.medium.com", desc: "Where good ideas find you.", favicon: "https://www.medium.com/favicon.ico" }],
+            "stack overflow": [{ name: "Stack Overflow", url: "https://stackoverflow.com", desc: "The largest, most trusted online community for developers.", favicon: "https://stackoverflow.com/favicon.ico" }],
+            "linkedin": [{ name: "LinkedIn", url: "https://www.linkedin.com", desc: "Manage your professional identity.", favicon: "https://www.linkedin.com/favicon.ico" }],
+            "twitter": [{ name: "X / Twitter", url: "https://www.twitter.com", desc: "It's what's happening.", favicon: "https://abs.twimg.com/favicons/twitter.ico" }],
+            "instagram": [{ name: "Instagram", url: "https://www.instagram.com", desc: "Capture and Share the World's Moments.", favicon: "https://www.instagram.com/favicon.ico" }],
+            "pinterest": [{ name: "Pinterest", url: "https://www.pinterest.com", desc: "Discover recipes, home ideas, style inspiration.", favicon: "https://www.pinterest.com/favicon.ico" }],
+            "tiktok": [{ name: "TikTok", url: "https://www.tiktok.com", desc: "Make Your Day.", favicon: "https://www.tiktok.com/favicon.ico" }],
+            "hulu": [{ name: "Hulu", url: "https://www.hulu.com", desc: "Stream TV and Movies.", favicon: "https://www.hulu.com/favicon.ico" }],
+            "hbo": [{ name: "Max (HBO)", url: "https://www.max.com", desc: "The One to Watch for HBO, DC, and more.", favicon: "https://www.max.com/favicon.ico" }],
+            "craigslist": [{ name: "Craigslist", url: "https://www.craigslist.org", desc: "Local classifieds and forums.", favicon: "https://www.craigslist.org/favicon.ico" }],
+            "imdb": [{ name: "IMDb", url: "https://www.imdb.com", desc: "Movies, TV and Celebrities.", favicon: "https://www.imdb.com/favicon.ico" }],
+            "yelp": [{ name: "Yelp", url: "https://www.yelp.com", desc: "Real reviews from real people.", favicon: "https://www.yelp.com/favicon.ico" }],
+            "zillow": [{ name: "Zillow", url: "https://www.zillow.com", desc: "Real Estate, Apartments, Mortgages & Home Values.", favicon: "https://www.zillow.com/favicon.ico" }],
+            "bbc": [{ name: "BBC News", url: "https://www.bbc.com/news", desc: "Breaking news from around the world.", favicon: "https://www.bbc.com/favicon.ico" }],
+            "nyt": [{ name: "The New York Times", url: "https://www.nytimes.com", desc: "Breaking News, World News & Multimedia.", favicon: "https://www.nytimes.com/favicon.ico" }],
+            "forbes": [{ name: "Forbes", url: "https://www.forbes.com", desc: "Business, Stock Market, and Financial Advice.", favicon: "https://www.forbes.com/favicon.ico" }],
+            "ign": [{ name: "IGN", url: "https://www.ign.com", desc: "Video Games, Movies, TV and Comics.", favicon: "https://www.ign.com/favicon.ico" }],
+            "gamespot": [{ name: "GameSpot", url: "https://www.gamespot.com", desc: "Gaming news and reviews.", favicon: "https://www.gamespot.com/favicon.ico" }],
+            "epic games": [{ name: "Epic Games Store", url: "https://www.epicgames.com", desc: "Download and play amazing games.", favicon: "https://www.epicgames.com/favicon.ico" }],
+            "openai": [{ name: "OpenAI", url: "https://www.openai.com", desc: "Creating safe AGI that benefits all of humanity.", favicon: "https://www.openai.com/favicon.ico" }],
+            "claude": [{ name: "Claude AI", url: "https://claude.ai", desc: "Talk to Claude, an AI by Anthropic.", favicon: "https://claude.ai/favicon.ico" }],
+            "gemini": [{ name: "Gemini AI", url: "https://gemini.google.com", desc: "Google's most capable AI model.", favicon: "https://www.gstatic.com/lamda/images/favicon_v1_150160d13ffabc731.svg" }],
+            "canva": [{ name: "Canva", url: "https://www.canva.com", desc: "Design anything with Canva.", favicon: "https://www.canva.com/favicon.ico" }],
+            "fandom": [{ name: "Fandom", url: "https://www.fandom.com", desc: "The fan's voice in entertainment.", favicon: "https://www.fandom.com/favicon.ico" }],
+            "messenger": [{ name: "Messenger", url: "https://www.messenger.com", desc: "Connect with your favorite people.", favicon: "https://www.messenger.com/favicon.ico" }],
+            "whatsapp": [{ name: "WhatsApp", url: "https://www.whatsapp.com", desc: "Simple. Personal. Real-time messaging.", favicon: "https://www.whatsapp.com/favicon.ico" }],
+            "zoom": [{ name: "Zoom", url: "https://zoom.us", desc: "Video conferencing, webinars, and meetings.", favicon: "https://zoom.us/favicon.ico" }],
+            "dropbox": [{ name: "Dropbox", url: "https://www.dropbox.com", desc: "Focus on the work that matters.", favicon: "https://www.dropbox.com/favicon.ico" }],
+            "google drive": [{ name: "Google Drive", url: "https://drive.google.com", desc: "A safe place for all your files.", favicon: "https://ssl.gstatic.com/docs/doclist/images/drive_2020q4_32dp.png" }],
+            "shein": [{ name: "SHEIN", url: "https://www.shein.com", desc: "Fashionable clothing and accessories.", favicon: "https://www.shein.com/favicon.ico" }],
+            "temu": [{ name: "Temu", url: "https://www.temu.com", desc: "Shop like a billionaire.", favicon: "https://www.temu.com/favicon.ico" }],
+            "aliexpress": [{ name: "AliExpress", url: "https://www.aliexpress.com", desc: "Smarter Shopping, Better Living.", favicon: "https://www.aliexpress.com/favicon.ico" }],
+            "fedex": [{ name: "FedEx", url: "https://www.fedex.com", desc: "Track your packages and shipments.", favicon: "https://www.fedex.com/favicon.ico" }],
+            "ups": [{ name: "UPS", url: "https://www.ups.com", desc: "Shipping, Freight, and Logistics.", favicon: "https://www.ups.com/favicon.ico" }],
+            "paypal": [{ name: "PayPal", url: "https://www.paypal.com", desc: "Digital Wallets and Money Management.", favicon: "https://www.paypal.com/favicon.ico" }],
+            "chase": [{ name: "Chase Bank", url: "https://www.chase.com", desc: "Personalized Banking and Credit Cards.", favicon: "https://www.chase.com/favicon.ico" }],
+            "bank of america": [{ name: "Bank of America", url: "https://www.bankofamerica.com", desc: "Financial Services for individuals.", favicon: "https://www.bankofamerica.com/favicon.ico" }],
+            "nike": [{ name: "Nike", url: "https://www.nike.com", desc: "Just Do It.", favicon: "https://www.nike.com/favicon.ico" }],
+            "adidas": [{ name: "Adidas", url: "https://www.adidas.com", desc: "Impossible is Nothing.", favicon: "https://www.adidas.com/favicon.ico" }],
+            "poker": [{ name: "PokerStars", url: "https://www.pokerstars.com", desc: "Play online poker games.", favicon: "https://www.pokerstars.com/favicon.ico" }],
+            "nba": [{ name: "NBA", url: "https://www.nba.com", desc: "National Basketball Association Official Site.", favicon: "https://www.nba.com/favicon.ico" }],
+            "nfl": [{ name: "NFL", url: "https://www.nfl.com", desc: "National Football League Official Site.", favicon: "https://www.nfl.com/favicon.ico" }],
+            "mlb": [{ name: "MLB", url: "https://www.mlb.com", desc: "Major League Baseball Official Site.", favicon: "https://www.mlb.com/favicon.ico" }],
+            "ea": [{ name: "EA Sports", url: "https://www.ea.com", desc: "It's in the game.", favicon: "https://www.ea.com/favicon.ico" }],
+            "ubisoft": [{ name: "Ubisoft", url: "https://www.ubisoft.com", desc: "Official Ubisoft website.", favicon: "https://www.ubisoft.com/favicon.ico" }],
+            "nintendo": [{ name: "Nintendo", url: "https://www.nintendo.com", desc: "Systems, Games, and more.", favicon: "https://www.nintendo.com/favicon.ico" }],
+            "playstation": [{ name: "PlayStation", url: "https://www.playstation.com", desc: "Live in your world. Play in ours.", favicon: "https://www.playstation.com/favicon.ico" }],
+            "xbox": [{ name: "Xbox", url: "https://www.xbox.com", desc: "Power Your Dreams.", favicon: "https://www.xbox.com/favicon.ico" }],
+            "unblocked games": [{ name: "Classroom Center", url: "https://sites.google.com/classroom.center/view-1/", desc: "Play thousands of unblocked games at school.", favicon: "https://www.google.com/favicon.ico" }],
+            "searxng": [{ name: "SearXNG (rhsCZ)", url: "https://search.rhscz.eu/", desc: "Privacy‑respecting metasearch engine powered by SearXNG.", favicon: "https://search.rhscz.eu/favicon.ico" }]
+        };
+
+        /* INSIGHT TEXTS */
         const insightDB = {
             "heofon": "Heofon is a advanced, Norwegian, American search engine that is safe and does not take your info and has vast searches.",
             "appleton": "Appleton Packing & Gasket is an industrial leader specializing in sealing solutions.",
@@ -584,157 +632,158 @@ const searchDB = {
         }
 
         /* PERFORM SEARCH */
-        async function performSearch(queryRaw) {
-            const query = queryRaw.toLowerCase().trim();
-            if (!query) return;
+        function performSearch(query) {
+            const q = query.toLowerCase().trim();
+            if (!q) return;
 
-            document.getElementById('resultsSearch').value = queryRaw;
-           
-            let desc = insightDB[query] || `I've analyzed "${queryRaw}" through the Global Hub. Portals listed below.`;
-            document.getElementById('ai-insight-target').innerHTML = `
-                <div class="ai-insight-card">
-                    <p style="color:#00d4ff; font-size: 0.7rem; text-transform:uppercase; margin-bottom:10px;">AI Insight</p>
-                    <p style="font-size:1.1rem; line-height:1.4;">${desc}</p>
-                </div>`;
+            showPage('results-page');
+            document.getElementById('resultsSearch').value = query;
 
-            document.getElementById('side-title').innerText = queryRaw.toUpperCase();
-            document.getElementById('side-content').innerText = desc;
+            const resultsList = document.getElementById('results-list');
+            resultsList.innerHTML = '';
 
-            const list = document.getElementById('results-list');
-            list.innerHTML = `<h2 style="color:#00d4ff; margin-bottom:30px; font-size: 1.5rem;">Results for: ${query}</h2>`;
-           
-            let found = false;
+            let found = [];
             for (let key in searchDB) {
-                if (query.includes(key) || key.includes(query)) {
-                    searchDB[key].forEach(item => renderResult(item.name, item.url, item.desc, item.favicon));
-                    found = true;
+                if (key.includes(q)) {
+                    found = found.concat(searchDB[key]);
                 }
             }
-            if (!found) renderResult(`Search the web for "${query}"`, `https://google.com/search?q=${query}`, `Broad spectrum web results.`, "https://www.google.com/favicon.ico");
-            showPage('results-page');
+
+            if (found.length === 0) {
+                resultsList.innerHTML = `<p style="color:#bdc1c6;">No results found for "${query}".</p>`;
+            } else {
+                found.forEach(item => {
+                    const div = document.createElement('div');
+                    div.className = 'result-item';
+                    div.innerHTML = `
+                        <div class="result-header">
+                            <img src="${item.favicon}" class="result-favicon" onerror="this.style.display='none'">
+                            <span>${new URL(item.url).hostname}</span>
+                        </div>
+                        <a href="${item.url}" class="result-title" target="_blank">${item.name}</a>
+                        <p class="result-snippet">${item.desc}</p>
+                    `;
+                    div.onclick = (e) => {
+                        if (e.target.tagName.toLowerCase() !== 'a') {
+                            window.open(item.url, '_blank');
+                        }
+                    };
+                    resultsList.appendChild(div);
+                });
+            }
+
+            const aiTarget = document.getElementById('ai-insight-target');
+            aiTarget.innerHTML = '';
+            if (insightDB[q]) {
+                const card = document.createElement('div');
+                card.className = 'ai-insight-card';
+                card.innerHTML = `
+                    <h3 style="color:#00d4ff; margin-bottom:10px;">Heofon Insight</h3>
+                    <p style="color:#e8eaed; line-height:1.6;">${insightDB[q]}</p>
+                `;
+                aiTarget.appendChild(card);
+            } else {
+                document.getElementById('side-title').innerText = 'Knowledge Hub';
+                document.getElementById('side-content').innerText = 'Search Heofon to unlock deep intelligence insights here.';
+            }
         }
 
-        function renderResult(title, url, desc, favicon) {
-            document.getElementById('results-list').innerHTML += `
-                <div class="result-item" onclick="window.open('${url}', '_blank')">
-                    <div class="result-header">
-                        <img src="${favicon}" class="result-favicon" onerror="this.src='favicon.png'">
-                        <span>${url}</span>
-                    </div>
-                    <div class="result-title">${title}</div>
-                    <div class="result-snippet">${desc}</div>
-                </div>`;
-        }
-
-        /* SAFE SEARCH TOGGLE */
+        /* SAFE SEARCH TOGGLES */
         function toggleSafeSearch() {
             isSafeSearch = !isSafeSearch;
-            const btn = document.getElementById('safeToggle');
-            if (btn) {
-                btn.innerText = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
-                btn.classList.toggle('safe-on', isSafeSearch);
-            }
-            const btn2 = document.getElementById('safeToggleSettings');
-            if (btn2) {
-                btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
-            }
+            const label = document.getElementById('safeToggle');
+            label.classList.toggle('safe-on', isSafeSearch);
+            label.textContent = `Safe Search: ${isSafeSearch ? 'ON' : 'OFF'}`;
+            document.getElementById('safeToggleSettings').textContent = isSafeSearch ? 'ON' : 'OFF';
         }
+
         function toggleSafeSearchFromSettings() {
             toggleSafeSearch();
         }
 
-        /* TRANSLATIONS */
+        /* THEME TOGGLE */
+        function toggleTheme() {
+            document.body.classList.toggle('light-mode');
+            const btn = document.getElementById('themeToggle');
+            btn.textContent = document.body.classList.contains('light-mode') ? 'Light' : 'Dark';
+        }
+
+        /* I18N */
         const translations = {
             en: {
                 navHome: "Home",
                 navHeopad: "Heopad",
                 navAbout: "About Us",
                 navSettings: "Settings",
+                navAddHeofon: "Add Heofon",
+                homeSearchPlaceholder: "Search Global Hub...",
+                resultsSearchPlaceholder: "Search results...",
                 trendingTitle: "TRENDING SEARCHES",
-                btnLeft: "Left",
-                btnCenter: "Center",
-                downloadBtn: "Download .doc",
                 aboutTitle: "About Heofon",
                 aboutText: "Welcome to Heofon. Heofon is an advanced Search Engine. We deliver vast searches for all your wants and needs without stealing your info. Heofon gives you searches that you need and not random searches you find off other search engines, we give you the most advanced and vast we can give you.",
-                quickActions: "Quick Actions",
-                quickOpenHeopad: "➜ Open in Heopad",
-                homeSearchPlaceholder: "Search Global Hub...",
-                resultsSearchPlaceholder: "Search Heofon...",
                 settingsTitle: "Settings",
                 settingsLanguage: "Language / Språk",
                 settingsTheme: "Theme / Tema",
-                settingsSafe: "Safe Search"
+                settingsSafe: "Safe Search",
+                quickActions: "Quick Actions",
+                quickOpenHeopad: "➜ Open in Heopad",
+                downloadBtn: "Download .doc",
+                btnBold: "B",
+                btnItalic: "I",
+                btnUnderline: "U",
+                btnLeft: "Left",
+                btnCenter: "Center",
+                addHeofonTitle: "Add Heofon to your browser",
+                addHeofonText: "Choose your browser below to open the instructions page and add Heofon.",
+                addHeofonFirefoxBtn: "Add Heofon to Firefox",
+                addHeofonChromeBtn: "Add Heofon to Chrome"
             },
             no: {
                 navHome: "Hjem",
                 navHeopad: "Heopad",
                 navAbout: "Om oss",
                 navSettings: "Innstillinger",
-                trendingTitle: "POPULÆRE SØK",
+                navAddHeofon: "Legg til Heofon",
+                homeSearchPlaceholder: "Søk i Global Hub...",
+                resultsSearchPlaceholder: "Søk i resultater...",
+                trendingTitle: "TRENDENDE SØK",
+                aboutTitle: "Om Heofon",
+                aboutText: "Velkommen til Heofon. Heofon er en avansert søkemotor. Vi gir deg store og trygge søk uten å stjele informasjonen din. Heofon gir deg søkene du trenger og ikke tilfeldige søk du finner på andre søkemotorer.",
+                settingsTitle: "Innstillinger",
+                settingsLanguage: "Språk / Language",
+                settingsTheme: "Tema / Theme",
+                settingsSafe: "Trygt søk",
+                quickActions: "Hurtighandlinger",
+                quickOpenHeopad: "➜ Åpne i Heopad",
+                downloadBtn: "Last ned .doc",
+                btnBold: "Fet",
+                btnItalic: "Kursiv",
+                btnUnderline: "Understrek",
                 btnLeft: "Venstre",
                 btnCenter: "Senter",
-                downloadBtn: "Last ned .doc",
-                aboutTitle: "Om Heofon",
-                aboutText: "Velkommen til Heofon. Heofon er en avansert søkemotor. Vi leverer store og presise søk for alle dine behov uten å stjele informasjonen din. Heofon gir deg søkene du trenger og ikke tilfeldige treff fra andre søkemotorer, vi gir deg det mest avanserte og omfattende vi kan.",
-                quickActions: "Hurtigvalg",
-                quickOpenHeopad: "➜ Åpne i Heopad",
-                homeSearchPlaceholder: "Søk i Global Hub...",
-                resultsSearchPlaceholder: "Søk i Heofon...",
-                settingsTitle: "Innstillinger",
-                settingsLanguage: "Språk",
-                settingsTheme: "Tema",
-                settingsSafe: "Trygt søk"
+                addHeofonTitle: "Legg til Heofon i nettleseren",
+                addHeofonText: "Velg nettleser nedenfor for å åpne instruksjonene og legge til Heofon.",
+                addHeofonFirefoxBtn: "Legg til Heofon i Firefox",
+                addHeofonChromeBtn: "Legg til Heofon i Chrome"
             }
         };
 
-        function applyTranslations(lang) {
-            const dict = translations[lang] || translations.en;
-
-            document.querySelectorAll("[data-i18n-key]").forEach(el => {
-                const key = el.getAttribute("data-i18n-key");
-                if (dict[key]) el.innerHTML = dict[key];
-            });
-
-            document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
-                const key = el.getAttribute("data-i18n-placeholder");
-                if (dict[key]) el.placeholder = dict[key];
-            });
-        }
-
         function setLanguage(lang) {
-            document.documentElement.lang = lang === "no" ? "no" : "en";
-            localStorage.setItem("heofon_lang", lang);
-            applyTranslations(lang);
+            const t = translations[lang] || translations.en;
+
+            document.querySelectorAll('[data-i18n-key]').forEach(el => {
+                const key = el.getAttribute('data-i18n-key');
+                if (t[key]) el.textContent = t[key];
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key]) el.setAttribute('placeholder', t[key]);
+            });
         }
 
-        function toggleTheme() {
-            const body = document.body;
-            const btn = document.getElementById("themeToggle");
-            const isLight = body.classList.toggle("light-mode");
-            btn.innerText = isLight ? "Light" : "Dark";
-            localStorage.setItem("heofon_theme", isLight ? "light" : "dark");
-        }
-
-        (function initSettings() {
-            const savedLang = localStorage.getItem("heofon_lang") || "en";
-            const savedTheme = localStorage.getItem("heofon_theme") || "dark";
-
-            const langSelect = document.getElementById("langSelect");
-            if (langSelect) langSelect.value = savedLang;
-            setLanguage(savedLang);
-
-            if (savedTheme === "light") {
-                document.body.classList.add("light-mode");
-                const btn = document.getElementById("themeToggle");
-                if (btn) btn.innerText = "Light";
-            } else {
-                const btn = document.getElementById("themeToggle");
-                if (btn) btn.innerText = "Dark";
-            }
-
-            const btn2 = document.getElementById('safeToggleSettings');
-            if (btn2) btn2.innerText = isSafeSearch ? 'ON' : 'OFF';
-        })();
+        // Init language on load
+        setLanguage('en');
     </script>
 </body>
 </html>
