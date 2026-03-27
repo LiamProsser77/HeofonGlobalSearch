@@ -33,27 +33,3 @@ Our AI is currently down—thank you for your patience. We have just updated Heo
 
 
 
-
-<img width="266" height="275" alt="favicon png" src="https://heofonglobalsearch-com.base44.app" />
-
-
-<div ="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
-    
-        padding: 15px 40px;
-        font-size: 18px;
-        font-weight: bold;
-        color: #ffffff;
-        background: linear-gradient(135deg, #007cf0 0%, #00dfd8 100%);
-        text-decoration: none;
-        border-radius: 50px;
-        box-shadow: 0 4px 15px rgba(0, 223, 216, 0.4);
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    ">
-        Try Heofon Safe and Free
-    </a>
-</div>
-
-
-
