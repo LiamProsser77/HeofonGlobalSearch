@@ -7,11 +7,13 @@ Official URLs
 
 Official Search Engine: heofonglobalsearch-com.base44.app
 
+
 Official "Why Use Heofon" Article: https://sites.google.com/kimberly.k12.wi.us/whyuseheofon-com/home
 
 Heofon Home Website: https://schoen-dynuow-cootch.yolasite.com
 
 Official Blog: heofonbloghome-com.base44.app
+
 
 GitHub Page (Fast & Lightweight): https://liamprosser77.github.io/HeofonGlobalSearch/
 
