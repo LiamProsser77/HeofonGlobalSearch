@@ -60,39 +60,3 @@
 </ol>
 
 <hr>
-
-  <a href="https://heofonglobalsearch-com.base44.app" 
-    <div style="
-      background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
-      color: white;
-      padding: 20px 50px;
-      border-radius: 15px;
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 24px;
-      display: inline-block;
-      box-shadow: 0px 5px 20px rgba(0, 114, 255, 0.5);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 3px;">
-      🚀 Try Heofon Today!
-   <div align="center">
-  <a href="https://www.reddit.com">r/HeofonGlobalSearch</a></li>" style="text-decoration: none;">
-    <div style="
-      background: linear-gradient(90deg, #FF4500 0%, #FF5700 100%);
-      color: white;
-      padding: 15px 40px;
-      border-radius: 12px;
-      font-family: sans-serif;
-      font-weight: bold;
-      font-size: 20px;
-      display: inline-block;
-      box-shadow: 0px 4px 15px rgba(255, 69, 0, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      text-transform: uppercase;
-      letter-spacing: 2px;">
-      🚀 Join our Reddit Community!
-    </div>
-  </a>
-</div>
-    
