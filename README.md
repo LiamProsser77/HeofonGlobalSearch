@@ -32,7 +32,7 @@ Our AI is currently down—thank you for your patience. We have just updated Heo
 
 
 
-<img width="266" height="275" alt="favicon png" src="https://github.com/user-attachments/assets/ef68c494-9d0a-436a-820c-1c4019ae8ab8" />
+<img width="266" height="275" alt="favicon png" src="https://heofonglobalsearch-com.base44.app" />
 
 
 <div ="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
