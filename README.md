@@ -1,9 +1,21 @@
-Heofon is a powerful search engine and global hub built to give you the exact results you need. Instead of showing you random links like other sites, the Heofon search engine is designed to be vast and accurate, finding the best information from across the web. It is powered by Heofonix AI, a smart assistant that lives right in the hub to help you with math, translate Spanish, and solve logic problems.
+Heofon Global Search
+Heofon is a powerful search engine and global hub built to give you the exact results you need. Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems.
+The site also features the Heopad, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. It is the ultimate all-in-one search engine experience.
+Official URLs
+Official Search Engine: heofonglobalsearch-com.base44.app
+Official "Why Use Heofon" Article: https://sites.google.com/kimberly.k12.wi.us/whyuseheofon-com/home
+Heofon Home Website: https://schoen-dynuow-cootch.yolasite.com
+Official Blog: heofonbloghome-com.base44.app
+GitHub Page (Fast & Lightweight): https://liamprosser77.github.io/HeofonGlobalSearch/
+Wikipedia Article: https://en.wikipedia.org/wiki/Draft:Heofon_Global_Search
+Community & Contact
+Reddit: r/HeofonGlobalSearch
+Phone: 920-786-3835
+Gmails: l.a.prosser7@gmail.com | 32lprosser@kimberly.k12.wi.us
+Latest Updates
+Our AI is currently down—thank you for your patience. We have just updated Heofon with 10+ million pages via our web crawlers.
+(Note: Processing millions of pages on the main site currently has an avg. speed of 12.0 sec. For the fastest experience, use the GitHub Page.)
 
-The site also features the Heopad, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. Yeah, it's the ultimate all-in-one search engine and AI experience.
-Heofon may have not as much searches as the other big guys but all the searches are vast and helpful for what you want.
-
-Right now out AI is down thank you for the wait. We just have updated Heofon now with billions of pages with web crawlers, see it at: https://heofonglobalsearch-com.base44.app/. On the website other than Github billions of pages is slower avg. speed: 12.0 sec. For faster and more light weight try the Github Page: https://liamprosser77.github.io/HeofonGlobalSearch/
 
 
 
@@ -12,7 +24,7 @@ Right now out AI is down thank you for the wait. We just have updated Heofon now
 
 
 <div ="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
-    <a href="https://liamprosser77.github.io/HeofonGlobalSearch/" target="_blank" style="
+    <a href="https://heofonglobalsearch-com.base44.app" target="_blank" style="
         display: inline-block;
         padding: 15px 40px;
         font-size: 18px;
