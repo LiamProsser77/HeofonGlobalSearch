@@ -61,7 +61,7 @@
 
 <hr>
 
-  <a href="https://heofonglobalsearch-com.base44.app" style="text-decoration: none;">
+  <a href="https://heofonglobalsearch-com.base44.app" 
     <div style="
       background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
       color: white;
