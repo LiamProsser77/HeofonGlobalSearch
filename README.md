@@ -29,7 +29,3 @@ Gmails: l.a.prosser7@gmail.com | 32lprosser@kimberly.k12.wi.us
 Latest Updates
 Our AI is currently down—thank you for your patience. We have just updated Heofon with 10+ million pages via our web crawlers.
 (Note: Processing millions of pages on the main site currently has an avg. speed of 12.0 sec. For the fastest experience, use the GitHub Page.)
-
-
-
-
