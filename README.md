@@ -38,8 +38,7 @@ Our AI is currently down—thank you for your patience. We have just updated Heo
 
 
 <div ="text-align: center; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px;">
-    <a href="https://heofonglobalsearch-com.base44.app" target="_blank" style="
-        display: inline-block;
+    
         padding: 15px 40px;
         font-size: 18px;
         font-weight: bold;
