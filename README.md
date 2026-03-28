@@ -84,7 +84,20 @@
   <li>Enable GitHub Pages in settings</li>
   <li>Your node will be live instantly 🚀</li>
 </ol>
+ <h2>🌐 Submit a Heofon Node</h2>
+        <p style="text-align:center;">
+            Use the form below to submit your node:
+        </p>
 
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHkhuLp7d-5xw/viewform?embedded=true"
+            width="100%"
+            height="800">
+            Loading…
+        </iframe>
+    </div>
+
+    <div class="se
 <p><b>Heofon Node HTML:</b></p>
 
 <!-- START HEOFON NODE -->
