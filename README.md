@@ -87,6 +87,7 @@
 
 <p><b>Heofon Node HTML:</b></p>
 
+<!-- START HEOFON NODE -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,7 +97,7 @@
     <title>Heofon - Global Search</title>
     <link rel="icon" type="image/png" href="favicon.png">
    
-   <style>
+    <style>
         /* GLOBAL */
         * { margin: 0; padding: 0; box-sizing: border-box; font-weight: bold; }
         html, body { height: 100vh; width: 100vw; overflow: hidden; font-family: 'Segoe UI', sans-serif; }
@@ -880,3 +881,4 @@
 
 
 
+ 
