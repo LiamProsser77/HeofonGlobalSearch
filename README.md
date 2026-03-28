@@ -88,16 +88,8 @@
         <p style="text-align:center;">
             Use the form below to submit your node:
         </p>
+https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHkhuLp7d-5xw/viewform?usp=header
 
-        <iframe 
-            src="https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHkhuLp7d-5xw/viewform?embedded=true"
-            width="100%"
-            height="800">
-            Loading…
-        </iframe>
-    </div>
-
-    <div class="se
 <p><b>Heofon Node HTML:</b></p>
 
 <!-- START HEOFON NODE -->
