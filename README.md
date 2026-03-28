@@ -65,3 +65,57 @@
 <p align="center">
   <b>Try our No-Download Browser:</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a>
 </p>
+<hr>
+
+<h2>🌐 Want to make your own Heofon Node?</h2>
+
+<p>
+  You can run your own <b>Heofon Node</b> by using the open-source HTML code below. A node is your own hosted version of Heofon that you can customize, deploy, and share. This helps expand the Heofon network just like decentralized search platforms.
+</p>
+
+<p>
+  To create your own node:
+</p>
+
+<ol>
+  <li>Copy the HTML code below</li>
+  <li>Create a new repository on GitHub</li>
+  <li>Upload the file as <code>index.html</code></li>
+  <li>Enable GitHub Pages in settings</li>
+  <li>Your node will be live instantly 🚀</li>
+</ol>
+
+<p><b>Heofon Node HTML:</b></p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Heofon Node&lt;/title&gt;
+&lt;/head&gt;
+&lt;body style="background:#000; color:#00d4ff; font-family:sans-serif; text-align:center; padding:50px;"&gt;
+
+  &lt;h1&gt;🌐 Heofon Node&lt;/h1&gt;
+  &lt;p&gt;This is your custom Heofon node. Start searching below.&lt;/p&gt;
+
+  &lt;form action="https://heofonglobalsearch-com.base44.app/search"&gt;
+    &lt;input type="text" name="q" placeholder="Search Heofon..." 
+           style="padding:15px; width:60%; border-radius:30px; border:none;"&gt;
+    &lt;br&gt;&lt;br&gt;
+    &lt;button type="submit" 
+            style="padding:10px 25px; border:none; border-radius:20px; background:#00d4ff; color:#000; font-weight:bold;"&gt;
+      Search
+    &lt;/button&gt;
+  &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>
+  You can customize your node with your own design, features, or even connect it to different backends. The more nodes that exist, the stronger the Heofon network becomes.
+</p>
+
+<hr>
