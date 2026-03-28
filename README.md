@@ -12,6 +12,7 @@
 
 <h2>🔗 Official URLs</h2>
 <ul>
+  <li><b>Heofon Browser (No Download):</b> <a href="https://heofonbrowser-com.base44.app">heofonbrowser-com.base44.app</a></li>
   <li><b>Official Search Engine:</b> <a href="https://heofonglobalsearch-com.base44.app">heofonglobalsearch-com.base44.app</a></li>
   <li><b>Official "Why Use Heofon" Article:</b> <a href="https://sites.google.com">Why Use Heofon?</a></li>
   <li><b>Heofon Home Website:</b> <a href="https://schoen-dynuow-cootch.yolasite.com">Heofon Home</a></li>
@@ -60,3 +61,7 @@
 </ol>
 
 <hr>
+
+<p align="center">
+  <b>Try our No-Download Browser:</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a>
+</p>
