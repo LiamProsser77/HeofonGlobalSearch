@@ -49,7 +49,7 @@
   <li>Click <b>Add</b>.</li>
   <li><b>Name:</b> Heofon</li>
   <li><b>Shortcut:</b> heofon</li>
-  <li><b>URL:</b> <code>https://heofonglobalsearch-com.base44.appsearch?q=%s</code></li>
+  <li><b>URL:</b> <code>https://heofonglobalsearch-com.lovable.app/search?q=%s</code></li>
 </ol>
 
 <h3><b>Add Heofon to Firefox:</b></h3>
@@ -57,7 +57,7 @@
   <li>Open <b>Firefox Settings</b> -> <b>Search</b>.</li>
   <li>Scroll to <b>Search Shortcuts</b> and click <b>Add</b>.</li>
   <li><b>Engine Name:</b> Heofon Global Search Engine</li>
-  <li><b>URL:</b> <code>https://heofonglobalsearch-com.base44.appsearch?q=%s</code></li>
+  <li><b>URL:</b> <code>https://heofonglobalsearch-com.lovable.app/search?q=%s</code></li>
 </ol>
 
 <hr>
