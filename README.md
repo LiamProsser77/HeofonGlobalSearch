@@ -13,7 +13,7 @@
 <h2>🔗 Official URLs</h2>
 <ul>
   <li><b>Heofon Browser (No Download):</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a></li>
-  <li><b>Official Search Engine:</b> <a href="https://heofonglobalsearch-com.lovable.app/">Heofon Global Search/</a></li>
+  <li><b>Official Search Engine:</b> <a href="https://heofonglobalsearch-com.lovable.app/">Heofon Global Search</a></li>
   <li><b>Official "Why Use Heofon" Article:</b> <a href="https://sites.google.com/kimberly.k12.wi.us/whyuseheofon-com/home">Why Use Heofon?</a></li>
   <li><b>Heofon Home Website:</b> <a href="https://schoen-dynuow-cootch.yolasite.com">Heofon Home</a></li>
   <li><b>Official Blog:</b> <a href="https://heofonbloghome-com.base44.app">Heofon Blog</a></li>
