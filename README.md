@@ -32,7 +32,7 @@
 
 <h2>🚀 Latest Updates</h2>
 <p>
-  <b>Our AI is currently down—thank you for your patience.</b> We have just updated Heofon with <b>10+ million pages</b> via our web crawlers.
+  </b> We have just updated Heofon with <b>10+ million pages</b> via our web crawlers. <b></b> Also we have just updated Heofonix AI, that is now running!
 </p>
 <p>
   <i>(Note: Processing millions of pages on the main site currently has an avg. speed of 12.0 sec. For the fastest experience, use the GitHub Page.)</i>
