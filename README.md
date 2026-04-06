@@ -19,7 +19,7 @@
   <li><b>Official Blog:</b> <a href="https://heofonbloghome-com.base44.app">heofonbloghome-com.base44.app</a></li>
   <li><b>GitHub Page (Fast & Lightweight):</b> <a href="https://liamprosser77.github.io/HeofonGlobalSearch/">Heofon GitHub</a></li>
   <li><b>Wikipedia Article:</b> <a href="https://en.wikipedia.org/wiki/Draft:Heofon_Global_Search">Draft: Heofon Global Search</a></li>
-  <li><b>Heofonix AI: </b> <a href= "https://heofonix-ai-com.lovable.app/" 
+  <li><b>Heofonix AI: </b> <a href= "https://heofonix-ai-com.lovable.app/"> Heofonix AI</a> 
 </ul>
 
 <hr>
