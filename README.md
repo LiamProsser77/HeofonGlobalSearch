@@ -27,7 +27,9 @@
 <h2>💬 Community</h2>
 <ul>
   <li><b>Reddit:</b> <a href="https://www.reddit.com/user/HeofonGlobalSearch/">r/HeofonGlobalSearch</a></li>
+  <li><b>Quora: </b> <a href="https://www.quora.com/profile/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
+
 
 <hr>
 
