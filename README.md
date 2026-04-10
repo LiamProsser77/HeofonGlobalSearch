@@ -28,6 +28,7 @@
 <ul>
   <li><b>Reddit:</b> <a href="https://www.reddit.com/user/HeofonGlobalSearch/">r/HeofonGlobalSearch</a></li>
   <li><b>Quora: </b> <a href="https://www.quora.com/profile/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
+  <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
 </ul>
 
 
