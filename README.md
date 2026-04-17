@@ -1,6 +1,6 @@
-<img width="287" height="313" alt="HeofonGlobalSearchLogo" src="https://github.com/user-attachments/assets/e9952139-4e21-42e1-b2dc-7b6e8745c87c" />
+<img width="1536" height="1024" alt="Designer" src="https://github.com/user-attachments/assets/41259df2-443a-4c2d-a3d8-81867f4fa5f8" />
 
-<h1 align="center">🌐 Heofon Global Search🌐</h1>
+<h1 align="center">🌐 Heofon Global Search 🌐</h1>
 
 <p align="center">
   <b>Heofon is a powerful search engine and global hub built to give you the exact results you need.</b> Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems.
