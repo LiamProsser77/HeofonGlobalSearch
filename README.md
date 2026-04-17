@@ -1,4 +1,5 @@
-<img width="1536" height="1024" alt="Designer" src="https://github.com/user-attachments/assets/41259df2-443a-4c2d-a3d8-81867f4fa5f8" />
+<img width="647" height="217" alt="Screenshot 2026-04-17 6 05 37 PM" src="https://github.com/user-attachments/assets/f2c7d2b5-de12-4064-9131-db8f0b9b2d37" />
+
 
 <h1 align="center">🌐 Heofon Global Search 🌐</h1>
 
