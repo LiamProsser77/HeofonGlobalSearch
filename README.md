@@ -1,3 +1,5 @@
+<img width="287" height="313" alt="HeofonGlobalSearchLogo" src="https://github.com/user-attachments/assets/e9952139-4e21-42e1-b2dc-7b6e8745c87c" />
+
 <h1 align="center">🌐 Heofon Global Search</h1>
 
 <p align="center">
