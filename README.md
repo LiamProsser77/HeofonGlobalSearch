@@ -108,7 +108,7 @@ https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHk
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Heofon - Global Search</title>
-    <link rel="icon" type="image/png" href="Designer (1).png">
+    <link rel="icon" type="image/png" href="HeofonGlobalSearchLogo2g">
    
     <style>
         /* GLOBAL */
