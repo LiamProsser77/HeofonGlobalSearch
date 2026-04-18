@@ -40,7 +40,7 @@
 
 <h2>🚀 Latest Updates</h2>
 <p>
-  </b> We have just updated Heofon with <b>10+ million pages</b> via our web crawlers. <b></b> Also we have just updated Heofonix AI, that is now running! Also Last but not least on date: Apr 17 2026 we have changed the logo of Heofon Global Search, the new logo is out now!
+  </b> We have just updated Heofon with <b>10+ million pages</b> via our web crawlers. <b></b> Also we have just updated Heofonix AI, that is now running! Also Last but not least on date: Apr 17 2026 we have changed the logo of Heofon Global Search, the new logo is out now! Also Heofonix AI can generate images and do way more than do math or solve things we have 5 models: Heofonix 1.0, Heofonix 2.0, Heofonix Nova, Heofonix Alpha, Heofonix Gammaray 6.0 (PRO) 
 </p>
 <p>
   
