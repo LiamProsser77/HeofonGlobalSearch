@@ -36,6 +36,30 @@
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
 
+<h2>🏢 Founded and Headquarters</h2>
+<p>
+  <b>Heofon Global Search</b> was founded on <b>March 6, 2026</b>. The company is headquartered in <b>Appleton, Wisconsin, USA</b>.
+</p>
+<p>
+  The idea for Heofon was first conceived in <b>late February 2026</b>, with development beginning shortly after in early March 2026. The goal was to build a fast, private, all-in-one search hub with a built-in AI assistant and note-taking tools.
+</p>
+
+<hr>
+
+<h2>👨‍💻 Developers</h2>
+<p>
+  <b>Founder & Lead Developer:</b> Liam Aleksander Prosser<br>
+  Liam founded <b>Heofon Global Search</b> in early March 2026 after conceptualizing the platform in late February 2026. He leads development on the Heofon search engine, Heopad, Heofonix AI models, and Heofon OS 26.
+</p>
+<p>
+  <b>Core Projects:</b><br>
+    - <b>Heofonix AI:</b> Image generation + chat models — 1.0, 2.0, Nova, Alpha, Gammaray 6.0 (PRO)<br>
+    - <b>Heopad:</b> Instant note-saving workspace<br>
+    - <b>Heofon OS 26 1.0:</b> Custom search-focused OS<br>
+    - <b>Heofon Nodes:</b> Open-source deployable versions of the search engine
+</p>
+
+
 
 <hr>
 
