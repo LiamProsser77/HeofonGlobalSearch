@@ -39,7 +39,7 @@
 
 <h2>🏢 Founded and Headquarters</h2>
 <p>
-  <b>Heofon Global Search</b> was founded on <b>March 6, 2026</b>. The company is headquartered in <b>Appleton, Wisconsin, USA</b>.
+  <b>Heofon Global Search</b> was founded on <b>March 6, 2026</b>. The company is headquartered in <b>Appleton, Wisconsin, USA and is located in Halden Norway</b>.
 </p>
 <p>
   The idea for Heofon was first conceived in <b>late February 2026</b>, with development beginning shortly after in early March 2026. The goal was to build a fast, private, all-in-one search hub with a built-in AI assistant and note-taking tools.
