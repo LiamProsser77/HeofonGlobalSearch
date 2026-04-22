@@ -25,6 +25,7 @@
   <li><b>Heofonix AI: </b> </b> <a href="https://heofonix-ai-com.zite.so/">Heofonix AI</a>
   <li><b>Heofon OS 26 1.0: </b> <a href="https://innovative-custom-search.deploypad.app/">Heofon OS 26 1.0</a>
   <li><b>Heomail: </b> <a href="https://heomail-com.zite.so/">Heomail</a>
+  <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-ai-bluelight.zite.so/">Heofonix Bluelight</a>
 </ul>
 
 <hr>
