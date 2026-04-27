@@ -13,7 +13,7 @@
 
 <hr>
 
-<h2>🔗 Official URLs (Disclaimer: we are always updating our products if a url is old or not working tell us on Heofeedback)</h2>
+<h2>🔗 Official URLs (Disclaimer: we are always updating our products if a URL is old or not working tell us on Heofeedback)</h2>
 <ul>
   <li><b>Heofon Browser (No Download):</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a></li>
   <li><b>Official Search Engine:</b> <a href="https://heofonglobalsearch-com.zite.so/">Heofon Global Search</a></li>
