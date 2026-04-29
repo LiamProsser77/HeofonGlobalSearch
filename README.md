@@ -21,11 +21,10 @@
   <li><b>Heofon Home Website:</b> <a href="https://heofonglobalsearch-home.zite.so/">Heofon Home</a></li>
   <li><b>Official Blog:</b> <a href="https://heofonbloghome-com.base44.app">Heofon Blog</a></li>
   <li><b>GitHub Page (Fast & Lightweight) (First version of Heofon Search):</b> <a href="https://liamprosser77.github.io/HeofonGlobalSearch/">Heofon GitHub Node</a></li>
-  <li><b>Wikipedia Article:</b> <a href="https://en.wikipedia.org/wiki/Draft:Heofon_Global_Search">Heofon Global Search article</a></li>
+  </li>
   <li><b>Heofonix AI: </b> </b> <a href="https://heofonix-ai-com.zite.so/">Heofonix AI</a>
-  <li><b>Heofon OS 26 1.0: </b> <a href="https://innovative-custom-search.deploypad.app/">Heofon OS 26 1.0</a>
   <li><b>Heomail: </b> <a href="https://heomail-com.zite.so/">Heomail</a>
-  <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-ai-bluelight.zite.so/">Heofonix Bluelight</a>
+  <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-bluelight-ai.zite.so/">Heofonix Bluelight</a>
 </ul>
 
 <hr>
