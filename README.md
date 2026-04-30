@@ -3,6 +3,13 @@
 
 <h1 align="center">🌐 Heofon Global Search 🌐</h1>
 
+<h2>🌐 Official Heofon Global Search</h2>
+<p>
+  <a href="https://heofonglobalsearch-com.zite.so/" target="_blank">
+    https://heofonglobalsearch-com.zite.so/
+  </a>
+</p>
+
 <p align="center">
   <b>Heofon is a powerful search engine and global hub built to give you the exact results you need.</b> Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems.
 </p>
