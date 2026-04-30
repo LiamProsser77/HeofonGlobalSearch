@@ -3,12 +3,15 @@
 
 <h1 align="center">🌐 Heofon Global Search 🌐</h1>
 
-<div style="text-align: center;">
+<div align="center">
   <h2>🌐 Official Heofon Global Search</h2>
-  <a href="https://heofonglobalsearch-com.zite.so/" target="_blank">
-    https://heofonglobalsearch-com.zite.so/
-  </a>
+  <p>
+    <a href="https://heofonglobalsearch-com.zite.so/" target="_blank">
+      https://heofonglobalsearch-com.zite.so/
+    </a>
+  </p>
 </div>
+
 
 
 <p align="center">
