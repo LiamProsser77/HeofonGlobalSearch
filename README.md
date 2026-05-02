@@ -15,7 +15,7 @@
 
 
 <p align="center">
-  <b>Heofon is a powerful search engine and global hub built to give you the exact results you need.</b> Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems.
+  <b>Heofon is a powerful search engine and global hub built to give you the exact results you need.</b> Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems. Ask Heofonix anything.
 </p>
 
 <p align="center">
@@ -31,8 +31,6 @@
   <li><b>Official "Why Use Heofon" Article:</b> <a href="https://sites.google.com/kimberly.k12.wi.us/whyuseheofon-com/home">Why Use Heofon?</a></li>
   <li><b>Heofon Home Website:</b> <a href="https://heofonglobalsearch-home.zite.so/">Heofon Home</a></li>
   <li><b>Official Blog:</b> <a href="https://heofonbloghome-com.base44.app">Heofon Blog</a></li>
-  <li><b>GitHub Page (Fast & Lightweight) (First version of Heofon Search):</b> <a href="https://liamprosser77.github.io/HeofonGlobalSearch/">Heofon GitHub Node</a></li>
-  </li>
   <li><b>Heofonix AI: </b> </b> <a href="https://heofonix-ai-com.zite.so/">Heofonix AI</a>
   <li><b>Heomail: </b> <a href="https://heomail-com.zite.so/">Heomail</a>
   <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-bluelight-ai.zite.so/">Heofonix Bluelight</a>
