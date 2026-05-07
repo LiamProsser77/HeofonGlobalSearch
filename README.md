@@ -7,7 +7,7 @@
   <h2>🌐 Official Heofon Global Search</h2>
   <p>
     <a href="https://heofonsearch.zite.so/" target="_blank">
-      https://heofonglobalsearch-com.zite.so/
+      Heofon Search
     </a>
   </p>
 </div>
