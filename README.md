@@ -1,4 +1,5 @@
-<img width="300" height="300" alt="HeofonGlobalSearchLogo2" src="https://github.com/user-attachments/assets/5cc1846d-29b8-4eb8-be6a-07fd447b4bb3" />
+<img width="284" height="105" alt="Screenshot 2026-05-12 3 27 45 PM" src="https://github.com/user-attachments/assets/0fdd3f55-ff51-4998-bb0d-c778da6a51ad" />
+
 
 </p>
 
