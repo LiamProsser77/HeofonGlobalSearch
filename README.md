@@ -4,7 +4,7 @@
 
 </p>
 
-<h1 align="center">🌐 Heofon Global Search</h1>
+<h1 align="center"> Heofon Global Search</h1>
 
 <p align="center">
   <strong>The Peak of Global Search</strong><br/>
@@ -37,7 +37,7 @@
 
 <hr>
 
-<h2>🔗 Official URLs (Disclaimer: we are always updating our products if a URL is old or not working tell us on Heofeedback)</h2>
+<h2> Official URLs (Disclaimer: we are always updating our products if a URL is old or not working tell us on Heofeedback)</h2>
 <ul>
   <li><b>Heofon Browser (No Download):</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a></li>
   <li><b>Official Search Engine:</b> <a href="https://heofonsearch.zite.so/">Heofon Global Search</a></li>
@@ -52,7 +52,7 @@
 
 <hr>
 
-<h2>💬 Community</h2>
+<h2> Community</h2>
 <ul>
   <li><b>Reddit:</b> <a href="https://www.reddit.com/user/HeofonGlobalSearch/">r/HeofonGlobalSearch</a></li>
   <li><b>Quora: </b> <a href="https://www.quora.com/profile/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
@@ -60,7 +60,7 @@
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
 
-<h2>🏢 Founded and Headquarters</h2>
+<h2> Founded and Headquarters</h2>
 <p>
   <b>Heofon Global Search</b> was founded on <b>March 6, 2026</b>. The company is headquartered in <b>Appleton, Wisconsin, USA and is located in Halden Norway</b>.
 </p>
@@ -70,7 +70,7 @@
 
 <hr>
 
-<h2>👨‍💻 Developers</h2>
+<h2> Developers</h2>
 <p>
   <b>Founder & Lead Developer:</b> Liam Aleksander Prosser<br>
   Liam founded <b>Heofon Global Search</b> in early March 2026 after conceptualizing the platform in late February 2026. He leads development on the Heofon search engine, Heopad, Heofonix AI models, and Heofon OS 26.
@@ -87,7 +87,7 @@
 
 <hr>
 
-<h2>🚀 Latest Updates</h2>
+<h2> Latest Updates</h2>
 <p>
   </b> We have just updated Heofon with <b>10+ million pages</b> via our web crawlers. <b></b> Also we have just updated Heofonix AI, that is now running! Also Last but not least on date: Apr 17 2026 we have changed the logo of Heofon Global Search, the new logo is out now! Also Heofonix AI can generate images and do way more than do math or solve things we have 5 models: Heofonix 1.0, Heofonix 2.0, Heofonix Nova, Heofonix Alpha, Heofonix Gammaray 6.0 (PRO) NEW, Apr 27: We have just got to the milestone of 20 million pages! Breaking: we now have 50 million pages!
 </p>
@@ -97,7 +97,7 @@
 
 <hr>
 
-<h2>🛠️ Browser Integration</h2>
+<h2> Browser Integration</h2>
 
 <h3><b>Add Heofon to Chrome:</b></h3>
 <ol>
@@ -124,7 +124,7 @@
 </p>
 <hr>
 
-<h2>🌐 Want to make your own Heofon Node?</h2>
+<h2> Want to make your own Heofon Node?</h2>
 
 <p>
   You can run your own <b>Heofon Node</b> by using the open-source HTML code below. A node is your own hosted version of Heofon that you can customize, deploy, and share. This helps expand the Heofon network just like decentralized search platforms.
@@ -141,7 +141,7 @@
   <li>Enable GitHub Pages in settings</li>
   <li>Your node will be live instantly 🚀</li>
 </ol>
- <h2>🌐 Submit a Heofon Node</h2>
+ <h2> Submit a Heofon Node</h2>
         <p style="text-align:center;">
             Use the form below to submit your node:
         </p>
