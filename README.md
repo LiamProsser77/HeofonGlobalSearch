@@ -1,16 +1,27 @@
-<img width="647" height="217" alt="Screenshot 2026-04-17 6 05 37 PM" src="https://github.com/user-attachments/assets/f2c7d2b5-de12-4064-9131-db8f0b9b2d37" />
+<p align="center">
+  <img src="https://liamprosser77.github.io/HeofonGlobalSearch/heofon-global-search-logo.png" alt="Heofon Global Search Logo" width="400">
+</p>
 
+<h1 align="center">🌐 Heofon Global Search</h1>
 
-<h1 align="center">🌐 Heofon Global Search 🌐</h1>
+<p align="center">
+  <strong>The Peak of Global Search</strong><br/>
+  A privacy-first, global search engine built for discovery, transparency, and speed.
+</p>
 
-<div align="center">
-  <h2>🌐 Official Heofon Global Search</h2>
-  <p>
-    <a href="https://heofonsearch.zite.so/" target="_blank">
-      Heofon Search
-    </a>
-  </p>
-</div>
+<p align="center">
+  <a href="https://heofonsearch.zite.so/">Website</a> •
+  <a href="https://heofonbloghome-com.base44.app/">Blog</a> •
+  <a href="#license">License</a> •
+  <a href="SECURITY.md">Security</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
+  <img src="https://img.shields.io/badge/privacy--first-yes-brightgreen.svg" />
+  <img src="https://img.shields.io/badge/search--engine-global-blueviolet.svg" />
+  <img src="https://img.shields.io/github/last-commit/LiamProsser77/HeofonGlobalSearch" />
+</p>
 
 
 
