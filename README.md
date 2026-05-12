@@ -19,10 +19,10 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/license-MIT-blue.svg" />
-  <img src="https://img.shields.io/badge/privacy--first-yes-brightgreen.svg" />
+  <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
+  <img src="https://img.shields.io/badge/Privacy--first-yes-brightgreen.svg" />
   <img src="https://img.shields.io/badge/We are in:-Norway, Sweden, USA-blueviolet.svg" />
-  <img src="https://img.shields.io/github/last-commit/LiamProsser77/HeofonGlobalSearch" />
+  <img src="https://img.shields.io/github/Last-commit/LiamProsser77/HeofonGlobalSearch" />
 </p>
 
 
