@@ -1,4 +1,4 @@
-<img width="300" height="300" alt="HeofonGlobalSearchLogo" src="https://github.com/user-attachments/assets/1b0675bf-854c-4715-a23a-a89d37167260" />
+<img width="300" height="300" alt="HeofonGlobalSearchLogo2" src="https://github.com/user-attachments/assets/bd01cf54-e160-48a5-ab70-71c3e7c589ec" />
 
 
 
