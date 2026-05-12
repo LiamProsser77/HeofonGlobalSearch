@@ -12,7 +12,7 @@
 <p align="center">
   <a href="https://heofonsearch.zite.so/">Website</a> •
   <a href="https://heofonbloghome-com.base44.app/">Blog</a> •
-  <a href="#license">License</a> •
+  <a href="https://github.com/LiamProsser77/HeofonGlobalSearch?tab=MIT-1-ov-file">License</a> •
   <a href="SECURITY.md">Security</a>
 </p>
 
