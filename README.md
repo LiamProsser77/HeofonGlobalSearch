@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="https://liamprosser77.github.io/HeofonGlobalSearch/heofon-global-search-logo.png" alt="Heofon Global Search Logo" width="400">
+<img width="1024" height="1024" alt="HeofonGlobalSearchLogo2" src="https://github.com/user-attachments/assets/5cc1846d-29b8-4eb8-be6a-07fd447b4bb3" />
+
 </p>
 
 <h1 align="center">🌐 Heofon Global Search</h1>
