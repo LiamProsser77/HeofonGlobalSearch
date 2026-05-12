@@ -573,7 +573,7 @@ https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHk
             particlesContainer.appendChild(p);
         }
 
-        /* SEARCH DATABASE (TRUNCATED FOR BREVITY IN EXPLANATION – KEEP YOUR FULL DB HERE) */
+        /* SEARCH DATABASE */
         const searchDB = {
             "yahoo": [{ name: "Yahoo", url: "https://www.yahoo.com", desc: "News, email and search results.", favicon: "https://s.yimg.com/rz/p/yahoo_frontpage_en-US_s_f_p_bestfit_frontpage_2x.png" }],
             "ecosia": [{ name: "Ecosia", url: "https://www.ecosia.org", desc: "The search engine that plants trees.", favicon: "https://cdn-static.ecosia.org/assets/images/ico/favicon.ico" }],
