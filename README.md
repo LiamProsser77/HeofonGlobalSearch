@@ -39,7 +39,7 @@
 
 <h2> Official URLs (Disclaimer: we are always updating our products if a URL is old or not working tell us on Heofeedback)</h2>
 <ul>
-  <li><b>Knarr (Heofon's Browser:</b> <a href="https://knarr.zite.so/">Heofon Browser</a></li>
+  <li><b>Knarr (Heofon's Browser):</b> <a href="https://knarr.zite.so/">Heofon Browser</a></li>
   <li><b>Official Search Engine:</b> <a href="https://heofonsearch.zite.so/">Heofon Global Search</a></li>
   <li><b>Official "Why Use Heofon" Article:</b> <a href="https://sites.google.com/kimberly.k12.wi.us/whyuseheofon-com/home">Why Use Heofon?</a></li>
   <li><b>Heofon Home Website:</b> <a href="https://heofonglobalsearch-home.zite.so/">Heofon Home</a></li>
@@ -120,7 +120,7 @@
 <hr>
 
 <p align="center">
-  <b>Try our No-Download Browser:</b> <a href="https://heofonbrowser-com.base44.app">Heofon Browser</a>
+  <b>Try our No-ad browser, Knarr:</b> <a href="https://knarr.zite.so/">Knarr Browser</a>
 </p>
 <hr>
 
@@ -139,7 +139,7 @@
   <li>Create a new repository on GitHub</li>
   <li>Upload the file as <code>index.html</code></li>
   <li>Enable GitHub Pages in settings</li>
-  <li>Your node will be live instantly 🚀</li>
+  <li>Your node will be live instantly </li>
 </ol>
  <h2> Submit a Heofon Node</h2>
         <p style="text-align:center;">
