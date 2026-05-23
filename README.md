@@ -48,6 +48,7 @@
   <li><b>Heomail: </b> <a href="https://heomail-com.zite.so/">Heomail</a>
   <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-bluelight-ai.zite.so/">Heofonix Bluelight</a>
   <li><b>History of Heofon: </b> <a href= "https://heofon-history.zite.so/">History of Heofon</a>
+  <li><b>HeoCompose: </b> <a href= "https://heo-compose--laprosser7.replit.app/login">HeoCompose</a>
 </ul>
 
 <hr>
