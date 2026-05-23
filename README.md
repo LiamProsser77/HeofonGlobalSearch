@@ -89,7 +89,7 @@
 
 <h2> Latest Updates</h2>
 <p>
-  </b> Latest: We just got to a milestone of <b>50 miilion pages!</b> </b>
+  </b> Latest: We have just created HeoCompose! </b> </b>
 </p>
 <p>
   
