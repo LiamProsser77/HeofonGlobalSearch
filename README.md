@@ -60,7 +60,7 @@
   <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
-## Countries We Serve
+<h2> Countries We Serve</h2>
 
 Heofon Global Search is used by people around the world. We are proud to support users in:
 
