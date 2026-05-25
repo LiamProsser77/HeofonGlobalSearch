@@ -69,7 +69,8 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇸🇪 Sweden  
 - 🇬🇧 United Kingdom  
 - 🇰🇷 South Korea  
-- 🇯🇵 Japan  
+- 🇯🇵 Japan
+- 🇨🇦 Canada 
 
 We are continuously expanding and working to make Heofon accessible worldwide.
 
