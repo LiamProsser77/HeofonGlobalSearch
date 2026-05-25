@@ -60,6 +60,21 @@
   <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
+## Countries We Serve
+
+Heofon Global Search is used by people around the world. We are proud to support users in:
+
+- 🇺🇸 United States  
+- 🇳🇴 Norway  
+- 🇸🇪 Sweden  
+- 🇬🇧 United Kingdom  
+- 🇰🇷 South Korea  
+- 🇯🇵 Japan  
+
+We are continuously expanding and working to make Heofon accessible worldwide.
+
+
+
 
 <h2> Founded and Headquarters</h2>
 <p>
