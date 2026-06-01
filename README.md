@@ -87,11 +87,6 @@ We are continuously expanding and working to make Heofon accessible worldwide.
 
 <hr>
 
-<h2> Do you want to see the older versions of Heofon Search?</h2>
-
-# You can see one of the oldest versions of Heofon Search at https://liamprosser77.github.io/HeofonGlobalSearch/
-
-
 <h2> Developers</h2>
 <p>
   <b>Founder & Lead Developer:</b> Liam Aleksander Prosser<br>
