@@ -29,6 +29,8 @@
 
 <p align="center">
   <b>Heofon is a powerful search engine and global hub built to give you the exact results you need.</b> Instead of showing you random links like other sites, Heofon is designed to be vast and accurate, finding the best information from across the web. It features a smart assistant built right into the hub to help you with math, translate Spanish, and solve logic problems. Ask Heofonix anything.
+  
+  ## How much users does Heofon Search have: Heofon in 3 months has 1265 users, thank you to the loyal people that search on Heofon! 
 </p>
 
 <p align="center">
