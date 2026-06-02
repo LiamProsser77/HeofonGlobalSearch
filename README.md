@@ -36,7 +36,7 @@
   The site also features the <b>Heopad</b>, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. It is the ultimate all-in-one search engine experience.
 </p>
 
-<h3> How much users does Heofon Search have? Heofon in 3 months has 1265 users, thank you to the loyal people that search on Heofon! <h3/>
+<h3> How much users does Heofon Search have? Heofon in 3 months has 1,265 users, thank you to the loyal people that search on Heofon! <h3/>
 
 <h2> What products does Heofon Search have?</h2>
 <p> Heofon Search has: 
