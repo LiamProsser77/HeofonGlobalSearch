@@ -39,7 +39,7 @@
 <h3> How much users does Heofon Search have? Heofon in 3 months has 1265 users, thank you to the loyal people that search on Heofon! <h3/>
 
 <h2> What products does Heofon Search have?</h2>
-<p> Heofon search has: 
+<p> Heofon Search has: 
   
 Heofon Search,
 Heofon Nodes,
