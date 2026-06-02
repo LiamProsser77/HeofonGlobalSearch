@@ -41,22 +41,22 @@
 <h2> What products does Heofon Search have?</h2>
 <p> Heofon search has 
   
-Heofon Search
-Heofon Nodes
-Heomaps
-Heonews
-Knarr
-Heofon OS 26
-Heofonix AI
-Heofonix Bluelight
-Heomail
-Heopad
-HeoCompose
-Heotranslate
-HPP
-Heofon Hub
-Heofeedback
-History of Heofon
+Heofon Search,
+Heofon Nodes,
+Heomaps,
+Heonews,
+Knarr browser,
+Heofon OS 26,
+Heofonix AI,
+Heofonix Bluelight,
+Heomail,
+Heopad,
+HeoCompose,
+Heotranslate,
+HPP,
+Heofon Hub,
+Heofeedback,
+History of Heofon.
 </p>
 
 <hr>
