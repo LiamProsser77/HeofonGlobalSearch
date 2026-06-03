@@ -15,6 +15,11 @@ If you would like to contribute:
 2. Be respectful and clear in your description.
 3. The project maintainer will review suggestions as time allows.
 
+## Email Us at:
+- l.a.prosser7@gmail.com
+- L32prosser@outlook.com
+- liamprosser@proton.me
+
 ## Notes
 
 - This project is actively developed and evolving.
