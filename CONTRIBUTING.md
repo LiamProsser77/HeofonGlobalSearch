@@ -16,9 +16,9 @@ If you would like to contribute:
 3. The project maintainer will review suggestions as time allows.
 
 ## Email Us at:
-- l.a.prosser7@gmail.com
-- L32prosser@outlook.com
-- liamprosser@proton.me
+- l.a.prosser7@gmail.com (Gmail)
+- L32prosser@outlook.com (Microsoft Outlook Mail)
+- liamprosser@proton.me  (Proton Mail)
 
 ## Notes
 
