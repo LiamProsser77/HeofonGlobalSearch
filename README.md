@@ -130,7 +130,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. N
 
 <h2> Latest Updates</h2>
 <p>
-  </b> Latest: We have just created HeoCompose! </b> </b>
+  </b> Latest: We have just created HeoCompose, and we got 1,265 users! </b> </b>
 </p>
 <p>
   
