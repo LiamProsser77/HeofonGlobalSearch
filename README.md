@@ -8,7 +8,7 @@
 
 <p align="center">
   <strong>The Peak of Global Search</strong><br/>
-  A privacy-first, Norwegian search engine built for discovery, transparency, and speed.
+  A privacy-first, Norwegian search engine built for discovery, transparency, and speed. Created in March 6 2026
 </p>
 
 <p align="center">
