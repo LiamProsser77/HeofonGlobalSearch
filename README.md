@@ -176,7 +176,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. N
 </p>
 
 <ol>
-  <li>Copy the HTML code below</li>
+  <li>Copy the HTML code in index.html</li>
   <li>Create a new repository on GitHub</li>
   <li>Upload the file as <code>index.html</code></li>
   <li>Enable GitHub Pages in settings</li>
