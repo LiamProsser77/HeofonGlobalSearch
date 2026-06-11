@@ -96,7 +96,6 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇨🇦 Canada
 - 🇧🇾 Belarus
 - 🇸🇬 Singapore
-- 🇧🇷 Brazil
 
 We are continuously expanding and working to make Heofon accessible worldwide. Next goal for users in: 🇩🇰 Denmark
 
