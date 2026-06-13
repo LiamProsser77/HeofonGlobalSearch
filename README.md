@@ -86,8 +86,11 @@ History of Heofon.
 
   <h2> Email Us at: </h2>
 - l.a.prosser7@gmail.com (Liam Prosser Email)
+
 - heofonsearch.help@outlook.com (Help Email)
+
 - liamprosser@proton.me (Dev Email)
+
 - heofonsearch.dev@tutamail.com (Heofon Team Email)
     
     
