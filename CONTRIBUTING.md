@@ -16,9 +16,10 @@ If you would like to contribute:
 3. The project maintainer will review suggestions as time allows.
 
 ## Email Us at:
-- l.a.prosser7@gmail.com (Gmail)
-- heofonsearch.help@outlook.com (Microsoft Outlook Mail)
-- liamprosser@proton.me  (Proton Mail)
+- l.a.prosser7@gmail.com (Liam Prosser Email)
+- heofonsearch.help@outlook.com (Help Email)
+- liamprosser@proton.me  (Team Email)
+- heofonsearch.dev@tutamail.com (Dev Email)
 
 ## Notes
 
