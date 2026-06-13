@@ -17,7 +17,7 @@ If you would like to contribute:
 
 ## Email Us at:
 - l.a.prosser7@gmail.com (Gmail)
-- L32prosser@outlook.com (Microsoft Outlook Mail)
+- heofonsearch.help@outlook.com (Microsoft Outlook Mail)
 - liamprosser@proton.me  (Proton Mail)
 
 ## Notes
