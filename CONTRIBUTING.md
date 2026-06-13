@@ -18,8 +18,8 @@ If you would like to contribute:
 ## Email Us at:
 - l.a.prosser7@gmail.com (Liam Prosser Email)
 - heofonsearch.help@outlook.com (Help Email)
-- liamprosser@proton.me  (Team Email)
-- heofonsearch.dev@tutamail.com (Dev Email)
+- liamprosser@proton.me (Dev Email)
+- heofonsearch.dev@tutamail.com (Heofon Team Email)
 
 ## Notes
 
