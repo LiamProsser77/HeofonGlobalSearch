@@ -83,6 +83,14 @@ History of Heofon.
   <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
+## Email Us at:
+- l.a.prosser7@gmail.com (Liam Prosser Email)
+- heofonsearch.help@outlook.com (Help Email)
+- liamprosser@proton.me (Dev Email)
+- heofonsearch.dev@tutamail.com (Heofon Team Email)
+    
+    
+
 <h2> Countries We Serve</h2>
 
 Heofon Global Search is used by people around the world. We are proud to support users in:
