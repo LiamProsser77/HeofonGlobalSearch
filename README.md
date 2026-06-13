@@ -110,7 +110,8 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇧🇾 Belarus
 - 🇸🇬 Singapore
 - 🇺🇦 Ukraine
-- 🇵🇰 Pakistan 
+- 🇮🇳 India
+- 🇵🇰 Pakistan
 
 We are continuously expanding and working to make Heofon accessible worldwide. Next goal for users in: 🇩🇰 Denmark
 
