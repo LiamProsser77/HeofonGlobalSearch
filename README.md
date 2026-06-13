@@ -112,6 +112,7 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇺🇦 Ukraine
 - 🇮🇳 India
 - 🇵🇰 Pakistan
+- 🇹🇭 Thailand 
 
 We are continuously expanding and working to make Heofon accessible worldwide. Next goal for users in: 🇩🇰 Denmark
 
