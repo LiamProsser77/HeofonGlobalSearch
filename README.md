@@ -83,7 +83,8 @@ History of Heofon.
   <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
-## Email Us at:
+
+  <h2> Email Us at: </h2>
 - l.a.prosser7@gmail.com (Liam Prosser Email)
 - heofonsearch.help@outlook.com (Help Email)
 - liamprosser@proton.me (Dev Email)
