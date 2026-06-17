@@ -211,3 +211,15 @@ https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHk
 
 <p><b>Heofon Node HTML is in index.html in Heofon's Files</b></p>
 
+<h2> What Heofon Search isn't</h2>
+
+<p1> Heofon is not:</p1>
+
+- A project, Heofon is a privacy based search engine, not a project
+
+- Heofon does not track you or take your data and sell it to other company's like the big guys, we make everything private so you always are safe when you are searching
+
+- Heofon is not a Metasearch engine, but a independent index of 50 Million pages we find ourselves
+
+- Heofon is not based under any other licence but the MIT licence so people have the freedom to change and use the Heofon HTML 
+
