@@ -21,7 +21,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
   <img src="https://img.shields.io/badge/Privacy--first-yes-brightgreen.svg" />
-  <img src="https://img.shields.io/badge/We are in 16 countries-blueviolet.svg" />
+  <img src="https://img.shields.io/badge/We are in 17 countries-blueviolet.svg" />
   <img src="https://img.shields.io/github/last-commit/LiamProsser77/HeofonGlobalSearch" />
 </p>
 
