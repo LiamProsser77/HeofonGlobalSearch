@@ -115,7 +115,8 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇹🇭 Thailand
 - 🇳🇬 Nigeria
 - 🇧🇩 Bangladesh
-- 🇨🇴 Colombia 
+- 🇨🇴 Colombia
+- 🇹🇷 Türkiye
 
 We are continuously expanding and working to make Heofon accessible worldwide. Follow LiamProsser77 to get your country on this leader board. The Next goal for users in: 🇩🇰 Denmark
 
