@@ -209,7 +209,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
         <p style="text-align:center;">
             Use the form below to submit your node:
         </p>
-https://docs.google.com/forms/d/e/1FAIpQLScsSSUkSe1EVT4vsnyx1Ng0WhoB_HDAZnw6IcHkhuLp7d-5xw/viewform?usp=header
+<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__rOBorlURERGUlJHUDJaTkszRlVBTjk5NEpFN1YySi4u">Heofon Node Form</a>
 
 <p><b>Heofon Node HTML is in index.html in Heofon's Files</b></p>
 
