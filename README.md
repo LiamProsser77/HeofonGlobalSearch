@@ -154,7 +154,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 <h2> Latest Updates</h2>
 <p>
-  </b> Latest: We have just created HeoCompose, and we got 1,268 users! </b> </b>
+  </b> Latest: We have just created HeoCompose, and we got 1,300 users! </b> </b>
 </p>
 <p>
   
@@ -224,5 +224,8 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 - Heofon is not a Metasearch engine, but a independent index of 50 Million pages we find ourselves
 
-- Heofon is not based under any other licence but the MIT licence so people have the freedom to change and use the Heofon HTML 
+- Heofon is not based under any other licence but the MIT licence so people have the freedom to change and use the Heofon HTML
+
+
+#### Heofon is looking for non-binding partnerships with search engines, to partner email us at heofonsearch.help@outlook.com
 
