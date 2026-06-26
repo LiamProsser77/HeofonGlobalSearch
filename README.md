@@ -21,7 +21,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" />
   <img src="https://img.shields.io/badge/Privacy--first-yes-brightgreen.svg" />
-  <img src="https://img.shields.io/badge/We are in 22 countries-blueviolet.svg" />
+  <img src="https://img.shields.io/badge/We are in 24 countries-blueviolet.svg" />
   <img src="https://img.shields.io/github/last-commit/LiamProsser77/HeofonGlobalSearch" />
 </p>
 
@@ -121,7 +121,9 @@ Heofon Global Search is used by people around the world. We are proud to support
 - 🇩🇪 Germany
 - 🇪🇬 Egypt
 - 🇪🇹 Ethiopia
-- 🇰🇪 Kenya 
+- 🇰🇪 Kenya
+- 🇱🇰 Sri Lanka
+- 🇧🇷 Brazil
 
 We are continuously expanding and working to make Heofon accessible worldwide. Follow LiamProsser77 to get your country on this leader board. The Next goal for users in: 🇩🇰 Denmark and 🇺🇿 Uzbekistan
 
