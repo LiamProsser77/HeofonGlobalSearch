@@ -73,6 +73,7 @@ History of Heofon.
   <li><b>Heofonix Bluelight (Lens): </b> <a href= "https://heofonix-bluelight-ai.zite.so/">Heofonix Bluelight</a>
   <li><b>History of Heofon: </b> <a href= "https://heofon-history.zite.so/">History of Heofon</a>
   <li><b>HeoCompose: </b> <a href= "https://heo-compose--laprosser7.replit.app/login">HeoCompose</a>
+  <li><b>Heofon Search Wiki: </b> <a href= "https://heofon-search.fandom.com/wiki/Heofon_Search_Wiki">Heofon Search Wiki</a>
 </ul>
 
 <hr>
