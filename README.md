@@ -239,3 +239,8 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 #### Heofon is looking for non-binding partnerships with search engines, to partner email us at heofonsearch.help@outlook.com
 
+
+### Motto of Heofon Search:
+
+"The peak of Global Search"
+
