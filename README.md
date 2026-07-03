@@ -164,7 +164,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 <h2> Latest Updates</h2>
 <p>
-  </b> Latest: We have just created HeoCompose, and we got 1,300 users! </b> </b>
+  </b> Latest: We have just created HeoCompose, and we got 1,300 users and also we are working on a new product named Heobrush.  </b> </b>
 </p>
 <p>
   
