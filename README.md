@@ -81,7 +81,7 @@ History of Heofon.
 <h2> Community</h2>
 <ul>
   <li><b>Quora: </b> <a href="https://www.quora.com/profile/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
-  <li><b>Linkedin: </b> <a href="https://www.linkedin.com/in/heofon-globalsearch-931504402/">HeofonGlobalSearch<a></li>
+  <li><b>Linkedin: </b> <a href="https://www.linkedin.com/company/heofon-search/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
 </ul>
 
