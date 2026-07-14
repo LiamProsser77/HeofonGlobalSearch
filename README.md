@@ -83,7 +83,8 @@ History of Heofon.
   <li><b>Quora: </b> <a href="https://www.quora.com/profile/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
   <li><b>Linkedin: </b> <a href="https://www.linkedin.com/company/heofon-search/">HeofonGlobalSearch<a></li>
   <li><b>Lemmy: </b> <a href="https://lemmy.org/u/HeofonGlobalSearch">HeofonGlobalSearch<a></li>
-  <li><b>Twitch: </b> <a href="<li><b>Lemmy: </b> <a href="https://www.twitch.tv/heofonsearch">Heofon Search<a></li>
+  <li><b>Twitch: </b> <a href="https://www.twitch.tv/heofonsearch">Heofon Search<a></li>
+  
 </ul>
 
   <h2> Email Us at: </h2>
