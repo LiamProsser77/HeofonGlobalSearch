@@ -36,7 +36,7 @@
   The site also features the <b>Heopad</b>, a dedicated space where you can write down notes and save your work instantly. Everything on Heofon is built to be fast, unblocked, and private, so your data stays yours while you explore the digital world. It is the ultimate all-in-one search engine experience.
 </p>
 
-<h3> How much users does Heofon Search have? Heofon in 3 months has 1,300 users, thank you to the loyal people that search on Heofon, join those 1,300 users around the globe at heofonsearch.zite.so! <h3/>
+<h3> How much users does Heofon Search have? Heofon in 5 months has 1,400 users, thank you to the loyal people that search on Heofon, join those 1,400 users around the globe at heofonsearch.zite.so! <h3/>
 
 <h2> What products does Heofon Search have?</h2>
 <p> Heofon Search has: 
@@ -175,7 +175,7 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 <h2> Latest Updates</h2>
 <p>
-  </b> Latest: We have just created HeoCompose, and we got 1,300 users and also we are working on a new product named Heobrush and we are almost done!  </b> </b>
+  </b> Latest: We have just created HeoCompose, and we got 1,400 users and also we are working on a new product named Heobrush and we are almost done!  </b> </b>
 </p>
 <p>
   
@@ -253,5 +253,5 @@ We are continuously expanding and working to make Heofon accessible worldwide. F
 
 ### Motto of Heofon Search:
 
-"The peak of Global Search"
+#### "The Peak of Global Search"
 
